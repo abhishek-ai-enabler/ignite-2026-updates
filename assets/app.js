@@ -153,6 +153,7 @@
       'data-status': u.status,
       'data-product': u.product,
       'data-id': u.id,
+      id: 'update-' + u.id,
       'data-search': [u.name, u.summary, u.area, u.note || '', u.status].join(' ').toLowerCase()
     }, [
       el('div', { class: 'update-head' }, [
@@ -160,7 +161,7 @@
         statusBadge(u.status)
       ]),
       areaLabel(u),
-      el('p', { text: u.summary }),
+      el('p', { class: 'update-summary', text: u.summary }),
       u.note ? el('p', { class: 'note', text: u.note }) : null,
       el('div', { class: 'meta' }, meta)
     ]);
@@ -353,8 +354,35 @@
     return true;
   }
 
+  function escapeRe(t) { return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+  function clearMarks(card) {
+    card.querySelectorAll('mark.hit').forEach(function (m) { m.replaceWith(document.createTextNode(m.textContent)); });
+    card.normalize();
+  }
+
+  function markTerms(card, terms) {
+    var re = new RegExp('(' + terms.map(escapeRe).join('|') + ')', 'gi');
+    card.querySelectorAll('h4, .area, .update-summary, .note').forEach(function (host) {
+      var walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT);
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function (node) {
+        var parts = node.nodeValue.split(re);
+        if (parts.length < 2) return;
+        var frag = document.createDocumentFragment();
+        parts.forEach(function (part, i) {
+          if (!part) return;
+          frag.appendChild(i % 2 ? el('mark', { class: 'hit', text: part }) : document.createTextNode(part));
+        });
+        node.parentNode.replaceChild(frag, node);
+      });
+    });
+  }
+
   function applyFilters() {
     var total = 0;
+    var terms = state.q ? state.q.split(/\s+/).filter(Boolean) : [];
     data.products.forEach(function (p) {
       var list = document.querySelector('[data-list-for="' + p.id + '"]');
       var section = document.getElementById(p.id);
@@ -362,6 +390,9 @@
       list.querySelectorAll('.update').forEach(function (card) {
         var show = matches(card);
         card.classList.toggle('is-hidden', !show);
+        clearMarks(card);
+        card.classList.toggle('is-match', show && terms.length > 0);
+        if (show && terms.length) markTerms(card, terms);
         if (show) visible++;
       });
       document.querySelector('[data-empty-for="' + p.id + '"]').classList.toggle('is-hidden', visible !== 0);
@@ -369,12 +400,21 @@
       total += state.products.size === 0 || state.products.has(p.id) ? visible : 0;
     });
     var filtering = state.q || state.products.size || state.statuses.size;
-    var firstShown = data.products.filter(function (p) {
-      return document.querySelector('[data-list-for="' + p.id + '"] .update:not(.is-hidden)') &&
-        (!state.products.size || state.products.has(p.id));
-    })[0];
+    var firstShown = null;
+    data.products.some(function (p) {
+      if (state.products.size && !state.products.has(p.id)) return false;
+      var hit = document.querySelector('[data-list-for="' + p.id + '"] .update:not(.is-hidden)');
+      if (hit) firstShown = { id: hit.id };
+      return !!hit;
+    });
     var jump = document.getElementById('jump-results');
     jump.classList.toggle('is-hidden', !(filtering && firstShown));
+    if (firstShown && state.q) {
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.update:not(.is-hidden)'));
+      var best = cards.filter(function (c) { return c.querySelector('h4').textContent.toLowerCase().indexOf(state.q) !== -1; })[0] ||
+        cards.filter(function (c) { return c.getAttribute('data-search').indexOf(state.q) !== -1; })[0];
+      if (best) firstShown = { id: best.id };
+    }
     if (firstShown) jump.setAttribute('href', '#' + firstShown.id);
     document.getElementById('result-count').textContent = filtering
       ? total + ' of ' + data.updates.length + ' updates match your filters.'
@@ -404,7 +444,7 @@
     main.insertBefore(el('div', { class: 'wrap section' }, [el('p', { class: 'notice', role: 'alert', text: message })]), main.firstChild);
   }
 
-  fetch('data/updates.json?v=20261126c', { cache: 'no-cache' })
+  fetch('data/updates.json?v=20261126d', { cache: 'no-cache' })
     .then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();

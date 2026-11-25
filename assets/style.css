@@ -343,3 +343,7 @@ tbody tr:last-child > * { border-bottom: 0; }
   .hero, .site-footer { background: #fff !important; color: #000 !important; }
   .update, .panel { box-shadow: none; break-inside: avoid; }
 }
+
+mark.hit { background: #ffe08a; color: #1a1a1a; padding: 0 0.12em; border-radius: 3px; box-shadow: 0 0 0 1px #e0b400; }
+.update.is-match { box-shadow: 0 0 0 3px #ffe08a; }
+.update:target { box-shadow: 0 0 0 4px var(--accent); }
