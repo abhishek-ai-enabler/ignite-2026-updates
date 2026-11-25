@@ -369,6 +369,13 @@
       total += state.products.size === 0 || state.products.has(p.id) ? visible : 0;
     });
     var filtering = state.q || state.products.size || state.statuses.size;
+    var firstShown = data.products.filter(function (p) {
+      return document.querySelector('[data-list-for="' + p.id + '"] .update:not(.is-hidden)') &&
+        (!state.products.size || state.products.has(p.id));
+    })[0];
+    var jump = document.getElementById('jump-results');
+    jump.classList.toggle('is-hidden', !(filtering && firstShown));
+    if (firstShown) jump.setAttribute('href', '#' + firstShown.id);
     document.getElementById('result-count').textContent = filtering
       ? total + ' of ' + data.updates.length + ' updates match your filters.'
       : data.updates.length + ' updates across ' + data.products.length + ' products.';
@@ -397,7 +404,7 @@
     main.insertBefore(el('div', { class: 'wrap section' }, [el('p', { class: 'notice', role: 'alert', text: message })]), main.firstChild);
   }
 
-  fetch('data/updates.json?v=20261126', { cache: 'no-cache' })
+  fetch('data/updates.json?v=20261126b', { cache: 'no-cache' })
     .then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
