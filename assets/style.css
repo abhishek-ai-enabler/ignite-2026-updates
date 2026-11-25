@@ -83,29 +83,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .nav-list a { display: block; padding: 0.4rem 0.8rem; border-radius: 999px; color: var(--muted); text-decoration: none; font-size: 0.93rem; font-weight: 500; white-space: nowrap; }
 .nav-list a:hover { background: var(--bg-soft); color: var(--text); }
 .nav-list a[aria-current="true"] { background: var(--accent); color: var(--accent-ink); }
-.controls { display: flex; align-items: center; gap: 0.6rem; }
-
-.theme-menu { position: relative; }
-.theme-menu summary {
-  list-style: none; display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer;
-  border: 1px solid var(--control-border); border-radius: 999px; padding: 0.3rem 0.8rem 0.3rem 0.45rem;
-  background: var(--bg-elev); font-size: 0.86rem; font-weight: 600;
-}
-.theme-menu summary::-webkit-details-marker { display: none; }
-.theme-menu summary::after { content: ""; border: solid currentColor; border-width: 0 2px 2px 0; padding: 2.5px; transform: rotate(45deg) translateY(-2px); }
-.swatch { width: 1.2rem; height: 1.2rem; border-radius: 50%; border: 1px solid var(--control-border); flex: none; }
-.menu-panel {
-  position: absolute; right: 0; top: calc(100% + 8px); width: 15rem; padding: 0.4rem; z-index: 60;
-  background: var(--bg-elev); border: 1px solid var(--control-border); border-radius: 14px; box-shadow: var(--shadow-hover);
-}
-.theme-option {
-  display: flex; align-items: center; gap: 0.7rem; width: 100%; text-align: left; font: inherit; color: var(--text);
-  background: transparent; border: 0; padding: 0.5rem 0.6rem; border-radius: 10px; cursor: pointer;
-}
-.theme-option:hover { background: var(--bg-soft); }
-.theme-option[aria-checked="true"] { background: var(--bg-soft); box-shadow: inset 0 0 0 2px var(--accent); }
-.theme-text { display: flex; flex-direction: column; line-height: 1.25; }
-.theme-text small { color: var(--muted); font-size: 0.78rem; }
 
 /* ---------- Hero ---------- */
 .hero { background: var(--hero-bg); color: var(--hero-fg); padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(2.5rem, 5vw, 3.5rem); position: relative; overflow: hidden; }
@@ -328,9 +305,6 @@ tbody tr:last-child > * { border-bottom: 0; }
 @media (max-width: 560px) {
   .brand > span:not(.logo) { display: none; }
   .filters { grid-template-columns: 1fr; }
-  .controls { gap: 0.4rem; }
-  .theme-menu summary { padding-right: 0.6rem; }
-  #theme-current { display: none; }
   .ps-pills { margin-left: 0; }
 }
 
@@ -357,7 +331,7 @@ tbody tr:last-child > * { border-bottom: 0; }
 .disclaimer.trademark a { color: inherit; text-decoration: underline; }
 
 @media print {
-  .site-header, .filters, .controls { display: none !important; }
+  .site-header, .filters { display: none !important; }
   .hero, .site-footer { background: #fff !important; color: #000 !important; }
   .update, .panel { box-shadow: none; break-inside: avoid; }
 }
