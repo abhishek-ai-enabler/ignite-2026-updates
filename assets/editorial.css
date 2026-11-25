@@ -1,0 +1,127 @@
+/*
+  "Editorial" theme.
+  Visual language adapted from Editorial by HTML5 UP (html5up.net, @ajlkn), as used in
+  sdasrc/editorial-website-extended. Licensed CC BY 3.0: https://html5up.net/license
+  Fonts (Open Sans, Roboto Slab) are self-hosted under the SIL Open Font License; see assets/fonts.
+*/
+@font-face { font-family: "Open Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/open-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Open Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/open-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Open Sans"; font-weight: 700; font-style: normal; font-display: swap; src: url("fonts/open-sans-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Roboto Slab"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/roboto-slab-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Roboto Slab"; font-weight: 700; font-style: normal; font-display: swap; src: url("fonts/roboto-slab-latin-700-normal.woff2") format("woff2"); }
+
+:root[data-theme="editorial"] {
+  color-scheme: light;
+  --radius: 6px;
+  --font: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-head: "Roboto Slab", Georgia, "Times New Roman", serif;
+
+  --bg: #ffffff; --bg-elev: #ffffff; --bg-soft: #f5f6f7;
+  --text: #3d4449; --muted: #586067; --border: #d2d7d9; --control-border: #7f888f;
+  --accent: #d32f2f; --accent-ink: #ffffff; --focus: #d32f2f;
+  --shadow: none; --shadow-hover: none;
+
+  --build: #d32f2f; --ground: #3f5b6b; --govern: #00796b;
+
+  --hero-bg: #ffffff; --hero-fg: #3d4449; --hero-muted: #586067; --hero-accent: #d32f2f;
+  --hero-glass: #f5f6f7; --hero-line: #d2d7d9;
+  --hero-build: #d32f2f; --hero-ground: #3f5b6b; --hero-govern: #00796b;
+
+  --footer-bg: #3d4449; --footer-fg: #f5f6f7; --footer-muted: #d2d7d9; --footer-link: #ffb3b3;
+}
+
+:root[data-theme="editorial"] body { font-family: var(--font); }
+:root[data-theme="editorial"] h1,
+:root[data-theme="editorial"] h2,
+:root[data-theme="editorial"] h3 { font-weight: 700; letter-spacing: 0; }
+:root[data-theme="editorial"] a { text-decoration: none; border-bottom: 1px dotted currentColor; }
+:root[data-theme="editorial"] a:hover { color: var(--accent); border-bottom-style: solid; }
+:root[data-theme="editorial"] .skip-link,
+:root[data-theme="editorial"] .nav-list a,
+:root[data-theme="editorial"] .brand,
+:root[data-theme="editorial"] .product-card h3 a,
+:root[data-theme="editorial"] .update a.card-link { border-bottom: 0; }
+
+/* Hero: white page with the signature red rule */
+:root[data-theme="editorial"] .hero { border-bottom: 5px solid var(--accent); padding-bottom: clamp(2rem, 4vw, 3rem); }
+:root[data-theme="editorial"] .hero :focus-visible { outline-color: var(--focus); }
+:root[data-theme="editorial"] .hero h1 { font-weight: 700; font-size: clamp(2rem, 4.2vw, 3.3rem); line-height: 1.25; max-width: 24ch; }
+:root[data-theme="editorial"] .pill { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.75rem; }
+:root[data-theme="editorial"] .kpi { backdrop-filter: none; border-radius: var(--radius); background: var(--bg-soft); }
+:root[data-theme="editorial"] .kpi strong { font-weight: 700; }
+:root[data-theme="editorial"] .product-card { border-radius: var(--radius); background: var(--bg-soft); }
+:root[data-theme="editorial"] .product-card:hover { transform: none; background: #fff; border-color: var(--pc); }
+:root[data-theme="editorial"] .product-card:focus-within { outline-color: var(--focus); }
+:root[data-theme="editorial"] .bar { background: #e1e5e7; }
+
+/* Sections and cards: flat, hairline borders */
+:root[data-theme="editorial"] .section,
+:root[data-theme="editorial"] .product-section { border-top: 2px solid var(--border); }
+:root[data-theme="editorial"] .product-section { background: none; }
+:root[data-theme="editorial"] .kicker,
+:root[data-theme="editorial"] .role,
+:root[data-theme="editorial"] .update .area,
+:root[data-theme="editorial"] .panel h3 { letter-spacing: 0.2em; }
+:root[data-theme="editorial"] .update,
+:root[data-theme="editorial"] .panel,
+:root[data-theme="editorial"] .filters,
+:root[data-theme="editorial"] .table-scroll,
+:root[data-theme="editorial"] .fit-steps li { border-radius: var(--radius); }
+:root[data-theme="editorial"] .update:hover { transform: none; border-color: var(--p); }
+:root[data-theme="editorial"] .ps-head .icon { border-radius: var(--radius); }
+:root[data-theme="editorial"] .update h4 { font-family: var(--font-head); }
+
+/* Controls: uppercase, letter-spaced like Editorial buttons */
+:root[data-theme="editorial"] .seg,
+:root[data-theme="editorial"] .seg button,
+:root[data-theme="editorial"] .theme-menu summary,
+:root[data-theme="editorial"] .chip span,
+:root[data-theme="editorial"] input[type="search"] { border-radius: var(--radius); }
+:root[data-theme="editorial"] .seg button,
+:root[data-theme="editorial"] .theme-menu summary { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.74rem; }
+:root[data-theme="editorial"] .menu-panel { border-radius: var(--radius); }
+:root[data-theme="editorial"] .theme-option { border-radius: 4px; }
+:root[data-theme="editorial"] .badge { border-radius: 4px; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.7rem; }
+:root[data-theme="editorial"] .audience-list li { border-radius: 4px; }
+
+:root[data-theme="editorial"] thead th { font-weight: 700; }
+:root[data-theme="editorial"] .disclaimer { border-radius: var(--radius); }
+
+:root[data-theme="editorial"] .logo { border-radius: var(--radius); background: var(--accent); }
+
+/* Sidebar layout (desktop), the Editorial signature */
+@media (min-width: 1021px) {
+  :root[data-theme="editorial"] body { padding-left: 18rem; }
+  :root[data-theme="editorial"] .wrap { width: min(1180px, 100% - 6rem); }
+  :root[data-theme="editorial"] { scroll-padding-top: 2rem; }
+
+  :root[data-theme="editorial"] .site-header {
+    position: fixed; inset: 0 auto 0 0; width: 18rem; overflow-y: auto; overflow-x: hidden;
+    background: var(--bg-soft); border-bottom: 0; border-right: 1px solid var(--border);
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1); backdrop-filter: none; -webkit-backdrop-filter: none;
+  }
+  :root[data-theme="editorial"] .header-inner {
+    display: flex; flex-direction: column; align-items: stretch; gap: 1.75rem;
+    width: 100%; min-height: 100%; margin: 0; padding: 2rem 1.5rem 2.25rem;
+  }
+  :root[data-theme="editorial"] .brand { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); white-space: normal; }
+  :root[data-theme="editorial"] .logo { width: 2.6rem; height: 2.6rem; }
+  :root[data-theme="editorial"] .brand > span:not(.logo):not(.brand-sub) { font-size: 1.5rem; line-height: 1.2; }
+  :root[data-theme="editorial"] .brand-sub { display: block; font-size: 0.82rem; font-weight: 400; color: var(--muted); }
+
+  :root[data-theme="editorial"] .site-header nav { overflow: visible; }
+  :root[data-theme="editorial"] .nav-list { flex-direction: column; gap: 0; justify-content: flex-start; overflow: visible; }
+  :root[data-theme="editorial"] .nav-list a {
+    padding: 0.65rem 0 0.65rem 0.9rem; border-radius: 0; border-left: 3px solid transparent; border-bottom: 1px solid var(--border);
+    font-family: var(--font-head); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text);
+  }
+  :root[data-theme="editorial"] .nav-list a:hover { background: transparent; color: var(--accent); }
+  :root[data-theme="editorial"] .nav-list a[aria-current="true"] { background: transparent; color: var(--accent); border-left-color: var(--accent); }
+
+  :root[data-theme="editorial"] .controls { flex-direction: column; align-items: stretch; gap: 0.75rem; margin-top: auto; padding-top: 1.5rem; border-top: 2px solid var(--border); }
+  :root[data-theme="editorial"] .seg { display: flex; }
+  :root[data-theme="editorial"] .seg button { flex: 1; }
+  :root[data-theme="editorial"] .theme-menu summary { width: 100%; justify-content: flex-start; }
+  :root[data-theme="editorial"] .theme-menu summary::after { margin-left: auto; }
+  :root[data-theme="editorial"] .menu-panel { position: static; width: 100%; margin-top: 0.5rem; box-shadow: none; }
+}
