@@ -20,6 +20,7 @@ Unofficial, static summary of Ignite 2026 (Nov 17–20, San Francisco) announcem
 | `assets/app.js`, `assets/style.css` | Rendering, filter/search, styling and themes |
 | `assets/theme.js` | Theme and view switching (loaded before first paint) |
 | `assets/editorial.css`, `assets/galaxy.css`, `assets/fonts/` | Editorial (sidebar) and Galaxy (deep space) themes and their self-hosted fonts |
+| `assets/icons/` | Official Microsoft icons, unmodified (see Credits). Mapped in the `logos`, `platforms` and `areaLogos` keys of `data/updates.json` |
 | `scripts/check.mjs` | Validates the data and checks every link |
 | `.github/workflows/pages.yml` | Validates, then deploys to GitHub Pages on push to `main` |
 
@@ -67,3 +68,5 @@ Push to `main`. The workflow validates the data and deploys with the official Pa
 ## Credits
 
 The Editorial theme borrows its visual design from [Editorial by HTML5 UP](https://html5up.net/editorial) (@ajlkn, [CC BY 3.0](https://html5up.net/license)), via [sdasrc/editorial-website-extended](https://github.com/sdasrc/editorial-website-extended). It is re-implemented in plain CSS; no Jekyll code is used. Open Sans and Roboto Slab are self-hosted under the SIL Open Font License (see `assets/fonts`). The Galaxy theme is original CSS using Orbitron and Exo 2, also self-hosted under the SIL Open Font License.
+
+**Microsoft icons.** `assets/icons/` holds the official Microsoft icons, unmodified: Copilot Studio, Agent 365, Power Platform, Power Apps, Power Automate and Dataverse from the [Power Platform icons](https://learn.microsoft.com/en-us/power-platform/guidance/icons) (terms in `assets/icons/LICENSE-power-platform-icons.pdf`), and Microsoft Foundry and Foundry IQ from the [Azure architecture icons](https://learn.microsoft.com/en-us/azure/architecture/icons/). Microsoft permits these only to illustrate the Microsoft products they represent, so keep each product name next to its icon, do not crop, flip, rotate or distort them, and do not use them for other products. Microsoft IQ, Work IQ, Fabric IQ and Web IQ have no published official icon, so they use a neutral symbol. Microsoft and the product names are trademarks of the Microsoft group of companies; this site is unofficial and not endorsed by Microsoft.

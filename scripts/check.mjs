@@ -2,6 +2,7 @@
 // Validates data/updates.json and (unless --offline) checks that every URL resolves.
 // Usage: node scripts/check.mjs [--offline]
 import { readFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -40,6 +41,16 @@ for (const k of data.meta.keyNumbers || []) {
   if (!productIds.has(k.product)) fail(`keyNumber "${k.value}": unknown product ${k.product}`);
 }
 for (const col of data.compare.columns) if (!productIds.has(col)) fail(`compare: unknown column ${col}`);
+
+for (const [key, l] of Object.entries(data.logos || {})) {
+  if (!existsSync(path.join(root, 'assets/icons', l.file))) fail(`logo ${key}: missing assets/icons/${l.file}`);
+}
+for (const p of data.products) if (p.logo && !data.logos?.[p.logo]) fail(`product ${p.id}: unknown logo ${p.logo}`);
+for (const p of data.platforms || []) if (!data.logos?.[p.logo]) fail(`platform: unknown logo ${p.logo}`);
+for (const a of data.areaLogos || []) {
+  if (!data.logos?.[a.logo]) fail(`areaLogo ${a.area}: unknown logo ${a.logo}`);
+  if (!data.updates.some((u) => u.product === a.product && u.area === a.area)) fail(`areaLogo ${a.area}: no matching updates`);
+}
 for (const row of data.compare.rows) {
   if (row.values.length !== data.compare.columns.length) fail(`compare row "${row.label}": wrong number of values`);
 }

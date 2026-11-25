@@ -49,6 +49,7 @@
     {
       "id": "copilot-studio",
       "name": "Microsoft Copilot Studio",
+      "logo": "copilot-studio",
       "role": "Build",
       "tagline": "Low-code studio for building and managing agents, workflows and apps for business processes.",
       "summary": "At Ignite 2026 Copilot Studio moved from single-task automation toward whole business processes: purpose-built harnesses, apps, shared and persistent agents with their own accounts, and team-based development with GitHub and a CLI.",
@@ -83,6 +84,7 @@
     {
       "id": "agent-365",
       "name": "Microsoft Agent 365",
+      "logo": "agent-365",
       "role": "Govern",
       "tagline": "Observability platform for AI: management, governance, security and business value for agents.",
       "summary": "Agent 365 launched in May 2026 and, per Microsoft, has since registered more than 50 million agents. Ignite adds multi-platform agent connections with Entra Agent ID, dynamic agent risk, local and shadow agent controls, and FinOps for AI.",
@@ -97,6 +99,30 @@
         { "label": "Business Analytics", "url": "https://aka.ms/A365AnalyticsLearn" }
       ]
     }
+  ],
+  "logos": {
+    "copilot-studio": { "name": "Microsoft Copilot Studio", "file": "copilot-studio.svg", "set": "Power Platform icons" },
+    "agent-365": { "name": "Microsoft Agent 365", "file": "agent-365.svg", "set": "Power Platform icons" },
+    "power-platform": { "name": "Microsoft Power Platform", "file": "power-platform.svg", "set": "Power Platform icons" },
+    "power-apps": { "name": "Microsoft Power Apps", "file": "power-apps.svg", "set": "Power Platform icons" },
+    "power-automate": { "name": "Microsoft Power Automate", "file": "power-automate.svg", "set": "Power Platform icons" },
+    "dataverse": { "name": "Microsoft Dataverse", "file": "dataverse.svg", "set": "Power Platform icons" },
+    "foundry": { "name": "Microsoft Foundry", "file": "foundry.svg", "set": "Azure architecture icons" },
+    "foundry-iq": { "name": "Foundry IQ", "file": "foundry-iq.svg", "set": "Azure architecture icons" }
+  },
+  "platforms": [
+    { "logo": "copilot-studio", "label": "Build agents", "href": "#copilot-studio" },
+    { "logo": "agent-365", "label": "Govern agents", "href": "#agent-365" },
+    { "logo": "foundry-iq", "label": "Ground agents", "href": "#iq" },
+    { "logo": "foundry", "label": "Agent platform" },
+    { "logo": "power-platform", "label": "Apps and automation" },
+    { "logo": "power-apps", "label": "Apps" },
+    { "logo": "power-automate", "label": "Workflows" },
+    { "logo": "dataverse", "label": "Data" }
+  ],
+  "areaLogos": [
+    { "product": "iq", "area": "Foundry IQ", "logo": "foundry-iq" },
+    { "product": "copilot-studio", "area": "Apps and workflows", "logo": "power-platform" }
   ],
   "audiences": {
     "maker": "Makers",

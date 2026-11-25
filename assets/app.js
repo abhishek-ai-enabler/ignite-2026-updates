@@ -21,7 +21,7 @@
   }
 
   function safeUrl(url) {
-    return /^https:\/\//i.test(url) ? url : '#';
+    return /^(https:\/\/|#[\w-]*$)/i.test(url) ? url : '#';
   }
 
   function externalLink(label, url) {
@@ -65,7 +65,15 @@
     'agent-365': [['path', { d: 'M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z' }], ['path', { d: 'M8.5 12l2.5 2.5 4.5-5' }]]
   };
 
+  function logoImg(key) {
+    var l = data.logos && data.logos[key];
+    if (!l || !/^[a-z0-9-]+\.svg$/.test(l.file)) return null;
+    return el('img', { src: 'assets/icons/' + l.file, alt: '', width: 48, height: 48, loading: 'lazy', decoding: 'async' });
+  }
+
   function icon(productId) {
+    var official = logoImg((productById(productId) || {}).logo);
+    if (official) return el('span', { class: 'icon official' }, [official]);
     var svg = document.createElementNS(SVG_NS, 'svg');
     svg.setAttribute('viewBox', '0 0 24 24');
     svg.setAttribute('fill', 'none');
@@ -151,12 +159,31 @@
         el('h4', { text: u.name }),
         statusBadge(u.status)
       ]),
-      el('p', { class: 'area', text: u.area }),
+      areaLabel(u),
       el('p', { text: u.summary }),
       u.note ? el('p', { class: 'note', text: u.note }) : null,
       el('div', { class: 'meta' }, meta)
     ]);
     return card;
+  }
+
+  function areaLabel(u) {
+    var match = (data.areaLogos || []).find(function (a) { return a.product === u.product && a.area === u.area; });
+    var img = match && logoImg(match.logo);
+    if (img) img.setAttribute('class', 'area-logo');
+    return el('p', { class: 'area' }, [img, u.area]);
+  }
+
+  function renderPlatforms() {
+    var host = document.getElementById('platforms');
+    if (!host) return;
+    (data.platforms || []).forEach(function (p) {
+      var l = data.logos[p.logo];
+      var img = logoImg(p.logo);
+      if (!l || !img) return;
+      var body = [img, el('span', { class: 'pf-text' }, [el('strong', { text: l.name }), el('span', { text: p.label })])];
+      host.appendChild(el('li', { class: 'platform' }, [p.href ? el('a', { href: p.href }, body) : el('span', { class: 'pf-static' }, body)]));
+    });
   }
 
   function shortSourceLabel(s) {
@@ -353,6 +380,7 @@
       renderHeader();
       renderKpis();
       renderProductCards();
+      renderPlatforms();
       renderProductSections();
       renderCompare();
       renderGetStarted();
