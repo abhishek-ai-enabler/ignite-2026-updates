@@ -26,7 +26,7 @@
   --build: #0b5cad;
   --ground: #6b3fa0;
   --govern: #0d6e4f;
-
+  --apps: #9a5a00;
   --hero-bg: radial-gradient(70% 90% at 0% 0%, #243b8f 0%, transparent 60%),
              radial-gradient(60% 80% at 100% 10%, #0b6a73 0%, transparent 60%), #0a1530;
   --hero-fg: #ffffff;
@@ -37,7 +37,7 @@
   --hero-build: #8cc2ff;
   --hero-ground: #d2b6ff;
   --hero-govern: #7ae6c0;
-  --footer-bg: #0f1630;
+  --hero-apps: #ffc46b;  --footer-bg: #0f1630;
   --footer-fg: #e4e8f7;
   --footer-muted: #b9c1dc;
   --footer-link: #a9d0ff;
@@ -94,10 +94,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .hero h1 .hl-build { color: var(--hero-build); }
 .hero h1 .hl-ground { color: var(--hero-ground); }
 .hero h1 .hl-govern { color: var(--hero-govern); }
+.hero h1 .hl-apps { color: var(--hero-apps); }
 .lead { font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: var(--hero-muted); max-width: 62ch; margin: 1.1rem 0 0.6rem; }
 .updated { color: var(--hero-muted); font-size: 0.9rem; margin-bottom: 2rem; }
 
-.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.9rem; margin-bottom: 1.4rem; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 0.9rem; margin-bottom: 1.4rem; }
 .kpi { background: var(--hero-glass); border: 1px solid var(--hero-line); border-radius: var(--radius); padding: 1rem 1.15rem; backdrop-filter: blur(6px); }
 .kpi strong { display: block; font: 800 clamp(2rem, 3.4vw, 2.7rem)/1.05 var(--font-head); color: var(--kpi, var(--hero-fg)); letter-spacing: -0.02em; }
 .kpi span { display: block; color: var(--hero-fg); font-size: 0.93rem; margin-top: 0.3rem; line-height: 1.4; }
@@ -105,8 +106,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .kpi[data-product="copilot-studio"] { --kpi: var(--hero-build); }
 .kpi[data-product="iq"] { --kpi: var(--hero-ground); }
 .kpi[data-product="agent-365"] { --kpi: var(--hero-govern); }
+.kpi[data-product="power-platform"] { --kpi: var(--hero-apps); }
 
-.product-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1rem; }
+.product-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(205px, 1fr)); gap: 1rem; }
 .product-card {
   position: relative; background: var(--hero-glass); border: 1px solid var(--hero-line); border-top: 4px solid var(--pc);
   border-radius: var(--radius); padding: 1.2rem 1.25rem 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; transition: transform 0.18s ease, background 0.18s ease;
@@ -114,6 +116,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .product-card[data-product="copilot-studio"] { --pc: var(--hero-build); }
 .product-card[data-product="iq"] { --pc: var(--hero-ground); }
 .product-card[data-product="agent-365"] { --pc: var(--hero-govern); }
+.product-card[data-product="power-platform"] { --pc: var(--hero-apps); }
 .product-card:hover { transform: translateY(-3px); background: rgba(255, 255, 255, 0.13); }
 .product-card:focus-within { outline: 3px solid #fff; outline-offset: 3px; }
 .pc-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem; }
@@ -161,6 +164,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 [data-product="copilot-studio"] { --p: var(--build); }
 [data-product="iq"] { --p: var(--ground); }
 [data-product="agent-365"] { --p: var(--govern); }
+[data-product="power-platform"] { --p: var(--apps); }
 
 /* SVG diagram */
 .svg-frame { fill: var(--bg-soft); stroke: var(--border); }
@@ -168,6 +172,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .svg-build { stroke: var(--build); }
 .svg-ground { stroke: var(--ground); }
 .svg-govern { stroke: var(--govern); }
+.svg-apps { stroke: var(--apps); }
 .svg-step { fill: var(--muted); font: 700 12px var(--font); letter-spacing: 0.14em; }
 .svg-title { fill: var(--text); font: 800 22px var(--font-head); }
 .svg-text { fill: var(--text); font: 500 14px var(--font); }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Microsoft Ignite 2026: Copilot Studio, Microsoft IQ and Agent 365",
+    "title": "Microsoft Ignite 2026: Copilot Studio, Microsoft IQ, Agent 365 and Power Platform",
     "event": "Microsoft Ignite 2026",
     "dates": "November 17–20, 2026",
     "location": "San Francisco, CA and online",
@@ -9,7 +9,13 @@
       { "value": "50M+", "label": "agents registered in Agent 365 since its May 2026 launch", "product": "agent-365", "source": "a365" },
       { "value": "350+", "label": "third-party connectors brought together in Microsoft IQ", "product": "iq", "source": "iq" },
       { "value": "$1", "label": "per 1,000 Web IQ calls, with no waitlist", "product": "iq", "source": "iq" },
-      { "value": "70%+", "label": "touchless invoices at Asurion with Copilot Studio, up from under 20%", "product": "copilot-studio", "source": "cs" }
+      { "value": "70%+", "label": "touchless invoices at Asurion with Copilot Studio, up from under 20%", "product": "copilot-studio", "source": "cs"       },
+      {
+        "value": "80M",
+        "label": "people use Power Platform every month",
+        "product": "power-platform",
+        "source": "pp"
+      }
     ],
     "statusLegend": {
       "GA": "Generally available",
@@ -43,6 +49,21 @@
       "id": "a365ba",
       "label": "Introducing Microsoft Agent 365 Business Analytics (Tech Community)",
       "url": "https://techcommunity.microsoft.com/blog/ai-finops-blog/introducing-microsoft-agent-365-business-analytics-turn-ai-investment-into-busin/4574149"
+    },
+    {
+      "id": "pp",
+      "label": "Turn AI ambition into real business value with Power Platform (Power Platform blog, Nov 18, 2026)",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/2026/11/18/turn-ai-ambition-into-real-business-value-with-power-platform/"
+    },
+    {
+      "id": "ppwiq",
+      "label": "Business Applications in Work IQ (Microsoft Learn)",
+      "url": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/business-applications-work-iq"
+    },
+    {
+      "id": "ppfabric",
+      "label": "Now available: Cross-region Link to Fabric and Update connection (Power Platform blog, Nov 24, 2026)",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/2026/11/24/now-available-cross-region-link-to-fabric-and-update-connection/"
     }
   ],
   "products": [
@@ -101,6 +122,25 @@
         { "label": "Service description and licensing", "url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365" },
         { "label": "Business Analytics", "url": "https://aka.ms/A365AnalyticsLearn" }
       ]
+    },
+    {
+      "id": "power-platform",
+      "name": "Microsoft Power Platform",
+      "logo": "power-platform",
+      "role": "Apps and data",
+      "glance": "The low-code apps, flows and data that agents build with and use as tools, now with higher quality and Business Applications in Work IQ.",
+      "tagline": "Low-code platform for apps, workflows and data, now a foundation for agents.",
+      "summary": "At Ignite 2026 Microsoft framed Power Platform around four principles: lead with the platform, deliver high-quality products, bring AI on your terms and protect existing investments. Announcements cover faster and richer apps, hybrid teams of makers and agents, Copilot inside apps, and Business Applications in Work IQ.",
+      "why": "Existing apps, flows and Dataverse data become tools and context for agents without being rebuilt, and they stay inside existing permissions and governance. Microsoft says 80 million people use Power Platform every month, and that most of this year's 130+ new capabilities focused on quality and experience.",
+      "audience": ["maker", "developer", "admin", "business"],
+      "docs": [
+        { "label": "Power Platform documentation", "url": "https://learn.microsoft.com/en-us/power-platform/" },
+        { "label": "Business Applications in Work IQ", "url": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/business-applications-work-iq" },
+        { "label": "Copilot in model-driven apps", "url": "https://learn.microsoft.com/en-us/power-apps/user/use-microsoft-365-copilot-model-driven-apps" },
+        { "label": "Copilot Chat in canvas apps (Learn page, marked preview)", "url": "https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/microsoft-365-copilot-canvas-app" },
+        { "label": "Flowchart mode in Power Automate for desktop (Learn page, marked preview)", "url": "https://learn.microsoft.com/en-us/power-automate/desktop-flows/flowchart-flow-designer" },
+        { "label": "Dataverse overview", "url": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-intro" }
+      ]
     }
   ],
   "logos": {
@@ -117,15 +157,17 @@
     { "logo": "copilot-studio", "label": "Build agents", "href": "#copilot-studio" },
     { "logo": "agent-365", "label": "Govern agents", "href": "#agent-365" },
     { "logo": "foundry-iq", "label": "Ground agents", "href": "#iq" },
+    { "logo": "power-platform", "label": "Apps and data", "href": "#power-platform" },
     { "logo": "foundry", "label": "Agent platform" },
-    { "logo": "power-platform", "label": "Apps and automation" },
     { "logo": "power-apps", "label": "Apps" },
     { "logo": "power-automate", "label": "Workflows" },
     { "logo": "dataverse", "label": "Data" }
   ],
   "areaLogos": [
     { "product": "iq", "area": "Foundry IQ", "logo": "foundry-iq" },
-    { "product": "copilot-studio", "area": "Apps and workflows", "logo": "power-platform" }
+    { "product": "copilot-studio", "area": "Apps and workflows", "logo": "power-platform" },
+    { "product": "power-platform", "area": "Power Automate", "logo": "power-automate" },
+    { "product": "power-platform", "area": "Data", "logo": "dataverse" }
   ],
   "audiences": {
     "maker": "Makers",
@@ -731,17 +773,156 @@
       "audience": ["security"],
       "top": false,
       "source": "a365"
+    },
+    {
+      "id": "pp-bawiq",
+      "product": "power-platform",
+      "area": "Business Applications in Work IQ",
+      "name": "Business Applications in Work IQ",
+      "summary": "Power Platform apps, flows and sites become tools that agents can use across Microsoft Copilot, Cowork, Copilot Studio, GitHub Copilot and custom agents, without being rebuilt. Agents work within existing permissions and governance.",
+      "status": "Announced",
+      "audience": ["maker", "developer", "admin"],
+      "top": true,
+      "source": "pp"
+    },
+    {
+      "id": "pp-work-iq-setting",
+      "product": "power-platform",
+      "area": "Business Applications in Work IQ",
+      "name": "Work IQ setting, business skills and Dataverse semantic model",
+      "summary": "The Dataverse intelligence (preview) setting in the Power Platform admin center is now the Work IQ setting. It adds business skills and a Dataverse semantic model, with data from Dynamics 365 Sales, Customer Service, ERP and Power Apps model-driven apps.",
+      "status": "Announced",
+      "audience": ["admin", "developer", "data"],
+      "top": false,
+      "note": "The Learn page labels ERP data as preview.",
+      "source": "ppwiq"
+    },
+    {
+      "id": "pp-entry-points",
+      "product": "power-platform",
+      "area": "Business Applications in Work IQ",
+      "name": "Ways agents reach business data",
+      "summary": "Entry points include Copilot Chat, Copilot Cowork, MCP tools (Work IQ MCP and Dataverse MCP), the Dataverse Ask API and the Dataverse plugin for coding agents. It works with Agent Builder in Copilot, Copilot Studio and Microsoft Foundry.",
+      "status": "Announced",
+      "audience": ["developer", "maker"],
+      "top": false,
+      "note": "The Learn page labels the Copilot Cowork entry point as preview.",
+      "source": "ppwiq"
+    },
+    {
+      "id": "pp-hybrid-build",
+      "product": "power-platform",
+      "area": "Agents and AI",
+      "name": "Hybrid teams of makers and agents",
+      "summary": "Makers can bring agents into new and existing apps and flows only when they want them, and work continues if tokens run out. Agents build through MCP servers using Power Platform controls and components, so output stays low-code and is governed like other solutions.",
+      "status": "Announced",
+      "audience": ["maker", "developer"],
+      "top": true,
+      "source": "pp"
+    },
+    {
+      "id": "pp-build-entry-points",
+      "product": "power-platform",
+      "area": "Agents and AI",
+      "name": "Start building from the tool you prefer",
+      "summary": "Pro developers can start in GitHub Copilot or other coding agents, makers use dedicated studios, and business users can build from Microsoft Copilot and Cowork.",
+      "status": "Announced",
+      "audience": ["maker", "developer", "business"],
+      "top": false,
+      "source": "pp"
+    },
+    {
+      "id": "pp-copilot-model-driven",
+      "product": "power-platform",
+      "area": "Copilot in apps",
+      "name": "Copilot in model-driven apps",
+      "summary": "App users get Copilot inside model-driven apps. Copilot respects the app's existing data access and permissions.",
+      "status": "GA",
+      "audience": ["maker", "business"],
+      "top": false,
+      "note": "Microsoft says this became generally available in April 2026, before Ignite.",
+      "source": "pp"
+    },
+    {
+      "id": "pp-copilot-canvas",
+      "product": "power-platform",
+      "area": "Copilot in apps",
+      "name": "Copilot in canvas apps",
+      "summary": "Makers can add suggested prompts and app-specific context and actions to Copilot in canvas apps, which respects the app's existing data access and permissions.",
+      "status": "Coming soon",
+      "audience": ["maker", "business"],
+      "top": true,
+      "note": "Microsoft's post says general availability this November. The related Learn page was still marked preview.",
+      "source": "pp"
+    },
+    {
+      "id": "pp-platform-quality",
+      "product": "power-platform",
+      "area": "Platform quality",
+      "name": "Faster, higher-quality apps",
+      "summary": "New canvas controls with better performance, model-driven apps that load faster and faster mobile app startup. Microsoft says it shipped 130+ capabilities this year, 65% focused on quality and experience, and retired 24 features.",
+      "status": "Announced",
+      "audience": ["maker", "developer"],
+      "top": true,
+      "source": "pp"
+    },
+    {
+      "id": "pp-views",
+      "product": "power-platform",
+      "area": "Platform quality",
+      "name": "New views and native mobile experiences",
+      "summary": "Model-driven apps get calendar, cards and timeline views, and mobile apps get native experiences. Offline sync is more reliable and keeps working while the app is in the background.",
+      "status": "Announced",
+      "audience": ["maker", "business"],
+      "top": false,
+      "source": "pp"
+    },
+    {
+      "id": "pp-canvas-authoring",
+      "product": "power-platform",
+      "area": "Platform quality",
+      "name": "Canvas app authoring improvements",
+      "summary": "Canvas apps gain a detachable formula bar, a delegation limit extended to 10,000 items and a grid container.",
+      "status": "Announced",
+      "audience": ["maker", "developer"],
+      "top": false,
+      "source": "pp"
+    },
+    {
+      "id": "pp-automate",
+      "product": "power-platform",
+      "area": "Power Automate",
+      "name": "New Power Automate views and on-premises connectivity",
+      "summary": "Cloud flows get inline views and connect to on-premises systems in fewer steps. Power Automate for desktop adds Flowchart and Flow Map views.",
+      "status": "Announced",
+      "audience": ["maker", "developer", "admin"],
+      "top": false,
+      "note": "The Learn page labels flowchart mode in Power Automate for desktop as preview.",
+      "source": "pp"
+    },
+    {
+      "id": "pp-fabric-link",
+      "product": "power-platform",
+      "area": "Data",
+      "name": "Cross-region Link to Fabric and Update connection",
+      "summary": "Any Dataverse region can now link to any Fabric region. Update connection is rolling out and Microsoft expects it to be available everywhere by the end of November 2026.",
+      "status": "GA",
+      "audience": ["admin", "data"],
+      "top": false,
+      "note": "Published on Nov 24, after Ignite week. Cross-region Link to Fabric is GA, and Update connection is still rolling out.",
+      "source": "ppfabric"
     }
   ],
   "compare": {
-    "columns": ["copilot-studio", "iq", "agent-365"],
+    "columns": ["copilot-studio", "iq", "agent-365", "power-platform"],
     "rows": [
       {
         "label": "Role in the stack",
         "values": [
           "Build agents, workflows and apps",
           "Ground agents in organizational context",
-          "Govern, secure and measure agents"
+          "Govern, secure and measure agents",
+          "Low-code apps, flows and data that agents build with and use as tools"
         ]
       },
       {
@@ -749,7 +930,8 @@
         "values": [
           "Makers and developers",
           "Developers, data teams and makers",
-          "IT, security and business leaders"
+          "IT, security and business leaders",
+          "Makers, pro developers and admins"
         ]
       },
       {
@@ -757,7 +939,8 @@
         "values": [
           "Customer conversation harness, apps, agent sharing, Copilot Managed Runtime",
           "Microsoft IQ platform, Web IQ for all Azure customers, SharePoint knowledge source",
-          "Tools registry, Defender local agent discovery, plugin and skill governance"
+          "Tools registry, Defender local agent discovery, plugin and skill governance",
+          "Copilot in model-driven apps (April), Cross-region Link to Fabric"
         ]
       },
       {
@@ -765,7 +948,8 @@
         "values": [
           "Agent accounts (December), creation from Cowork and Code, CLI and MCP",
           "Business plugins, knowledge graphs, Programmed Training, Foundry IQ Serverless (December)",
-          "Business Analytics, dynamic agent risk, connected platforms, action center (December)"
+          "Business Analytics, dynamic agent risk, connected platforms, action center (December)",
+          "Copilot in canvas apps (GA this November), Update connection rollout"
         ]
       },
       {
@@ -773,7 +957,8 @@
         "values": [
           "Usage-based. The harness you choose affects billing, and workflows show credit usage",
           "Built on products customers already use, with no new SKU or subscription",
-          "Premium governance, security and non-Microsoft insights need Agent 365 or ME7"
+          "Premium governance, security and non-Microsoft insights need Agent 365 or ME7",
+          "Not stated in the announcements. Check Power Platform licensing for your plan"
         ]
       }
     ]
@@ -800,6 +985,15 @@
         { "label": "Get started with Agent 365", "url": "https://learn.microsoft.com/microsoft-agent-365/get-started" },
         { "label": "Training module", "url": "https://learn.microsoft.com/training/modules/agent-365-get-started/" },
         { "label": "Microsoft 365 roadmap", "url": "https://www.microsoft.com/microsoft-365/roadmap" }
+      ]
+    },
+    {
+      "title": "Power Platform",
+      "links": [
+        { "label": "Explore Power Platform", "url": "https://www.microsoft.com/en-us/power-platform" },
+        { "label": "Power Platform documentation", "url": "https://learn.microsoft.com/en-us/power-platform/" },
+        { "label": "Power Platform learning paths", "url": "https://learn.microsoft.com/en-us/training/powerplatform/" },
+        { "label": "Ignite 2026 Power Platform blog", "url": "https://www.microsoft.com/en-us/power-platform/blog/2026/11/18/turn-ai-ambition-into-real-business-value-with-power-platform/" }
       ]
     },
     {

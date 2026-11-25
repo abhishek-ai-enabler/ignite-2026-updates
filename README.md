@@ -1,4 +1,4 @@
-# Microsoft Ignite 2026: Copilot Studio, Microsoft IQ and Agent 365
+# Microsoft Ignite 2026: Copilot Studio, Microsoft IQ, Agent 365 and Power Platform
 
 Unofficial, static summary of Ignite 2026 (Nov 17–20, San Francisco) announcements. Plain HTML/CSS/JS, no build step, no tracking, no external dependencies.
 
@@ -27,7 +27,7 @@ Edit `data/updates.json`. Each entry in `updates`:
 ```json
 {
   "id": "unique-kebab-id",
-  "product": "copilot-studio | iq | agent-365",
+  "product": "copilot-studio | iq | agent-365 | power-platform",
   "area": "Sub-area label",
   "name": "Feature name",
   "summary": "1–2 sentences.",
