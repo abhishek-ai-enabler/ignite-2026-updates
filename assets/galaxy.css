@@ -1,0 +1,154 @@
+/*
+  "Galaxy" theme: deep-space palette, twinkling starfield, nebula glow and glass cards.
+  Fonts (Orbitron for display, Exo 2 for text) are self-hosted under the SIL Open Font License; see assets/fonts.
+*/
+@font-face { font-family: "Orbitron"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/orbitron-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Orbitron"; font-weight: 700; font-style: normal; font-display: swap; src: url("fonts/orbitron-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Orbitron"; font-weight: 800; font-style: normal; font-display: swap; src: url("fonts/orbitron-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "Exo 2"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/exo-2-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Exo 2"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/exo-2-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Exo 2"; font-weight: 700; font-style: normal; font-display: swap; src: url("fonts/exo-2-latin-700-normal.woff2") format("woff2"); }
+
+:root[data-theme="galaxy"] {
+  color-scheme: dark;
+  --radius: 14px;
+  --font: "Exo 2", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-head: "Orbitron", "Exo 2", ui-sans-serif, system-ui, sans-serif;
+
+  --bg: #070618; --bg-elev: #131038; --bg-soft: #1b1750;
+  --text: #eeecff; --muted: #bdb8e6; --border: #3a3480; --control-border: #8f88d8;
+  --accent: #5cd6ff; --accent-ink: #04122a; --focus: #9be8ff;
+  --shadow: 0 0 0 1px rgba(140, 130, 255, 0.08), 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-hover: 0 0 0 1px rgba(92, 214, 255, 0.5), 0 0 28px rgba(92, 214, 255, 0.25), 0 14px 34px rgba(0, 0, 0, 0.55);
+
+  --ga-bg: #0f3a33; --ga-fg: #7dffc9;
+  --preview-bg: #43300b; --preview-fg: #ffd98a;
+  --soon-bg: #1f2d6b; --soon-fg: #b3c8ff;
+  --announced-bg: #2d2858; --announced-fg: #dcd7f5;
+
+  --build: #5cd6ff; --ground: #d9a6ff; --govern: #6dffc4;
+
+  --hero-bg: transparent; --hero-fg: #ffffff; --hero-muted: #cfcaf2; --hero-accent: #9be8ff;
+  --hero-glass: rgba(22, 18, 70, 0.55); --hero-line: rgba(150, 140, 255, 0.35);
+  --hero-build: #5cd6ff; --hero-ground: #d9a6ff; --hero-govern: #6dffc4;
+
+  --footer-bg: #04030f; --footer-fg: #eeecff; --footer-muted: #bdb8e6; --footer-link: #9be8ff;
+}
+
+/* Starfield and nebula behind everything */
+:root[data-theme="galaxy"] body {
+  background:
+    radial-gradient(60% 45% at 8% 4%, rgba(112, 66, 255, 0.28), transparent 70%),
+    radial-gradient(50% 40% at 95% 12%, rgba(0, 190, 220, 0.2), transparent 70%),
+    radial-gradient(55% 45% at 70% 100%, rgba(214, 60, 170, 0.18), transparent 70%),
+    #070618;
+  background-attachment: fixed;
+  font-family: var(--font);
+}
+:root[data-theme="galaxy"] body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background-image:
+    radial-gradient(1.2px 1.2px at 12% 18%, #fff 50%, transparent 52%),
+    radial-gradient(1px 1px at 34% 62%, #cfe9ff 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 58% 28%, #fff 50%, transparent 52%),
+    radial-gradient(1px 1px at 81% 74%, #ffe7ff 50%, transparent 52%),
+    radial-gradient(1.4px 1.4px at 91% 14%, #d8ceff 50%, transparent 52%),
+    radial-gradient(1px 1px at 22% 88%, #fff 50%, transparent 52%),
+    radial-gradient(1.2px 1.2px at 67% 52%, #bff 50%, transparent 52%);
+  background-size: 420px 420px, 520px 520px, 610px 610px, 470px 470px, 560px 560px, 380px 380px, 690px 690px;
+  animation: galaxy-twinkle 7s ease-in-out infinite alternate;
+}
+@keyframes galaxy-twinkle { from { opacity: 0.55; } to { opacity: 1; } }
+
+/* Type */
+:root[data-theme="galaxy"] h1,
+:root[data-theme="galaxy"] h2 { font-family: var(--font-head); font-weight: 800; letter-spacing: 0.03em; }
+:root[data-theme="galaxy"] h3 { font-family: var(--font-head); font-weight: 700; letter-spacing: 0.02em; }
+:root[data-theme="galaxy"] .update h4 { font-family: var(--font); font-weight: 700; letter-spacing: 0; }
+:root[data-theme="galaxy"] a { text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+:root[data-theme="galaxy"] code { background: rgba(140, 130, 255, 0.18); }
+
+/* Header */
+:root[data-theme="galaxy"] .site-header { background: rgba(7, 6, 24, 0.72); border-bottom: 1px solid var(--hero-line); }
+:root[data-theme="galaxy"] .brand { font-family: var(--font-head); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; }
+:root[data-theme="galaxy"] .logo { background: linear-gradient(135deg, #5cd6ff, #8a6bff 55%, #ff7ad1); color: #070618; box-shadow: 0 0 18px rgba(138, 107, 255, 0.6); border-radius: 50%; }
+:root[data-theme="galaxy"] .nav-list a { font-weight: 600; }
+:root[data-theme="galaxy"] .nav-list a:hover { background: rgba(140, 130, 255, 0.2); }
+:root[data-theme="galaxy"] .nav-list a[aria-current="true"] { box-shadow: 0 0 16px rgba(92, 214, 255, 0.45); }
+:root[data-theme="galaxy"] .seg,
+:root[data-theme="galaxy"] .theme-menu summary { background: rgba(19, 16, 56, 0.8); }
+:root[data-theme="galaxy"] .seg button[aria-pressed="true"] { box-shadow: 0 0 14px rgba(92, 214, 255, 0.45); }
+
+/* Hero with a planet */
+:root[data-theme="galaxy"] .hero { border-bottom: 1px solid var(--hero-line); }
+:root[data-theme="galaxy"] .hero > .wrap { position: relative; z-index: 1; }
+:root[data-theme="galaxy"] .hero::before {
+  content: ""; position: absolute; z-index: 0; pointer-events: none;
+  width: clamp(14rem, 30vw, 28rem); aspect-ratio: 1; border-radius: 50%;
+  right: clamp(-6rem, -4vw, -2rem); top: clamp(-5rem, -3vw, -1rem);
+  background: radial-gradient(circle at 30% 28%, #b9a6ff 0%, #6a4fe0 30%, #2a1b8a 58%, #0d0838 82%);
+  box-shadow: 0 0 80px rgba(120, 90, 255, 0.45), inset -30px -30px 70px rgba(0, 0, 0, 0.6);
+  opacity: 0.55;
+}
+:root[data-theme="galaxy"] .hero::after {
+  content: ""; position: absolute; z-index: 0; pointer-events: none;
+  width: clamp(22rem, 46vw, 44rem); aspect-ratio: 5 / 1; border-radius: 50%;
+  right: clamp(-12rem, -8vw, -4rem); top: clamp(4rem, 10vw, 10rem);
+  border: 3px solid rgba(190, 170, 255, 0.45); border-left-color: transparent; border-bottom-color: rgba(92, 214, 255, 0.35);
+  transform: rotate(-18deg); opacity: 0.7;
+}
+:root[data-theme="galaxy"] .hero h1 { font-size: clamp(1.8rem, 4vw, 3.1rem); line-height: 1.2; font-weight: 800; max-width: 24ch; text-shadow: 0 0 40px rgba(120, 90, 255, 0.45); }
+:root[data-theme="galaxy"] .hero h1 .hl-build,
+:root[data-theme="galaxy"] .hero h1 .hl-ground,
+:root[data-theme="galaxy"] .hero h1 .hl-govern { text-shadow: 0 0 26px currentColor; }
+:root[data-theme="galaxy"] .pill { background: rgba(92, 214, 255, 0.14); border-color: var(--accent); color: var(--accent); letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.74rem; }
+:root[data-theme="galaxy"] .kpi,
+:root[data-theme="galaxy"] .product-card { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+:root[data-theme="galaxy"] .kpi strong { font-family: var(--font-head); font-weight: 800; text-shadow: 0 0 22px currentColor; }
+:root[data-theme="galaxy"] .product-card:hover { background: rgba(34, 28, 100, 0.75); box-shadow: var(--shadow-hover); }
+:root[data-theme="galaxy"] .product-card:focus-within { outline-color: var(--focus); }
+:root[data-theme="galaxy"] .pc-count strong { font-family: var(--font-head); }
+:root[data-theme="galaxy"] .bar { background: rgba(255, 255, 255, 0.12); }
+:root[data-theme="galaxy"] .hero :focus-visible { outline-color: var(--focus); }
+
+/* Sections and cards */
+:root[data-theme="galaxy"] .product-section { background: none; border-top: 1px solid var(--hero-line); }
+:root[data-theme="galaxy"] .kicker,
+:root[data-theme="galaxy"] .role { letter-spacing: 0.22em; }
+:root[data-theme="galaxy"] .update,
+:root[data-theme="galaxy"] .panel,
+:root[data-theme="galaxy"] .filters,
+:root[data-theme="galaxy"] .fit-steps li {
+  background: rgba(19, 16, 56, 0.72); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: var(--hero-line);
+}
+:root[data-theme="galaxy"] .update:hover { box-shadow: var(--shadow-hover); }
+:root[data-theme="galaxy"] .update .note { background: rgba(140, 130, 255, 0.16); }
+:root[data-theme="galaxy"] .ps-head .icon { color: #070618; border-radius: 50%; box-shadow: 0 0 22px color-mix(in srgb, var(--p) 55%, transparent); }
+:root[data-theme="galaxy"] .fit-steps li::before { color: #070618; font-family: var(--font-head); }
+:root[data-theme="galaxy"] .audience-list li { background: rgba(140, 130, 255, 0.16); }
+:root[data-theme="galaxy"] .badge { background-image: none; }
+:root[data-theme="galaxy"] input[type="search"] { background: rgba(7, 6, 24, 0.7); }
+:root[data-theme="galaxy"] .chip span { background: rgba(7, 6, 24, 0.7); }
+
+/* Diagram */
+:root[data-theme="galaxy"] .svg-frame { fill: rgba(7, 6, 24, 0.55); }
+:root[data-theme="galaxy"] .svg-box { fill: #131038; }
+:root[data-theme="galaxy"] .svg-title { font-size: 18px; letter-spacing: 0.04em; }
+:root[data-theme="galaxy"] .svg-build { filter: drop-shadow(0 0 6px rgba(92, 214, 255, 0.5)); }
+:root[data-theme="galaxy"] .svg-ground { filter: drop-shadow(0 0 6px rgba(217, 166, 255, 0.5)); }
+:root[data-theme="galaxy"] .svg-govern { filter: drop-shadow(0 0 6px rgba(109, 255, 196, 0.5)); }
+
+/* Table */
+:root[data-theme="galaxy"] .table-scroll { border-color: var(--hero-line); }
+:root[data-theme="galaxy"] thead th { font-family: var(--font-head); font-size: 0.95rem; }
+
+/* Footer */
+:root[data-theme="galaxy"] .site-footer { border-top: 1px solid var(--hero-line); }
+
+@media (max-width: 560px) {
+  :root[data-theme="galaxy"] .hero::after { display: none; }
+  :root[data-theme="galaxy"] .hero::before { opacity: 0.3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root[data-theme="galaxy"] body::before { animation: none; }
+}

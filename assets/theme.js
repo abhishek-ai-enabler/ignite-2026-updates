@@ -2,6 +2,7 @@
   'use strict';
 
   var THEMES = [
+    { id: 'galaxy', label: 'Galaxy', hint: 'Deep space, stars and glow', colors: ['#070618', '#5cd6ff'] },
     { id: 'editorial', label: 'Editorial', hint: 'Sidebar, serif headings, red accent', colors: ['#f5f6f7', '#d32f2f'] },
     { id: 'auto', label: 'Auto', hint: 'Follows your system', colors: ['#f6f7fb', '#0d1117'] },
     { id: 'light', label: 'Daylight', hint: 'Clean and bright', colors: ['#ffffff', '#0b5cad'] },
@@ -24,7 +25,7 @@
   function isTheme(id) { return THEMES.some(function (t) { return t.id === id; }); }
 
   var params = new URLSearchParams(window.location.search);
-  var theme = [params.get('theme'), read('ignite-theme'), 'editorial'].filter(isTheme)[0];
+  var theme = [params.get('theme'), read('ignite-theme'), 'galaxy'].filter(isTheme)[0];
   var view = [params.get('view'), read('ignite-view'), 'detail'].filter(function (v) { return VIEWS.indexOf(v) !== -1; })[0];
 
   function resolve(id) {

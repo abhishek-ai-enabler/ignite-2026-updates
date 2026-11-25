@@ -6,7 +6,7 @@ Unofficial, static summary of Ignite 2026 (Nov 17–20, San Francisco) announcem
 
 ## Themes and views
 
-- **Theme menu**: Editorial (default), Auto (follows the system), Daylight, Midnight, Aurora, Executive and High contrast. The choice is saved in `localStorage`.
+- **Theme menu**: Galaxy (default), Editorial, Auto (follows the system), Daylight, Midnight, Aurora, Executive and High contrast. The choice is saved in `localStorage`.
 - **View toggle**: *Leadership* shows the headline numbers, why it matters, top announcements, the comparison and next steps. *Full detail* adds search, filters and every update.
 - Both can be preset with URL parameters, for example `?theme=executive&view=leadership`, which is handy for presenting.
 - Theme colors are CSS variables at the top of `assets/style.css`; add a theme by adding a `:root[data-theme="name"]` block and an entry in `assets/theme.js`.
@@ -19,7 +19,7 @@ Unofficial, static summary of Ignite 2026 (Nov 17–20, San Francisco) announcem
 | `data/updates.json` | **All content.** The page is rendered from this file |
 | `assets/app.js`, `assets/style.css` | Rendering, filter/search, styling and themes |
 | `assets/theme.js` | Theme and view switching (loaded before first paint) |
-| `assets/editorial.css`, `assets/fonts/` | Editorial theme (sidebar layout) and its self-hosted fonts |
+| `assets/editorial.css`, `assets/galaxy.css`, `assets/fonts/` | Editorial (sidebar) and Galaxy (deep space) themes and their self-hosted fonts |
 | `scripts/check.mjs` | Validates the data and checks every link |
 | `.github/workflows/pages.yml` | Validates, then deploys to GitHub Pages on push to `main` |
 
@@ -66,4 +66,4 @@ Push to `main`. The workflow validates the data and deploys with the official Pa
 
 ## Credits
 
-The Editorial theme borrows its visual design from [Editorial by HTML5 UP](https://html5up.net/editorial) (@ajlkn, [CC BY 3.0](https://html5up.net/license)), via [sdasrc/editorial-website-extended](https://github.com/sdasrc/editorial-website-extended). It is re-implemented in plain CSS; no Jekyll code is used. Open Sans and Roboto Slab are self-hosted under the SIL Open Font License (see `assets/fonts`).
+The Editorial theme borrows its visual design from [Editorial by HTML5 UP](https://html5up.net/editorial) (@ajlkn, [CC BY 3.0](https://html5up.net/license)), via [sdasrc/editorial-website-extended](https://github.com/sdasrc/editorial-website-extended). It is re-implemented in plain CSS; no Jekyll code is used. Open Sans and Roboto Slab are self-hosted under the SIL Open Font License (see `assets/fonts`). The Galaxy theme is original CSS using Orbitron and Exo 2, also self-hosted under the SIL Open Font License.
