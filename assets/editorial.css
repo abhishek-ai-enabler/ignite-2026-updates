@@ -64,6 +64,7 @@
 :root[data-theme="editorial"] .panel h3 { letter-spacing: 0.2em; }
 :root[data-theme="editorial"] .update,
 :root[data-theme="editorial"] .panel,
+:root[data-theme="editorial"] .glance-card,
 :root[data-theme="editorial"] .filters,
 :root[data-theme="editorial"] .table-scroll,
 :root[data-theme="editorial"] .fit-steps li { border-radius: var(--radius); }
@@ -72,12 +73,9 @@
 :root[data-theme="editorial"] .update h4 { font-family: var(--font-head); }
 
 /* Controls: uppercase, letter-spaced like Editorial buttons */
-:root[data-theme="editorial"] .seg,
-:root[data-theme="editorial"] .seg button,
 :root[data-theme="editorial"] .theme-menu summary,
 :root[data-theme="editorial"] .chip span,
 :root[data-theme="editorial"] input[type="search"] { border-radius: var(--radius); }
-:root[data-theme="editorial"] .seg button,
 :root[data-theme="editorial"] .theme-menu summary { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.74rem; }
 :root[data-theme="editorial"] .menu-panel { border-radius: var(--radius); }
 :root[data-theme="editorial"] .theme-option { border-radius: 4px; }
@@ -119,8 +117,6 @@
   :root[data-theme="editorial"] .nav-list a[aria-current="true"] { background: transparent; color: var(--accent); border-left-color: var(--accent); }
 
   :root[data-theme="editorial"] .controls { flex-direction: column; align-items: stretch; gap: 0.75rem; margin-top: auto; padding-top: 1.5rem; border-top: 2px solid var(--border); }
-  :root[data-theme="editorial"] .seg { display: flex; }
-  :root[data-theme="editorial"] .seg button { flex: 1; }
   :root[data-theme="editorial"] .theme-menu summary { width: 100%; justify-content: flex-start; }
   :root[data-theme="editorial"] .theme-menu summary::after { margin-left: auto; }
   :root[data-theme="editorial"] .menu-panel { position: static; width: 100%; margin-top: 0.5rem; box-shadow: none; }

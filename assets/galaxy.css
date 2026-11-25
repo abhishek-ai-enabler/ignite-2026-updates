@@ -98,9 +98,7 @@
 :root[data-theme="galaxy"] .nav-list a { font-weight: 600; }
 :root[data-theme="galaxy"] .nav-list a:hover { background: rgba(255, 170, 110, 0.2); }
 :root[data-theme="galaxy"] .nav-list a[aria-current="true"] { box-shadow: 0 0 16px rgba(255, 179, 107, 0.45); }
-:root[data-theme="galaxy"] .seg,
 :root[data-theme="galaxy"] .theme-menu summary { background: rgba(46, 18, 40, 0.82); }
-:root[data-theme="galaxy"] .seg button[aria-pressed="true"] { box-shadow: 0 0 14px rgba(255, 179, 107, 0.5); }
 
 /* Hero with a glowing sun-planet, a ring and a shooting star */
 :root[data-theme="galaxy"] .hero { border-bottom: 1px solid var(--hero-line); }
@@ -152,6 +150,7 @@
 :root[data-theme="galaxy"] .role { letter-spacing: 0.22em; }
 :root[data-theme="galaxy"] .update,
 :root[data-theme="galaxy"] .panel,
+:root[data-theme="galaxy"] .glance-card,
 :root[data-theme="galaxy"] .filters,
 :root[data-theme="galaxy"] .fit-steps li {
   background: rgba(46, 18, 40, 0.74); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-color: var(--hero-line);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="galaxy" data-view="detail">
+<html lang="en" data-theme="galaxy">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,13 +38,10 @@
           <li><a href="#agent-365">Agent 365</a></li>
           <li><a href="#compare">Compare</a></li>
           <li><a href="#get-started">Get started</a></li>
+          <li><a href="#summary">Summary</a></li>
         </ul>
       </nav>
       <div class="controls">
-        <div class="seg" role="group" aria-label="Content view">
-          <button type="button" data-view-btn="leadership" aria-pressed="false">Leadership</button>
-          <button type="button" data-view-btn="detail" aria-pressed="true">Full detail</button>
-        </div>
         <details class="theme-menu" id="theme-menu">
           <summary aria-label="Choose theme"><span class="swatch" id="theme-swatch" aria-hidden="true"></span><span id="theme-current">Theme</span></summary>
           <div class="menu-panel" id="theme-options" role="radiogroup" aria-label="Theme"></div>
@@ -135,7 +132,7 @@
       </div>
     </section>
 
-    <section class="wrap section detail-only" id="explore" aria-labelledby="explore-title">
+    <section class="wrap section" id="explore" aria-labelledby="explore-title">
       <div class="section-head">
         <p class="kicker">Explore</p>
         <h2 id="explore-title">Browse all updates</h2>
@@ -178,11 +175,19 @@
       </div>
       <div class="start-grid" id="start-grid"></div>
     </section>
+
+    <section class="wrap section" id="summary" aria-labelledby="summary-title">
+      <div class="section-head">
+        <p class="kicker">In a nutshell</p>
+        <h2 id="summary-title">Summary at a glance</h2>
+        <p class="section-intro">One card per platform: what it is, what was announced and who should care.</p>
+      </div>
+      <ul class="glance-grid" id="glance-grid" aria-label="Platform summaries"></ul>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p class="disclaimer"><strong>Unofficial summary.</strong> This is an unofficial summary of public Microsoft announcements. Availability, naming and licensing can change, so verify against Microsoft sources before making decisions.</p>
       <p class="disclaimer trademark">Microsoft, Copilot Studio, Agent 365, Power Platform, Microsoft Foundry and related names and icons are trademarks of the Microsoft group of companies. Icons are the unmodified official Microsoft architecture icons (<a href="https://learn.microsoft.com/en-us/power-platform/guidance/icons" rel="noopener noreferrer" target="_blank">Power Platform</a>, <a href="https://learn.microsoft.com/en-us/azure/architecture/icons/" rel="noopener noreferrer" target="_blank">Azure</a>), used to identify those Microsoft products. This site is not affiliated with or endorsed by Microsoft.</p>
       <h2 class="footer-heading">Sources</h2>
       <ul class="source-list" id="source-list"></ul>

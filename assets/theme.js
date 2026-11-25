@@ -5,7 +5,6 @@
     { id: 'galaxy', label: 'Galaxy', hint: 'Warm sunset space with stars', colors: ['#1a0b1f', '#ff9a4d'] },
     { id: 'editorial', label: 'Editorial', hint: 'Sidebar, serif headings, red accent', colors: ['#f5f6f7', '#d32f2f'] }
   ];
-  var VIEWS = ['leadership', 'detail'];
 
   var root = document.documentElement;
 
@@ -19,11 +18,9 @@
 
   var params = new URLSearchParams(window.location.search);
   var theme = [params.get('theme'), read('ignite-theme'), 'galaxy'].filter(isTheme)[0];
-  var view = [params.get('view'), read('ignite-view'), 'detail'].filter(function (v) { return VIEWS.indexOf(v) !== -1; })[0];
 
   function apply() {
     root.setAttribute('data-theme', theme);
-    root.setAttribute('data-view', view);
   }
 
   apply();
@@ -33,14 +30,6 @@
     write('ignite-theme', id);
     apply();
     syncMenu();
-  }
-
-  function setView(id) {
-    view = id;
-    write('ignite-view', id);
-    apply();
-    syncView();
-    document.dispatchEvent(new CustomEvent('viewchange', { detail: { view: id } }));
   }
 
   var menu, options = [];
@@ -54,12 +43,6 @@
     if (label) label.textContent = current.label;
     var swatch = document.getElementById('theme-swatch');
     if (swatch) swatch.style.background = 'linear-gradient(135deg,' + current.colors[0] + ' 50%,' + current.colors[1] + ' 50%)';
-  }
-
-  function syncView() {
-    document.querySelectorAll('[data-view-btn]').forEach(function (btn) {
-      btn.setAttribute('aria-pressed', btn.getAttribute('data-view-btn') === view ? 'true' : 'false');
-    });
   }
 
   function buildMenu() {
@@ -112,9 +95,5 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     buildMenu();
-    syncView();
-    document.querySelectorAll('[data-view-btn]').forEach(function (btn) {
-      btn.addEventListener('click', function () { setView(btn.getAttribute('data-view-btn')); });
-    });
   });
 })();

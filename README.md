@@ -2,13 +2,11 @@
 
 Unofficial, static summary of Ignite 2026 (Nov 17–20, San Francisco) announcements. Plain HTML/CSS/JS, no build step, no tracking, no external dependencies.
 
-> Unofficial summary. Verify against the Microsoft sources listed in the site footer.
-
-## Themes and views
+## Themes
 
 - **Theme menu**: Galaxy (default, a warm sunset galaxy with orange, red and yellow nebulae, stars and a shooting star) and Editorial (light, sidebar layout). The choice is saved in `localStorage`.
-- **View toggle**: *Leadership* shows the headline numbers, why it matters, top announcements, the comparison and next steps. *Full detail* adds search, filters and every update.
-- Both can be preset with URL parameters, for example `?theme=editorial&view=leadership`, which is handy for presenting. Unknown theme names fall back to Galaxy.
+- Preset a theme with a URL parameter, for example `?theme=editorial`. Unknown theme names fall back to Galaxy.
+- The page always shows everything: headline numbers, per-product sections with search, filters and every update, the comparison, next steps, and a "Summary at a glance" section at the end with one card per platform (rendered from `data/updates.json`; the one-line `glance` text is set per product).
 - Theme colors are CSS variables at the top of `assets/style.css` (base tokens), `assets/editorial.css` and `assets/galaxy.css`; add a theme by adding a `:root[data-theme="name"]` block and an entry in `assets/theme.js`.
 
 ## Layout

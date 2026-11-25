@@ -229,11 +229,9 @@
         ]),
         el('h3', { class: 'subheading', id: p.id + '-top', text: 'Top announcements' }),
         el('ul', { class: 'card-grid top-grid', 'aria-labelledby': p.id + '-top' }, top.map(function (u) { return updateCard(u, true); })),
-        el('div', { class: 'detail-only' }, [
-          el('h3', { class: 'subheading', id: p.id + '-all', text: 'All updates' }),
-          el('p', { class: 'empty is-hidden', 'data-empty-for': p.id, text: 'No updates match the current filters.' }),
-          el('ul', { class: 'card-grid', 'data-list-for': p.id, 'aria-labelledby': p.id + '-all' }, updates.map(function (u) { return updateCard(u, false); }))
-        ])
+        el('h3', { class: 'subheading', id: p.id + '-all', text: 'All updates' }),
+        el('p', { class: 'empty is-hidden', 'data-empty-for': p.id, text: 'No updates match the current filters.' }),
+        el('ul', { class: 'card-grid', 'data-list-for': p.id, 'aria-labelledby': p.id + '-all' }, updates.map(function (u) { return updateCard(u, false); }))
       ])]);
       host.appendChild(section);
     });
@@ -252,6 +250,35 @@
         return el('td', { text: v });
       })));
     })));
+  }
+
+  function renderGlance() {
+    var host = document.getElementById('glance-grid');
+    if (!host) return;
+    data.products.forEach(function (p) {
+      var updates = data.updates.filter(function (u) { return u.product === p.id; });
+      var top = updates.filter(function (u) { return u.top; });
+      host.appendChild(el('li', { class: 'glance-card', 'data-product': p.id }, [
+        el('div', { class: 'gl-head' }, [
+          icon(p.id),
+          el('div', {}, [
+            el('p', { class: 'role', text: p.role }),
+            el('h3', {}, [el('a', { href: '#' + p.id, text: p.name })])
+          ])
+        ]),
+        el('p', { class: 'gl-line', text: p.glance || p.tagline }),
+        el('div', { class: 'gl-counts', 'aria-label': 'Status counts' }, statusCounts(updates).map(function (c) {
+          return el('span', { class: 'badge', 'data-status': c.status, text: c.n + ' ' + c.status });
+        })),
+        el('h4', { text: 'Top announcements' }),
+        el('ul', { class: 'gl-list' }, top.map(function (u) {
+          return el('li', {}, [el('span', { text: u.name }), statusBadge(u.status)]);
+        })),
+        el('h4', { text: 'Who should care' }),
+        el('p', { class: 'gl-who', text: p.audience.map(function (a) { return data.audiences[a] || a; }).join(', ') }),
+        el('a', { class: 'gl-more', href: '#' + p.id, text: 'Full details for ' + p.name })
+      ]));
+    });
   }
 
   function renderGetStarted() {
@@ -384,14 +411,12 @@
       renderProductSections();
       renderCompare();
       renderGetStarted();
+      renderGlance();
       renderSources();
       renderLegend();
       renderFilters();
       applyFilters();
       renderNavSpy();
-      document.addEventListener('viewchange', function () {
-        document.getElementById('filters').reset();
-      });
     })
     .catch(function (err) {
       showError('Could not load data/updates.json (' + err.message + '). If you opened index.html directly from disk, serve the folder with a local web server instead.');
