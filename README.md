@@ -4,13 +4,21 @@ Unofficial, static summary of Ignite 2026 (Nov 17–20, San Francisco) announcem
 
 > Unofficial summary. Verify against the Microsoft sources listed in the site footer.
 
+## Themes and views
+
+- **Theme menu** (top right): Auto (follows the system), Daylight, Midnight, Aurora, Executive and High contrast. The choice is saved in `localStorage`.
+- **View toggle**: *Leadership* shows the headline numbers, why it matters, top announcements, the comparison and next steps. *Full detail* adds search, filters and every update.
+- Both can be preset with URL parameters, for example `?theme=executive&view=leadership`, which is handy for presenting.
+- Theme colors are CSS variables at the top of `assets/style.css`; add a theme by adding a `:root[data-theme="name"]` block and an entry in `assets/theme.js`.
+
 ## Layout
 
 | Path | Purpose |
 |---|---|
 | `index.html` | Page shell, diagram, meta tags |
 | `data/updates.json` | **All content.** The page is rendered from this file |
-| `assets/app.js`, `assets/style.css` | Rendering, filter/search, theming |
+| `assets/app.js`, `assets/style.css` | Rendering, filter/search, styling and themes |
+| `assets/theme.js` | Theme and view switching (loaded before first paint) |
 | `scripts/check.mjs` | Validates the data and checks every link |
 | `.github/workflows/pages.yml` | Validates, then deploys to GitHub Pages on push to `main` |
 

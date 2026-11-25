@@ -58,16 +58,71 @@
     }).filter(Boolean).join(' · ');
   }
 
+  var SVG_NS = 'http://www.w3.org/2000/svg';
+  var ICONS = {
+    'copilot-studio': [['path', { d: 'M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z' }]],
+    'iq': [['circle', { cx: 12, cy: 12, r: 9 }], ['circle', { cx: 12, cy: 12, r: 5 }], ['circle', { cx: 12, cy: 12, r: 1.5 }]],
+    'agent-365': [['path', { d: 'M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z' }], ['path', { d: 'M8.5 12l2.5 2.5 4.5-5' }]]
+  };
+
+  function icon(productId) {
+    var svg = document.createElementNS(SVG_NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '1.8');
+    svg.setAttribute('stroke-linecap', 'round');
+    svg.setAttribute('stroke-linejoin', 'round');
+    svg.setAttribute('aria-hidden', 'true');
+    (ICONS[productId] || []).forEach(function (shape) {
+      var node = document.createElementNS(SVG_NS, shape[0]);
+      Object.keys(shape[1]).forEach(function (k) { node.setAttribute(k, shape[1][k]); });
+      svg.appendChild(node);
+    });
+    return el('span', { class: 'icon' }, [svg]);
+  }
+
+  function statusCounts(updates) {
+    return STATUSES.map(function (s) {
+      return { status: s, n: updates.filter(function (u) { return u.status === s; }).length };
+    }).filter(function (c) { return c.n; });
+  }
+
+  function statusBar(updates) {
+    var counts = statusCounts(updates);
+    var bar = el('div', { class: 'bar', role: 'img', 'aria-label': statusSummary(updates) }, counts.map(function (c) {
+      var seg = el('span', { 'data-status': c.status });
+      seg.style.flexGrow = c.n;
+      return seg;
+    }));
+    var legend = el('ul', { class: 'bar-legend', 'aria-hidden': 'true' }, counts.map(function (c) {
+      return el('li', {}, [el('span', { class: 'dot', 'data-status': c.status }), c.n + ' ' + c.status]);
+    }));
+    return [bar, legend];
+  }
+
+  function renderKpis() {
+    var host = document.getElementById('kpis');
+    (data.meta.keyNumbers || []).forEach(function (k) {
+      var s = sourceById(k.source);
+      host.appendChild(el('li', { class: 'kpi', 'data-product': k.product }, [
+        el('strong', { text: k.value }),
+        el('span', { text: k.label }),
+        s ? externalLink('Source', s.url) : null
+      ]));
+    });
+  }
+
   function renderProductCards() {
     var list = document.getElementById('product-cards');
     data.products.forEach(function (p) {
       var updates = data.updates.filter(function (u) { return u.product === p.id; });
       list.appendChild(el('li', { class: 'product-card', 'data-product': p.id }, [
-        el('span', { class: 'role', text: p.role }),
+        el('div', { class: 'pc-top' }, [el('span', { class: 'role', text: p.role }), icon(p.id)]),
         el('h3', {}, [el('a', { href: '#' + p.id, text: p.name })]),
         el('p', { text: p.tagline }),
-        el('p', { class: 'count', text: updates.length + ' updates: ' + statusSummary(updates) })
-      ]));
+        el('p', { class: 'pc-count' }, [el('strong', { text: String(updates.length) }), 'updates'])
+      ].concat(statusBar(updates))));
     });
   }
 
@@ -114,15 +169,21 @@
       var updates = data.updates.filter(function (u) { return u.product === p.id; });
       var top = updates.filter(function (u) { return u.top; });
 
-      var section = el('section', { class: 'wrap product-section', id: p.id, 'data-product': p.id, 'aria-labelledby': p.id + '-title' }, [
-        el('div', { class: 'product-header' }, [
-          el('p', { class: 'role', text: p.role }),
-          el('h2', { id: p.id + '-title', text: p.name }),
-          el('p', { class: 'tagline', text: p.tagline })
+      var section = el('section', { class: 'product-section', id: p.id, 'data-product': p.id, 'aria-labelledby': p.id + '-title' }, [el('div', { class: 'wrap' }, [
+        el('div', { class: 'ps-head' }, [
+          icon(p.id),
+          el('div', {}, [
+            el('p', { class: 'role', text: p.role }),
+            el('h2', { id: p.id + '-title', text: p.name }),
+            el('p', { class: 'ps-tag', text: p.tagline })
+          ]),
+          el('div', { class: 'ps-pills', 'aria-label': 'Status counts' }, statusCounts(updates).map(function (c) {
+            return el('span', { class: 'badge', 'data-status': c.status, text: c.n + ' ' + c.status });
+          }))
         ]),
-        el('p', { text: p.summary }),
+        el('p', { class: 'ps-summary', text: p.summary }),
         el('div', { class: 'context-grid' }, [
-          el('div', { class: 'panel' }, [
+          el('div', { class: 'panel feature' }, [
             el('h3', { text: 'Why it matters' }),
             el('p', { text: p.why })
           ]),
@@ -140,11 +201,13 @@
           ])
         ]),
         el('h3', { class: 'subheading', id: p.id + '-top', text: 'Top announcements' }),
-        el('ul', { class: 'card-grid', 'aria-labelledby': p.id + '-top' }, top.map(function (u) { return updateCard(u, true); })),
-        el('h3', { class: 'subheading', id: p.id + '-all', text: 'All updates' }),
-        el('p', { class: 'empty is-hidden', 'data-empty-for': p.id, text: 'No updates match the current filters.' }),
-        el('ul', { class: 'card-grid', 'data-list-for': p.id, 'aria-labelledby': p.id + '-all' }, updates.map(function (u) { return updateCard(u, false); }))
-      ]);
+        el('ul', { class: 'card-grid top-grid', 'aria-labelledby': p.id + '-top' }, top.map(function (u) { return updateCard(u, true); })),
+        el('div', { class: 'detail-only' }, [
+          el('h3', { class: 'subheading', id: p.id + '-all', text: 'All updates' }),
+          el('p', { class: 'empty is-hidden', 'data-empty-for': p.id, text: 'No updates match the current filters.' }),
+          el('ul', { class: 'card-grid', 'data-list-for': p.id, 'aria-labelledby': p.id + '-all' }, updates.map(function (u) { return updateCard(u, false); }))
+        ])
+      ])]);
       host.appendChild(section);
     });
   }
@@ -154,7 +217,7 @@
     var cols = data.compare.columns.map(productById);
     table.appendChild(el('thead', {}, [
       el('tr', {}, [el('th', { scope: 'col', text: 'Aspect' })].concat(cols.map(function (c) {
-        return el('th', { scope: 'col', text: c.name });
+        return el('th', { scope: 'col', text: c.name, 'data-product': c.id });
       })))
     ]));
     table.appendChild(el('tbody', {}, data.compare.rows.map(function (row) {
@@ -257,6 +320,24 @@
       : data.updates.length + ' updates across ' + data.products.length + ' products.';
   }
 
+  function renderNavSpy() {
+    if (!('IntersectionObserver' in window)) return;
+    var links = {};
+    document.querySelectorAll('#nav-list a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        Object.keys(links).forEach(function (id) { links[id].removeAttribute('aria-current'); });
+        var link = links[entry.target.id];
+        if (link) link.setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-35% 0px -60% 0px' });
+    Object.keys(links).forEach(function (id) {
+      var target = document.getElementById(id);
+      if (target) observer.observe(target);
+    });
+  }
+
   function showError(message) {
     var main = document.getElementById('main');
     main.insertBefore(el('div', { class: 'wrap section' }, [el('p', { class: 'notice', role: 'alert', text: message })]), main.firstChild);
@@ -270,6 +351,7 @@
     .then(function (json) {
       data = json;
       renderHeader();
+      renderKpis();
       renderProductCards();
       renderProductSections();
       renderCompare();
@@ -278,6 +360,10 @@
       renderLegend();
       renderFilters();
       applyFilters();
+      renderNavSpy();
+      document.addEventListener('viewchange', function () {
+        document.getElementById('filters').reset();
+      });
     })
     .catch(function (err) {
       showError('Could not load data/updates.json (' + err.message + '). If you opened index.html directly from disk, serve the folder with a local web server instead.');

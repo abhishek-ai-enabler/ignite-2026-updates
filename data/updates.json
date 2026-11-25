@@ -5,6 +5,12 @@
     "dates": "November 17–20, 2026",
     "location": "San Francisco, CA and online",
     "lastUpdated": "2026-11-25",
+    "keyNumbers": [
+      { "value": "50M+", "label": "agents registered in Agent 365 since its May 2026 launch", "product": "agent-365", "source": "a365" },
+      { "value": "350+", "label": "third-party connectors brought together in Microsoft IQ", "product": "iq", "source": "iq" },
+      { "value": "$1", "label": "per 1,000 Web IQ calls, with no waitlist", "product": "iq", "source": "iq" },
+      { "value": "70%+", "label": "touchless invoices at Asurion with Copilot Studio, up from under 20%", "product": "copilot-studio", "source": "cs" }
+    ],
     "statusLegend": {
       "GA": "Generally available",
       "Preview": "Public, private, Frontier or limited preview",

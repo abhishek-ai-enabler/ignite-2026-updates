@@ -35,6 +35,10 @@ for (const p of data.products) {
   const top = data.updates.filter((u) => u.product === p.id && u.top).length;
   if (top < 3 || top > 5) fail(`product ${p.id}: expected 3–5 top announcements, found ${top}`);
 }
+for (const k of data.meta.keyNumbers || []) {
+  if (!sourceIds.has(k.source)) fail(`keyNumber "${k.value}": unknown source ${k.source}`);
+  if (!productIds.has(k.product)) fail(`keyNumber "${k.value}": unknown product ${k.product}`);
+}
 for (const col of data.compare.columns) if (!productIds.has(col)) fail(`compare: unknown column ${col}`);
 for (const row of data.compare.rows) {
   if (row.values.length !== data.compare.columns.length) fail(`compare row "${row.label}": wrong number of values`);
