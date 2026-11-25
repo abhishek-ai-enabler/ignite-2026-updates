@@ -1,0 +1,778 @@
+{
+  "meta": {
+    "title": "Microsoft Ignite 2026: Copilot Studio, Microsoft IQ and Agent 365",
+    "event": "Microsoft Ignite 2026",
+    "dates": "November 17–20, 2026",
+    "location": "San Francisco, CA and online",
+    "lastUpdated": "2026-11-25",
+    "statusLegend": {
+      "GA": "Generally available",
+      "Preview": "Public, private, Frontier or limited preview",
+      "Coming soon": "Announced with a future date or availability",
+      "Announced": "Announced without an explicit availability label in the source"
+    }
+  },
+  "sources": [
+    {
+      "id": "bon",
+      "label": "Microsoft Ignite 2026 Book of News",
+      "url": "https://news.microsoft.com/events/ignite/2026/book-of-news/"
+    },
+    {
+      "id": "cs",
+      "label": "Build and manage business processes with Microsoft Copilot Studio (Copilot Studio blog)",
+      "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/build-and-manage-business-processes-with-microsoft-copilot-studio/"
+    },
+    {
+      "id": "iq",
+      "label": "Introducing the new Microsoft IQ (Azure blog)",
+      "url": "https://azure.microsoft.com/en-us/blog/introducing-the-new-microsoft-iq-putting-your-organizations-intelligence-to-work-in-every-agent/"
+    },
+    {
+      "id": "a365",
+      "label": "What's new in Microsoft Agent 365: Ignite 2026 (Tech Community)",
+      "url": "https://techcommunity.microsoft.com/blog/agent-365-blog/whats-new-in-microsoft-agent-365-ignite-2026/4571753"
+    },
+    {
+      "id": "a365ba",
+      "label": "Introducing Microsoft Agent 365 Business Analytics (Tech Community)",
+      "url": "https://techcommunity.microsoft.com/blog/ai-finops-blog/introducing-microsoft-agent-365-business-analytics-turn-ai-investment-into-busin/4574149"
+    }
+  ],
+  "products": [
+    {
+      "id": "copilot-studio",
+      "name": "Microsoft Copilot Studio",
+      "role": "Build",
+      "tagline": "Low-code studio for building and managing agents, workflows and apps for business processes.",
+      "summary": "At Ignite 2026 Copilot Studio moved from single-task automation toward whole business processes: purpose-built harnesses, apps, shared and persistent agents with their own accounts, and team-based development with GitHub and a CLI.",
+      "why": "Agents that carry work forward, work for a whole team and can be co-built by makers and developers turn one-off automations into shared, governed business assets. Microsoft cites Asurion raising touchless invoice processing from under 20% to over 70%, and Microsoft's own support agent resolving over 35% of cases fully autonomously (August 2026).",
+      "audience": ["maker", "developer", "admin"],
+      "docs": [
+        { "label": "What is Copilot Studio", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio" },
+        { "label": "Apps overview", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/apps-experience/apps-overview" },
+        { "label": "Copilot Studio MCP", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/copilot-studio-mcp" },
+        { "label": "Computer use", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use" },
+        { "label": "Share agents", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-share-bots?tabs=webApp" },
+        { "label": "How the Microsoft Copilot harness works", "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/how-the-microsoft-copilot-harness-in-copilot-studio-helps-agents-finish-the-job/" },
+        { "label": "Customer conversation harness", "url": "https://techcommunity.microsoft.com/blog/copilot-studio-blog/introducing-the-customer-conversation-harness-in-microsoft-copilot-studio/4563954" }
+      ]
+    },
+    {
+      "id": "iq",
+      "name": "Microsoft IQ",
+      "role": "Ground",
+      "tagline": "Enterprise context management platform: Work IQ, Fabric IQ, Foundry IQ and Web IQ.",
+      "summary": "Microsoft IQ is now generally available as a platform that gives agents the organization's own context: how people work, governed business data, institutional knowledge and real-world information, plus reusable plugins, skills and tools and continuous improvement in Foundry.",
+      "why": "Every organization can use the same frontier models, so differentiation comes from context. Microsoft IQ lets teams curate that context once and reuse it across Microsoft Copilot, GitHub Copilot, Microsoft Foundry and any agent harness via MCP. It is built on products customers already use, with no new SKU or subscription.",
+      "audience": ["developer", "data", "maker", "admin"],
+      "docs": [
+        { "label": "Microsoft IQ", "url": "https://aka.ms/microsoftiq" },
+        { "label": "What's new in Work IQ", "url": "https://aka.ms/WorkIQIgnite2026" },
+        { "label": "What's new in Fabric IQ", "url": "https://aka.ms/FabricIQ-Ignite26" },
+        { "label": "Web IQ is broadly available", "url": "https://aka.ms/webiqnews" },
+        { "label": "Continuous improvement in Microsoft Foundry", "url": "https://azure.microsoft.com/en-us/blog/continuous-improvement-comes-to-microsoft-foundry/" }
+      ]
+    },
+    {
+      "id": "agent-365",
+      "name": "Microsoft Agent 365",
+      "role": "Govern",
+      "tagline": "Observability platform for AI: management, governance, security and business value for agents.",
+      "summary": "Agent 365 launched in May 2026 and, per Microsoft, has since registered more than 50 million agents. Ignite adds multi-platform agent connections with Entra Agent ID, dynamic agent risk, local and shadow agent controls, and FinOps for AI.",
+      "why": "As agents multiply across Microsoft and non-Microsoft platforms and employee devices, IT, security and business leaders need shared answers to who owns each agent, what risk it carries, and what it costs and returns.",
+      "audience": ["admin", "security", "business"],
+      "docs": [
+        { "label": "Agent 365 documentation", "url": "https://learn.microsoft.com/microsoft-agent-365/" },
+        { "label": "Get started with Agent 365", "url": "https://learn.microsoft.com/microsoft-agent-365/get-started" },
+        { "label": "Training module", "url": "https://learn.microsoft.com/training/modules/agent-365-get-started/" },
+        { "label": "Connected platforms", "url": "https://learn.microsoft.com/microsoft-agent-365/admin/connected-platforms" },
+        { "label": "Service description and licensing", "url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365" },
+        { "label": "Business Analytics", "url": "https://aka.ms/A365AnalyticsLearn" }
+      ]
+    }
+  ],
+  "audiences": {
+    "maker": "Makers",
+    "admin": "IT admins",
+    "developer": "Developers",
+    "security": "Security",
+    "data": "Data teams",
+    "business": "Business leaders"
+  },
+  "updates": [
+    {
+      "id": "cs-customer-conversation-harness",
+      "product": "copilot-studio",
+      "area": "Harnesses",
+      "name": "Customer conversation harness",
+      "summary": "Purpose-built harness for customer-facing voice and chat, including hand-off to a live agent with context.",
+      "status": "GA",
+      "audience": ["maker", "developer"],
+      "top": true,
+      "source": "cs"
+    },
+    {
+      "id": "cs-apps-ga",
+      "product": "copilot-studio",
+      "area": "Apps and workflows",
+      "name": "Apps in Copilot Studio and Copilot Cowork",
+      "summary": "Makers can build apps that put the right information and actions in front of people for repeatable tasks. Rolling out in November 2026.",
+      "status": "GA",
+      "audience": ["maker"],
+      "top": true,
+      "source": "cs"
+    },
+    {
+      "id": "cs-create-from-cowork-code",
+      "product": "copilot-studio",
+      "area": "Apps and workflows",
+      "name": "Create agents and workflows from Copilot Cowork and Copilot Code",
+      "summary": "People closest to the work describe agents and workflows in natural language, then grow them in Copilot Studio where IT applies the same governance.",
+      "status": "Preview",
+      "note": "Public preview",
+      "audience": ["maker", "admin"],
+      "top": true,
+      "source": "cs"
+    },
+    {
+      "id": "cs-agent-accounts",
+      "product": "copilot-studio",
+      "area": "Agents",
+      "name": "Dedicated agent accounts for persistent agents",
+      "summary": "Agents get managed credentials and approved access so teammates can @mention them and hand off work. Memory and signal-based triggers let them carry work forward.",
+      "status": "Coming soon",
+      "note": "Public preview from December 2026. The Ignite post does not state the availability of memory and triggers separately.",
+      "audience": ["maker", "admin", "security"],
+      "top": true,
+      "source": "cs"
+    },
+    {
+      "id": "cs-agent-sharing",
+      "product": "copilot-studio",
+      "area": "Developer",
+      "name": "Agent sharing (co-authoring)",
+      "summary": "Multiple makers work on the same agent directly in Copilot Studio.",
+      "status": "GA",
+      "audience": ["maker"],
+      "top": true,
+      "source": "cs"
+    },
+    {
+      "id": "cs-cli-mcp",
+      "product": "copilot-studio",
+      "area": "Developer",
+      "name": "Copilot Studio CLI, Copilot Studio MCP and local development with GitHub",
+      "summary": "Developers and their AI assistants can access Copilot Studio components such as the Microsoft Copilot harness, tools and models, and edit agents locally with GitHub-backed artifacts. Agents and workflows can be published to Copilot Studio from the CLI through Copilot Managed Runtime.",
+      "status": "Preview",
+      "note": "CLI and Copilot Studio MCP are in public preview.",
+      "audience": ["developer"],
+      "top": false,
+      "source": "cs",
+      "also": ["bon"]
+    },
+    {
+      "id": "cs-managed-runtime",
+      "product": "copilot-studio",
+      "area": "Platform",
+      "name": "Copilot Managed Runtime",
+      "summary": "Microsoft-managed hosting, execution and governance for apps created in Copilot Code, Copilot Cowork, Copilot Studio and compatible third-party tools, with an optional Microsoft Fabric data backend.",
+      "status": "GA",
+      "audience": ["developer", "admin"],
+      "top": false,
+      "source": "bon"
+    },
+    {
+      "id": "cs-classify-node",
+      "product": "copilot-studio",
+      "area": "Apps and workflows",
+      "name": "Faster classify node and credit usage visibility in workflows",
+      "summary": "The classify node uses a decision-scoring model by default for scenarios such as email triage and routing. Clearer credit usage visibility helps makers control spend.",
+      "status": "Announced",
+      "audience": ["maker"],
+      "top": false,
+      "source": "cs"
+    },
+    {
+      "id": "cs-governance-finops",
+      "product": "copilot-studio",
+      "area": "Governance",
+      "name": "Evaluations, monitoring and organization-level cost policies",
+      "summary": "Built-in evaluations, monitoring and telemetry, plus organization-level cost policies and centralized management across the Microsoft 365 admin center and Power Platform admin center.",
+      "status": "Announced",
+      "audience": ["admin", "maker"],
+      "top": false,
+      "source": "cs"
+    },
+    {
+      "id": "cs-w365-standard",
+      "product": "copilot-studio",
+      "area": "Agents",
+      "name": "Windows 365 for Agents computer-use tool (Standard harness)",
+      "summary": "Agents can use governed Cloud PCs to operate legacy apps without APIs. Windows 365 for Agents is now eligible for Copilot Credits.",
+      "status": "Announced",
+      "note": "Described as available in the Standard harness in Copilot Studio.",
+      "audience": ["maker", "admin"],
+      "top": false,
+      "source": "bon"
+    },
+    {
+      "id": "cs-w365-copilot-harness",
+      "product": "copilot-studio",
+      "area": "Agents",
+      "name": "Windows 365 for Agents in the Microsoft Copilot harness",
+      "summary": "Computer-use on governed Cloud PCs comes to the Microsoft Copilot harness.",
+      "status": "Coming soon",
+      "note": "Preview in December 2026.",
+      "audience": ["maker", "admin"],
+      "top": false,
+      "source": "bon"
+    },
+
+    {
+      "id": "iq-ga",
+      "product": "iq",
+      "area": "Platform",
+      "name": "Microsoft IQ is generally available",
+      "summary": "Enterprise context management plus continuous improvement in Foundry. Brings together Work IQ, Fabric IQ, Foundry IQ, Web IQ and more than 350 third-party connectors, with no new SKU or subscription.",
+      "status": "GA",
+      "audience": ["developer", "maker", "admin"],
+      "top": true,
+      "source": "iq",
+      "also": ["bon"]
+    },
+    {
+      "id": "iq-business-plugins",
+      "product": "iq",
+      "area": "Platform",
+      "name": "Business plugins in Microsoft IQ",
+      "summary": "Curated, hierarchical and governed guidance that tells agents which context, tools, skills and authoritative sources to use. Sensitivity labels and change auditing support governance.",
+      "status": "Preview",
+      "note": "Frontier program",
+      "audience": ["maker", "developer", "admin"],
+      "top": true,
+      "source": "bon"
+    },
+    {
+      "id": "iq-reuse",
+      "product": "iq",
+      "area": "Platform",
+      "name": "Reusable plugins, skills, tools and agents",
+      "summary": "Discover and reuse the building blocks of enterprise AI in Microsoft Copilot and through Microsoft IQ APIs.",
+      "status": "GA",
+      "audience": ["maker", "developer"],
+      "top": false,
+      "source": "bon"
+    },
+    {
+      "id": "iq-context-mcp",
+      "product": "iq",
+      "area": "Platform",
+      "name": "Context capabilities across Copilot, GitHub Copilot, Foundry and any harness via MCP",
+      "summary": "Work IQ, Fabric IQ, Foundry IQ and Web IQ context is available across Microsoft Copilot, GitHub Copilot, Microsoft Foundry and compatible agent platforms.",
+      "status": "GA",
+      "audience": ["developer"],
+      "top": false,
+      "source": "bon"
+    },
+    {
+      "id": "iq-work-ga",
+      "product": "iq",
+      "area": "Work IQ",
+      "name": "Work IQ: CRM and ERP grounding, Retrieve, real-time meeting context and long-running tasks",
+      "summary": "Business Applications in Work IQ adds CRM and ERP records. Retrieve returns permission-trimmed Microsoft 365 and connector data in one call. Also GA: real-time meeting context, long-running tasks and agent-to-agent support, granular MCP policies, and OpenAI and Anthropic plugins.",
+      "status": "GA",
+      "audience": ["developer", "admin"],
+      "top": true,
+      "source": "iq"
+    },
+    {
+      "id": "iq-work-preview",
+      "product": "iq",
+      "area": "Work IQ",
+      "name": "Work IQ: memory, Office content editing, Listen events and approval-based governance",
+      "summary": "Agents can remember what matters, create and edit Word, Excel and PowerPoint content, respond to events through Listen subscriptions, and pause for human approval before consequential actions.",
+      "status": "Preview",
+      "note": "Public preview per the Azure blog. The Book of News words some of these as generally available, so verify before relying on them.",
+      "audience": ["developer", "admin", "security"],
+      "top": false,
+      "source": "iq",
+      "also": ["bon"]
+    },
+    {
+      "id": "iq-fabric-copilot",
+      "product": "iq",
+      "area": "Fabric IQ",
+      "name": "Power BI semantic models in Microsoft Copilot and Fabric apps",
+      "summary": "Users get answers grounded in trusted business context. With Fabric apps, developers embed conversational experiences powered by semantic models and Fabric data agents into custom apps.",
+      "status": "GA",
+      "audience": ["data", "developer"],
+      "top": false,
+      "source": "iq"
+    },
+    {
+      "id": "iq-fabric-agents",
+      "product": "iq",
+      "area": "Fabric IQ",
+      "name": "Fabric data agents in Microsoft Copilot",
+      "summary": "Specialized data agents that reason over enterprise data arrive in Microsoft Copilot.",
+      "status": "Coming soon",
+      "note": "General availability is stated as coming soon.",
+      "audience": ["data"],
+      "top": false,
+      "source": "iq"
+    },
+    {
+      "id": "iq-fabric-integrations",
+      "product": "iq",
+      "area": "Fabric IQ",
+      "name": "Fabric IQ in Excel, ChatGPT, Claude and GitHub Copilot",
+      "summary": "Ask governed semantic models questions and build live Fabric-connected PivotTables in Excel. New ChatGPT and Claude connectors bring Power BI semantic model insights into those assistants, and Fabric IQ ontologies in GitHub Copilot bring business context into development.",
+      "status": "Preview",
+      "audience": ["data", "developer"],
+      "top": false,
+      "source": "iq"
+    },
+    {
+      "id": "iq-fabric-sharing",
+      "product": "iq",
+      "area": "Fabric IQ",
+      "name": "IQ sharing for ontologies",
+      "summary": "Share business context from Fabric IQ ontologies with customers and partners.",
+      "status": "Preview",
+      "audience": ["data"],
+      "top": false,
+      "source": "iq"
+    },
+    {
+      "id": "iq-foundry-graphs",
+      "product": "iq",
+      "area": "Foundry IQ",
+      "name": "Knowledge graphs and Microsoft-Retriever-1",
+      "summary": "Knowledge graphs connect entities and relationships across documents and enable topic-based retrieval. Microsoft-Retriever-1 is a retrieval model that runs iterative search and query planning for agentic grounding.",
+      "status": "Preview",
+      "audience": ["developer"],
+      "top": true,
+      "source": "bon",
+      "also": ["iq"]
+    },
+    {
+      "id": "iq-foundry-sharepoint",
+      "product": "iq",
+      "area": "Foundry IQ",
+      "name": "SharePoint indexed knowledge source",
+      "summary": "Brings SharePoint content into Foundry IQ retrieval while respecting source permissions.",
+      "status": "GA",
+      "audience": ["developer"],
+      "top": false,
+      "source": "bon",
+      "also": ["iq"]
+    },
+    {
+      "id": "iq-foundry-serverless",
+      "product": "iq",
+      "area": "Foundry IQ",
+      "name": "Foundry IQ Serverless",
+      "summary": "Usage-based pricing with no capacity to provision and free monthly allowances. A Foundry IQ resource in every new Foundry project provides grounding from day one.",
+      "status": "Coming soon",
+      "note": "GA in December 2026 per the Azure blog. The Book of News describes the per-project resource as in preview.",
+      "audience": ["developer"],
+      "top": false,
+      "source": "iq",
+      "also": ["bon"]
+    },
+    {
+      "id": "iq-web-ga",
+      "product": "iq",
+      "area": "Web IQ",
+      "name": "Web IQ available to every Azure customer",
+      "summary": "No waitlist, pricing from $1 per 1,000 calls. Auto and Auto Advanced modes unify Web, Images, Videos, News, Places and Weather. Scopes let organizations include or exclude sites and domains. Health-aware ranking surfaces credible health sources.",
+      "status": "GA",
+      "audience": ["developer", "admin"],
+      "top": true,
+      "source": "iq",
+      "also": ["bon"]
+    },
+    {
+      "id": "iq-web-commerce",
+      "product": "iq",
+      "area": "Web IQ",
+      "name": "Web IQ Commerce",
+      "summary": "Structured product data across more than 40 billion listings for AI shopping agents.",
+      "status": "Preview",
+      "note": "Private preview",
+      "audience": ["developer"],
+      "top": false,
+      "source": "bon"
+    },
+    {
+      "id": "iq-web-byol",
+      "product": "iq",
+      "area": "Web IQ",
+      "name": "Bring Your Own License for publisher content",
+      "summary": "Combines licensed publisher content with web results.",
+      "status": "Announced",
+      "audience": ["developer"],
+      "top": false,
+      "source": "iq"
+    },
+    {
+      "id": "iq-optimizer",
+      "product": "iq",
+      "area": "Continuous improvement",
+      "name": "Agent Optimizer and Managed Training in Foundry",
+      "summary": "Teams define success, then Agent Optimizer evaluates an agent, generates and ranks improved configurations, and teams approve changes before deployment. Managed Training automates model improvement for most customization needs.",
+      "status": "Announced",
+      "audience": ["developer"],
+      "top": false,
+      "source": "iq",
+      "also": ["bon"]
+    },
+    {
+      "id": "iq-programmed-training",
+      "product": "iq",
+      "area": "Continuous improvement",
+      "name": "Programmed Training",
+      "summary": "AI engineers write custom training loops, including supervised fine-tuning and reinforcement learning, for supported open-weight models while Foundry manages compute.",
+      "status": "Preview",
+      "note": "Public preview",
+      "audience": ["developer"],
+      "top": false,
+      "source": "iq"
+    },
+
+    {
+      "id": "a365-business-analytics",
+      "product": "agent-365",
+      "area": "Business value",
+      "name": "Agent 365 Business Analytics",
+      "summary": "Shows AI spend, usage and value together across Microsoft and non-Microsoft AI, with measures such as assisted hours, success rate and satisfaction, spend forecasting and plain-language questions.",
+      "status": "Preview",
+      "note": "Frontier program. Insights for Microsoft services need at least one Microsoft 365 Copilot license in the tenant. Non-Microsoft insights need Agent 365 and/or ME7 licensing.",
+      "audience": ["business", "admin"],
+      "top": true,
+      "source": "a365ba",
+      "also": ["a365", "bon"]
+    },
+    {
+      "id": "a365-cost-management",
+      "product": "agent-365",
+      "area": "Business value",
+      "name": "Agent 365 Cost Management",
+      "summary": "Central place in the Microsoft 365 admin center to see and control usage-based AI services, including Copilot Studio, Copilot Cowork, Copilot Code and Copilot Managed Runtime. Set spend limits and alerts, control which models teams can use, and extend analysis through Fabric, Graph APIs and exports.",
+      "status": "Preview",
+      "note": "Forecasting and plain-language questions are in the Frontier program. Value insights expand in December.",
+      "audience": ["admin", "business"],
+      "top": true,
+      "source": "bon",
+      "also": ["a365"]
+    },
+    {
+      "id": "a365-connected-platforms",
+      "product": "agent-365",
+      "area": "Management",
+      "name": "Connected platforms with Microsoft Entra Agent ID",
+      "summary": "Sync agents from Salesforce Agentforce, Amazon AgentCore, Google Vertex AI, Databricks, Snowflake, Anthropic, OpenAI and others into the registry. Each gets an Entra Agent ID. Includes a guided connection wizard and secretless authentication.",
+      "status": "Preview",
+      "note": "Capabilities vary by platform. Rollout completes in December.",
+      "audience": ["admin", "security"],
+      "top": true,
+      "source": "a365"
+    },
+    {
+      "id": "a365-dynamic-risk",
+      "product": "agent-365",
+      "area": "Security",
+      "name": "Dynamic agent risk",
+      "summary": "One continuously updated risk level per agent, combining identity, access, data, endpoint, cloud and network signals with exposure and blast radius. Visible in the Microsoft 365 admin center, Defender, Entra and Purview. Check Point, Cyera, Darktrace and Zenity contribute signals through Sentinel.",
+      "status": "Preview",
+      "audience": ["security", "admin"],
+      "top": true,
+      "source": "a365",
+      "also": ["bon"]
+    },
+    {
+      "id": "a365-multitenant",
+      "product": "agent-365",
+      "area": "Management",
+      "name": "Multi-tenant agent management",
+      "summary": "Partners and multi-tenant enterprises view agents across tenants, compare configuration and access, and approve or block agents at scale.",
+      "status": "Preview",
+      "note": "Public preview",
+      "audience": ["admin"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-local-discovery-defender",
+      "product": "agent-365",
+      "area": "Management",
+      "name": "Local agent discovery in Microsoft Defender",
+      "summary": "Discovers more than 60 local AI agents, such as Claude Code and GitHub Copilot CLI, and their MCP servers on managed Windows and macOS devices, tied to device and user.",
+      "status": "GA",
+      "audience": ["security", "admin"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-shadow-discovery",
+      "product": "agent-365",
+      "area": "Management",
+      "name": "Network-level and shadow AI discovery",
+      "summary": "Entra Global Secure Access adds network visibility into agent destinations and MCP servers. The Agent registry brings shadow AI into the same inventory as other agents.",
+      "status": "Preview",
+      "audience": ["security", "admin"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-local-agent-id",
+      "product": "agent-365",
+      "area": "Management",
+      "name": "Entra Agent ID for local agents and Autopilot",
+      "summary": "Supported local agents, starting with GitHub Copilot CLI and Claude Code, get their own identity separate from the user's. Entra Agent ID also extends to Microsoft Autopilot, alongside agents built with Copilot Studio and Foundry.",
+      "status": "Preview",
+      "audience": ["security", "admin"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-export-activity",
+      "product": "agent-365",
+      "area": "Management",
+      "name": "Export Agent Activity",
+      "summary": "Continuously sync agent traces from Agent 365 into Azure Monitor and Application Insights, with filters and control over which prompts and responses are included.",
+      "status": "Announced",
+      "audience": ["admin", "developer"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-tools-registry",
+      "product": "agent-365",
+      "area": "Management",
+      "name": "Tools registry",
+      "summary": "One view of the tools, resources and services agents use, including commonly used and potentially risky tools and connections.",
+      "status": "GA",
+      "audience": ["admin", "security"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-tools-catalogs",
+      "product": "agent-365",
+      "area": "Management",
+      "name": "External catalogs in the tools registry",
+      "summary": "Connect catalogs such as GitHub and Unity Catalog (Databricks) and gateways so Microsoft and non-Microsoft tools appear together.",
+      "status": "Coming soon",
+      "note": "Private preview in December 2026.",
+      "audience": ["admin"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-agent-map",
+      "product": "agent-365",
+      "area": "Management",
+      "name": "Agent Map use cases",
+      "summary": "Classifies agent sessions by type of work to reveal adoption patterns and overlapping or duplicate agents.",
+      "status": "Preview",
+      "audience": ["admin", "business"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-core-insights",
+      "product": "agent-365",
+      "area": "Management",
+      "name": "Usage insights for Microsoft agents with qualifying Microsoft 365 subscriptions",
+      "summary": "Agent overview, active users and usage metrics for Microsoft pre-built agents and agents on Microsoft platforms, without an Agent 365 license. Premium capabilities and non-Microsoft agent insights still need Agent 365 or ME7.",
+      "status": "GA",
+      "audience": ["admin"],
+      "top": false,
+      "source": "a365",
+      "also": ["bon"]
+    },
+    {
+      "id": "a365-plugins-skills-gov",
+      "product": "agent-365",
+      "area": "Governance",
+      "name": "Plugins and skills governance for Copilot and Cowork",
+      "summary": "Manage plugin and skill availability and assign access to users and groups from the Microsoft 365 admin center.",
+      "status": "GA",
+      "audience": ["admin"],
+      "top": false,
+      "source": "a365",
+      "also": ["bon"]
+    },
+    {
+      "id": "a365-mcp-gov",
+      "product": "agent-365",
+      "area": "Governance",
+      "name": "MCP server governance for Azure AI Gateway and LiteLLM",
+      "summary": "Bring MCP servers from Azure AI Gateway and third-party gateways into one experience, and see which agents and plugins depend on a server before blocking it.",
+      "status": "Preview",
+      "audience": ["admin", "security"],
+      "top": false,
+      "source": "a365",
+      "also": ["bon"]
+    },
+    {
+      "id": "a365-local-gov",
+      "product": "agent-365",
+      "area": "Governance",
+      "name": "Local and shadow agent governance",
+      "summary": "Block unsanctioned local agents with Intune, Defender and Global Secure Access. For approved agents, Intune policies and Microsoft Execution Containers (MXC) on Windows constrain tool execution outside the agent's control.",
+      "status": "Preview",
+      "audience": ["security", "admin"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-cowork-plugin",
+      "product": "agent-365",
+      "area": "Governance",
+      "name": "Copilot Cowork with the Agent 365 plugin",
+      "summary": "Administrators inspect their AI estate and automate governance in plain language, with approval prompts before consequential actions.",
+      "status": "Preview",
+      "audience": ["admin"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-action-center",
+      "product": "agent-365",
+      "area": "Governance",
+      "name": "Action center",
+      "summary": "A focused view of governance tasks, starting with inactive and ownerless agents for review and cleanup.",
+      "status": "Coming soon",
+      "note": "Private preview in December 2026.",
+      "audience": ["admin"],
+      "top": false,
+      "source": "a365",
+      "also": ["bon"]
+    },
+    {
+      "id": "a365-adaptive-access",
+      "product": "agent-365",
+      "area": "Security",
+      "name": "Conditional Access dynamic controls for agents",
+      "summary": "Evaluate policy at the point of action, not only at sign-in, and set access policies for agents acting on a user's behalf separate from the user's own.",
+      "status": "Announced",
+      "audience": ["security"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-purview-dlp",
+      "product": "agent-365",
+      "area": "Security",
+      "name": "Purview data loss prevention for Microsoft and local agents",
+      "summary": "Detect and block sensitive information before Microsoft agents and key local agents, such as Claude Code and GitHub Copilot CLI, process or transmit it, with flexible policy scoping.",
+      "status": "Preview",
+      "audience": ["security"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-runtime-protection",
+      "product": "agent-365",
+      "area": "Security",
+      "name": "Defender runtime protection for local agents",
+      "summary": "Inspects critical points in the agent loop and can block malicious instructions before the agent acts, in Audit or Block mode.",
+      "status": "GA",
+      "note": "Generally available on Windows.",
+      "audience": ["security"],
+      "top": false,
+      "source": "a365"
+    },
+    {
+      "id": "a365-third-party-posture",
+      "product": "agent-365",
+      "area": "Security",
+      "name": "Security posture for third-party agents",
+      "summary": "Defender extends posture assessment to agents built on Amazon Bedrock, Google Gemini, Google Vertex AI and Anthropic Claude, in the same inventory as Copilot Studio and Foundry agents.",
+      "status": "Preview",
+      "audience": ["security"],
+      "top": false,
+      "source": "a365"
+    }
+  ],
+  "compare": {
+    "columns": ["copilot-studio", "iq", "agent-365"],
+    "rows": [
+      {
+        "label": "Role in the stack",
+        "values": [
+          "Build agents, workflows and apps",
+          "Ground agents in organizational context",
+          "Govern, secure and measure agents"
+        ]
+      },
+      {
+        "label": "Primary audience",
+        "values": [
+          "Makers and developers",
+          "Developers, data teams and makers",
+          "IT, security and business leaders"
+        ]
+      },
+      {
+        "label": "Headline GA",
+        "values": [
+          "Customer conversation harness, apps, agent sharing, Copilot Managed Runtime",
+          "Microsoft IQ platform, Web IQ for all Azure customers, SharePoint knowledge source",
+          "Tools registry, Defender local agent discovery, plugin and skill governance"
+        ]
+      },
+      {
+        "label": "Headline preview or coming soon",
+        "values": [
+          "Agent accounts (December), creation from Cowork and Code, CLI and MCP",
+          "Business plugins, knowledge graphs, Programmed Training, Foundry IQ Serverless (December)",
+          "Business Analytics, dynamic agent risk, connected platforms, action center (December)"
+        ]
+      },
+      {
+        "label": "Licensing or access note",
+        "values": [
+          "Usage-based. The harness you choose affects billing, and workflows show credit usage",
+          "Built on products customers already use, with no new SKU or subscription",
+          "Premium governance, security and non-Microsoft insights need Agent 365 or ME7"
+        ]
+      }
+    ]
+  },
+  "getStarted": [
+    {
+      "title": "Copilot Studio",
+      "links": [
+        { "label": "Explore Copilot Studio", "url": "https://www.microsoft.com/copilot/products/copilot-studio" },
+        { "label": "Copilot Studio documentation", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio" },
+        { "label": "Copilot Studio blog", "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/" }
+      ]
+    },
+    {
+      "title": "Microsoft IQ",
+      "links": [
+        { "label": "Microsoft IQ overview", "url": "https://aka.ms/microsoftiq" },
+        { "label": "Introducing the new Microsoft IQ", "url": "https://azure.microsoft.com/en-us/blog/introducing-the-new-microsoft-iq-putting-your-organizations-intelligence-to-work-in-every-agent/" }
+      ]
+    },
+    {
+      "title": "Agent 365",
+      "links": [
+        { "label": "Get started with Agent 365", "url": "https://learn.microsoft.com/microsoft-agent-365/get-started" },
+        { "label": "Training module", "url": "https://learn.microsoft.com/training/modules/agent-365-get-started/" },
+        { "label": "Microsoft 365 roadmap", "url": "https://www.microsoft.com/microsoft-365/roadmap" }
+      ]
+    },
+    {
+      "title": "Ignite 2026",
+      "links": [
+        { "label": "Ignite 2026 home and on-demand sessions", "url": "https://ignite.microsoft.com/en-US/home" },
+        { "label": "Ignite 2026 news hub", "url": "https://news.microsoft.com/events/ignite/2026/" }
+      ]
+    }
+  ]
+}
