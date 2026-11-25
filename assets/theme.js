@@ -2,19 +2,12 @@
   'use strict';
 
   var THEMES = [
-    { id: 'galaxy', label: 'Galaxy', hint: 'Deep space, stars and glow', colors: ['#070618', '#5cd6ff'] },
-    { id: 'editorial', label: 'Editorial', hint: 'Sidebar, serif headings, red accent', colors: ['#f5f6f7', '#d32f2f'] },
-    { id: 'auto', label: 'Auto', hint: 'Follows your system', colors: ['#f6f7fb', '#0d1117'] },
-    { id: 'light', label: 'Daylight', hint: 'Clean and bright', colors: ['#ffffff', '#0b5cad'] },
-    { id: 'midnight', label: 'Midnight', hint: 'Dark and focused', colors: ['#0d1117', '#6cb2ff'] },
-    { id: 'aurora', label: 'Aurora', hint: 'Dark with vivid color', colors: ['#120a2b', '#b69cff'] },
-    { id: 'executive', label: 'Executive', hint: 'Navy, gold and serif headings', colors: ['#faf8f3', '#14325c'] },
-    { id: 'contrast', label: 'High contrast', hint: 'Maximum legibility', colors: ['#000000', '#ffe14d'] }
+    { id: 'galaxy', label: 'Galaxy', hint: 'Warm sunset space with stars', colors: ['#1a0b1f', '#ff9a4d'] },
+    { id: 'editorial', label: 'Editorial', hint: 'Sidebar, serif headings, red accent', colors: ['#f5f6f7', '#d32f2f'] }
   ];
   var VIEWS = ['leadership', 'detail'];
 
   var root = document.documentElement;
-  var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
   function read(key) {
     try { return localStorage.getItem(key); } catch (e) { return null; }
@@ -28,20 +21,12 @@
   var theme = [params.get('theme'), read('ignite-theme'), 'galaxy'].filter(isTheme)[0];
   var view = [params.get('view'), read('ignite-view'), 'detail'].filter(function (v) { return VIEWS.indexOf(v) !== -1; })[0];
 
-  function resolve(id) {
-    if (id !== 'auto') return id;
-    return mq && mq.matches ? 'midnight' : 'light';
-  }
-
   function apply() {
-    root.setAttribute('data-theme', resolve(theme));
+    root.setAttribute('data-theme', theme);
     root.setAttribute('data-view', view);
   }
 
   apply();
-  if (mq && mq.addEventListener) {
-    mq.addEventListener('change', function () { if (theme === 'auto') apply(); });
-  }
 
   function setTheme(id) {
     theme = id;
