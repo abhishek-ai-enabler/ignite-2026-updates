@@ -11,7 +11,7 @@
   document.documentElement.setAttribute('data-deck-theme', theme);
   var link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = 'assets/slides-' + theme + '.css?v=20261126f';
+  link.href = 'assets/slides-' + theme + '.css?v=20261126g';
   document.head.appendChild(link);
 
   function el(tag, attrs, children) {
@@ -30,6 +30,7 @@
   }
 
   function productById(id) { return data.products.find(function (p) { return p.id === id; }); }
+  function shortName(p) { return p.id === 'iq' ? p.name : p.name.replace('Microsoft ', ''); }
   function sourceById(id) { return data.sources.find(function (s) { return s.id === id; }); }
 
   function logo(key, size) {
@@ -67,7 +68,7 @@
       el('h1', { text: 'What’s new in Copilot Studio, Microsoft IQ, Agent 365 and Power Platform' }),
       el('p', { class: 'sub', text: m.dates + ' · ' + m.location }),
       el('ul', { class: 'logo-row', 'aria-label': 'Products' }, data.products.map(function (p) {
-        return el('li', {}, [logo(p.logo, 64), el('span', { text: p.name.replace('Microsoft ', '') })]);
+        return el('li', {}, [logo(p.logo, 64), el('span', { text: shortName(p) })]);
       })),
       el('p', { class: 'small', text: 'Unofficial summary. Last updated ' + m.lastUpdated + '.' })
     ]);
@@ -83,7 +84,7 @@
         return el('li', { 'data-product': id }, [
           el('span', { class: 'num', text: String(i + 1) }),
           logo(p.logo, 48),
-          el('h3', { text: roles[id] + ' with ' + p.name.replace('Microsoft ', '') }),
+          el('h3', { text: roles[id] + ' with ' + shortName(p) }),
           el('p', { text: p.glance })
         ]);
       }))
@@ -164,7 +165,7 @@
     var cols = data.compare.columns;
     var table = el('table', {}, [
       el('thead', {}, [el('tr', {}, [el('th', { scope: 'col', text: '' })].concat(cols.map(function (id) {
-        return el('th', { scope: 'col', 'data-product': id, text: productById(id).name.replace('Microsoft ', '') });
+        return el('th', { scope: 'col', 'data-product': id, text: shortName(productById(id)) });
       })))]),
       el('tbody', {}, data.compare.rows.map(function (r) {
         return el('tr', {}, [el('th', { scope: 'row', text: r.label })].concat(r.values.map(function (v) { return el('td', { text: v }); })));
@@ -178,7 +179,7 @@
       head('In a nutshell', 'Summary at a glance'),
       el('ul', { class: 'glance' }, data.products.map(function (p) {
         return el('li', { 'data-product': p.id }, [
-          el('div', { class: 'row' }, [logo(p.logo, 40), el('h3', { text: p.name.replace('Microsoft ', '') })]),
+          el('div', { class: 'row' }, [logo(p.logo, 40), el('h3', { text: shortName(p) })]),
           el('p', { text: p.glance })
         ]);
       }))
@@ -270,7 +271,7 @@
     });
   }
 
-  fetch('data/updates.json?v=20261126f', { cache: 'no-cache' })
+  fetch('data/updates.json?v=20261126g', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (d) {
       data = d;
