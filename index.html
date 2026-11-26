@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Microsoft Ignite 2026 updates: Copilot Studio, Microsoft IQ, Agent 365 and Power Platform</title>
-  <meta name="description" content="Unofficial summary of Microsoft Ignite 2026 (November 17–20) announcements for Copilot Studio, Microsoft IQ (Work IQ, Fabric IQ, Foundry IQ, Web IQ), Agent 365 and Power Platform, with availability status and sources.">
+  <title>Microsoft Ignite 2026 updates: Copilot Studio, Microsoft IQ, Microsoft Foundry, Agent 365 and Power Platform</title>
+  <meta name="description" content="Unofficial summary of Microsoft Ignite 2026 (November 17–20) announcements for Copilot Studio, Microsoft IQ (Work IQ, Fabric IQ, Foundry IQ, Web IQ), Microsoft Foundry (models and Agent Service), Agent 365 and Power Platform, with availability status and sources.">
   <meta name="color-scheme" content="light dark">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Microsoft Ignite 2026 updates: Copilot Studio, Microsoft IQ, Agent 365 and Power Platform">
@@ -14,9 +14,9 @@
   <meta name="twitter:title" content="Microsoft Ignite 2026 updates: Copilot Studio, Microsoft IQ, Agent 365 and Power Platform">
   <meta name="twitter:description" content="Unofficial summary with availability status and source links.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b5cad'/%3E%3Cpath d='M16 5l2.6 7.4L26 15l-7.4 2.6L16 25l-2.6-7.4L6 15l7.4-2.6z' fill='white'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/style.css?v=20261126f">
-  <link rel="stylesheet" href="assets/editorial.css?v=20261126f">
-  <script src="assets/app.js?v=20261126f" defer></script>
+  <link rel="stylesheet" href="assets/style.css?v=20261126h">
+  <link rel="stylesheet" href="assets/editorial.css?v=20261126h">
+  <script src="assets/app.js?v=20261126h" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -33,6 +33,7 @@
           <li><a href="#how-they-fit">How they fit</a></li>
           <li><a href="#copilot-studio">Copilot Studio</a></li>
           <li><a href="#iq">Microsoft IQ</a></li>
+          <li><a href="#foundry">Foundry</a></li>
           <li><a href="#agent-365">Agent 365</a></li>
           <li><a href="#power-platform">Power Platform</a></li>
           <li><a href="#compare">Compare</a></li>
@@ -48,10 +49,10 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="wrap">
         <p class="eyebrow"><span class="pill">Microsoft Ignite 2026</span><span id="event-dates">November 17–20, 2026</span><span id="event-location">San Francisco, CA and online</span></p>
-        <h1 id="hero-title">What’s new in <span class="hl-build">Copilot Studio</span>, <span class="hl-ground">Microsoft IQ</span>, <span class="hl-govern">Agent 365</span> and <span class="hl-apps">Power Platform</span></h1>
-        <p class="lead">Build agents, ground them in your organization’s context, run them on your apps and data, and govern them at scale. A one-page summary of the Ignite 2026 announcements, with availability status and a source for every item.</p>
-        <p class="lead"><a href="slides.html"><strong>View as slides</strong></a>: a presentation version with one deck for all four products. Press F for full screen, or print to PDF.</p>
-        <p class="updated">Last updated: <time id="last-updated" datetime="2026-11-25">November 25, 2026</time></p>
+        <h1 id="hero-title">What’s new in <span class="hl-build">Copilot Studio</span>, <span class="hl-ground">Microsoft IQ</span>, <span class="hl-foundry">Microsoft Foundry</span>, <span class="hl-govern">Agent 365</span> and <span class="hl-apps">Power Platform</span></h1>
+        <p class="lead">Build agents, ground them in your organization’s context, run and improve them on Foundry, connect them to your apps and data, and govern them at scale. A one-page summary of the Ignite 2026 announcements, with availability status and a source for every item.</p>
+        <p class="lead"><a href="slides.html"><strong>View as slides</strong></a>: a presentation version with one deck for all five products. Press F for full screen, or print to PDF.</p>
+        <p class="updated">Last updated: <time id="last-updated" datetime="2026-11-26">November 26, 2026</time></p>
         <ul class="kpis" id="kpis" aria-label="Key numbers"></ul>
         <ul class="product-cards" id="product-cards" aria-label="Products"></ul>
         <div class="platforms-wrap">
@@ -68,19 +69,19 @@
       <div class="section-head">
         <p class="kicker">The big picture</p>
         <h2 id="fit-title">How they fit together</h2>
-        <p class="section-intro">Copilot Studio builds the agents, Microsoft IQ grounds them in organizational context, Agent 365 governs, secures and measures them, and Power Platform supplies the low-code apps, flows and data they build with and act on.</p>
+        <p class="section-intro">Copilot Studio builds the agents, Microsoft IQ grounds them in organizational context, Microsoft Foundry runs and continuously improves them, Agent 365 governs, secures and measures them, and Power Platform supplies the low-code apps, flows and data they build with and act on.</p>
       </div>
       <div class="fit-grid">
         <figure class="diagram">
-          <svg viewBox="0 0 720 450" role="img" aria-labelledby="diagram-title diagram-desc" xmlns="http://www.w3.org/2000/svg">
-            <title id="diagram-title">How Copilot Studio, Microsoft IQ, Power Platform and Agent 365 fit together</title>
-            <desc id="diagram-desc">Copilot Studio builds agents, workflows and apps. Microsoft IQ sits beside it and supplies context from Work IQ, Fabric IQ, Foundry IQ and Web IQ, shown by an arrow into the agents. Below both, Power Platform supplies apps, flows and data as tools and context. Agent 365 is a governance band across the bottom, with an arrow showing identities, tools, usage and costs flowing into it.</desc>
+          <svg viewBox="0 0 720 564" role="img" aria-labelledby="diagram-title diagram-desc" xmlns="http://www.w3.org/2000/svg">
+            <title id="diagram-title">How Copilot Studio, Microsoft IQ, Microsoft Foundry, Power Platform and Agent 365 fit together</title>
+            <desc id="diagram-desc">Copilot Studio builds agents, workflows and apps. Microsoft IQ sits beside it and supplies context from Work IQ, Fabric IQ, Foundry IQ and Web IQ, shown by an arrow into the agents. Below both, Microsoft Foundry runs and continuously improves the agents with models, Agent Service, evaluations and training. Power Platform supplies apps, flows and data as tools and context. Agent 365 is a governance band across the bottom, with an arrow showing identities, tools, usage and costs flowing into it.</desc>
             <defs>
               <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
                 <path d="M0 0 L10 5 L0 10 z" class="svg-arrow"/>
               </marker>
             </defs>
-            <rect x="10" y="10" width="700" height="430" rx="16" class="svg-frame"/>
+            <rect x="10" y="10" width="700" height="544" rx="16" class="svg-frame"/>
 
             <rect x="30" y="30" width="300" height="180" rx="12" class="svg-box svg-build"/>
             <text x="180" y="62" text-anchor="middle" class="svg-step">1 · BUILD</text>
@@ -101,24 +102,32 @@
 
             <line x1="180" y1="212" x2="180" y2="238" class="svg-line" marker-end="url(#arrow)"/>
             <line x1="540" y1="212" x2="540" y2="238" class="svg-line" marker-end="url(#arrow)"/>
-            <text x="360" y="230" text-anchor="middle" class="svg-small">apps · flows · data as tools and context</text>
+            <text x="360" y="230" text-anchor="middle" class="svg-small">agents run on Foundry</text>
 
-            <rect x="30" y="240" width="660" height="84" rx="12" class="svg-box svg-apps"/>
-            <text x="360" y="264" text-anchor="middle" class="svg-step">3 · APPS AND DATA</text>
-            <text x="360" y="288" text-anchor="middle" class="svg-title">Power Platform</text>
-            <text x="360" y="310" text-anchor="middle" class="svg-small">Power Apps · Power Automate · Dataverse · Business Applications in Work IQ</text>
+            <rect x="30" y="240" width="660" height="84" rx="12" class="svg-box svg-foundry"/>
+            <text x="360" y="264" text-anchor="middle" class="svg-step">3 · RUN AND IMPROVE</text>
+            <text x="360" y="288" text-anchor="middle" class="svg-title">Microsoft Foundry</text>
+            <text x="360" y="310" text-anchor="middle" class="svg-small">11,000+ models · Agent Service · Evaluations · Agent optimizer · Training</text>
 
             <line x1="360" y1="326" x2="360" y2="352" class="svg-line" marker-end="url(#arrow)"/>
-            <text x="372" y="344" text-anchor="start" class="svg-small">identity · tools · usage · cost</text>
+            <text x="372" y="344" text-anchor="start" class="svg-small">apps · flows · data as tools and context</text>
 
-            <rect x="30" y="354" width="660" height="84" rx="12" class="svg-box svg-govern"/>
-            <text x="360" y="378" text-anchor="middle" class="svg-step">4 · GOVERN</text>
-            <text x="360" y="402" text-anchor="middle" class="svg-title">Agent 365</text>
-            <text x="360" y="424" text-anchor="middle" class="svg-small">Registry · Entra Agent ID · Risk · Cost and value</text>
+            <rect x="30" y="354" width="660" height="84" rx="12" class="svg-box svg-apps"/>
+            <text x="360" y="378" text-anchor="middle" class="svg-step">4 · APPS AND DATA</text>
+            <text x="360" y="402" text-anchor="middle" class="svg-title">Power Platform</text>
+            <text x="360" y="424" text-anchor="middle" class="svg-small">Power Apps · Power Automate · Dataverse · Business Applications in Work IQ</text>
+
+            <line x1="360" y1="440" x2="360" y2="466" class="svg-line" marker-end="url(#arrow)"/>
+            <text x="372" y="458" text-anchor="start" class="svg-small">identity · tools · usage · cost</text>
+
+            <rect x="30" y="468" width="660" height="84" rx="12" class="svg-box svg-govern"/>
+            <text x="360" y="492" text-anchor="middle" class="svg-step">5 · GOVERN</text>
+            <text x="360" y="516" text-anchor="middle" class="svg-title">Agent 365</text>
+            <text x="360" y="538" text-anchor="middle" class="svg-small">Registry · Entra Agent ID · Risk · Cost and value</text>
           </svg>
           <figcaption>Simplified view based on how Microsoft describes the products working together. It is not an official architecture diagram.</figcaption>
         </figure>
-        <ol class="fit-steps" aria-label="The four roles">
+        <ol class="fit-steps" aria-label="The five roles">
           <li data-product="copilot-studio">
             <h3>Build with Copilot Studio</h3>
             <p>Makers and developers create agents, workflows and apps for business processes.</p>
@@ -126,6 +135,10 @@
           <li data-product="iq">
             <h3>Ground with Microsoft IQ</h3>
             <p>Work, data, web and knowledge context so agents act on what your organization knows.</p>
+          </li>
+          <li data-product="foundry">
+            <h3>Run with Microsoft Foundry</h3>
+            <p>Models, Agent Service and continuous improvement to run agents at scale and keep making them better.</p>
           </li>
           <li data-product="power-platform">
             <h3>Connect with Power Platform</h3>

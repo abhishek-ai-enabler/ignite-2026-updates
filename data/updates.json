@@ -1,15 +1,41 @@
 {
   "meta": {
-    "title": "Microsoft Ignite 2026: Copilot Studio, Microsoft IQ, Agent 365 and Power Platform",
+    "title": "Microsoft Ignite 2026: Copilot Studio, Microsoft IQ, Microsoft Foundry, Agent 365 and Power Platform",
     "event": "Microsoft Ignite 2026",
     "dates": "November 17–20, 2026",
     "location": "San Francisco, CA and online",
-    "lastUpdated": "2026-11-25",
+    "lastUpdated": "2026-11-26",
     "keyNumbers": [
-      { "value": "50M+", "label": "agents registered in Agent 365 since its May 2026 launch", "product": "agent-365", "source": "a365" },
-      { "value": "350+", "label": "third-party connectors brought together in Microsoft IQ", "product": "iq", "source": "iq" },
-      { "value": "$1", "label": "per 1,000 Web IQ calls, with no waitlist", "product": "iq", "source": "iq" },
-      { "value": "70%+", "label": "touchless invoices at Asurion with Copilot Studio, up from under 20%", "product": "copilot-studio", "source": "cs"       },
+      {
+        "value": "50M+",
+        "label": "agents registered in Agent 365 since its May 2026 launch",
+        "product": "agent-365",
+        "source": "a365"
+      },
+      {
+        "value": "350+",
+        "label": "third-party connectors brought together in Microsoft IQ",
+        "product": "iq",
+        "source": "iq"
+      },
+      {
+        "value": "11,000+",
+        "label": "models available in Microsoft Foundry",
+        "product": "foundry",
+        "source": "fci"
+      },
+      {
+        "value": "$1",
+        "label": "per 1,000 Web IQ calls, with no waitlist",
+        "product": "iq",
+        "source": "iq"
+      },
+      {
+        "value": "70%+",
+        "label": "touchless invoices at Asurion with Copilot Studio, up from under 20%",
+        "product": "copilot-studio",
+        "source": "cs"
+      },
       {
         "value": "80M",
         "label": "people use Power Platform every month",
@@ -39,6 +65,26 @@
       "id": "iq",
       "label": "Introducing the new Microsoft IQ (Azure blog)",
       "url": "https://azure.microsoft.com/en-us/blog/introducing-the-new-microsoft-iq-putting-your-organizations-intelligence-to-work-in-every-agent/"
+    },
+    {
+      "id": "fci",
+      "label": "Continuous improvement comes to Microsoft Foundry (Azure blog)",
+      "url": "https://azure.microsoft.com/en-us/blog/continuous-improvement-comes-to-microsoft-foundry/"
+    },
+    {
+      "id": "fagent",
+      "label": "What’s new in Foundry Agent Service at Ignite 2026 (Foundry blog, Nov 18, 2026)",
+      "url": "https://devblogs.microsoft.com/foundry/whats-new-in-foundry-agent-service-at-ignite-2026/"
+    },
+    {
+      "id": "fmodels",
+      "label": "From model choice to your durable advantage: build AI that keeps improving (Foundry blog)",
+      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+    },
+    {
+      "id": "decision",
+      "label": "Microsoft-Decision-1.1 is now generally available (Microsoft Command Line)",
+      "url": "https://commandline.microsoft.com/microsoft-decision-model-ga/"
     },
     {
       "id": "a365",
@@ -76,15 +122,40 @@
       "tagline": "Low-code studio for building and managing agents, workflows and apps for business processes.",
       "summary": "At Ignite 2026 Copilot Studio moved from single-task automation toward whole business processes: purpose-built harnesses, apps, shared and persistent agents with their own accounts, and team-based development with GitHub and a CLI.",
       "why": "Agents that carry work forward, work for a whole team and can be co-built by makers and developers turn one-off automations into shared, governed business assets. Microsoft cites Asurion raising touchless invoice processing from under 20% to over 70%, and Microsoft's own support agent resolving over 35% of cases fully autonomously (August 2026).",
-      "audience": ["maker", "developer", "admin"],
+      "audience": [
+        "maker",
+        "developer",
+        "admin"
+      ],
       "docs": [
-        { "label": "What is Copilot Studio", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio" },
-        { "label": "Apps overview", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/apps-experience/apps-overview" },
-        { "label": "Copilot Studio MCP", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/copilot-studio-mcp" },
-        { "label": "Computer use", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use" },
-        { "label": "Share agents", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-share-bots?tabs=webApp" },
-        { "label": "How the Microsoft Copilot harness works", "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/how-the-microsoft-copilot-harness-in-copilot-studio-helps-agents-finish-the-job/" },
-        { "label": "Customer conversation harness", "url": "https://techcommunity.microsoft.com/blog/copilot-studio-blog/introducing-the-customer-conversation-harness-in-microsoft-copilot-studio/4563954" }
+        {
+          "label": "What is Copilot Studio",
+          "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio"
+        },
+        {
+          "label": "Apps overview",
+          "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/apps-experience/apps-overview"
+        },
+        {
+          "label": "Copilot Studio MCP",
+          "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/copilot-studio-mcp"
+        },
+        {
+          "label": "Computer use",
+          "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use"
+        },
+        {
+          "label": "Share agents",
+          "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-share-bots?tabs=webApp"
+        },
+        {
+          "label": "How the Microsoft Copilot harness works",
+          "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/how-the-microsoft-copilot-harness-in-copilot-studio-helps-agents-finish-the-job/"
+        },
+        {
+          "label": "Customer conversation harness",
+          "url": "https://techcommunity.microsoft.com/blog/copilot-studio-blog/introducing-the-customer-conversation-harness-in-microsoft-copilot-studio/4563954"
+        }
       ]
     },
     {
@@ -96,13 +167,74 @@
       "tagline": "Enterprise context management platform: Work IQ, Fabric IQ, Foundry IQ and Web IQ.",
       "summary": "Microsoft IQ is now generally available as a platform that gives agents the organization's own context: how people work, governed business data, institutional knowledge and real-world information, plus reusable plugins, skills and tools and continuous improvement in Foundry.",
       "why": "Every organization can use the same frontier models, so differentiation comes from context. Microsoft IQ lets teams curate that context once and reuse it across Microsoft Copilot, GitHub Copilot, Microsoft Foundry and any agent harness via MCP. It is built on products customers already use, with no new SKU or subscription.",
-      "audience": ["developer", "data", "maker", "admin"],
+      "audience": [
+        "developer",
+        "data",
+        "maker",
+        "admin"
+      ],
       "docs": [
-        { "label": "Microsoft IQ", "url": "https://aka.ms/microsoftiq" },
-        { "label": "What's new in Work IQ", "url": "https://aka.ms/WorkIQIgnite2026" },
-        { "label": "What's new in Fabric IQ", "url": "https://aka.ms/FabricIQ-Ignite26" },
-        { "label": "Web IQ is broadly available", "url": "https://aka.ms/webiqnews" },
-        { "label": "Continuous improvement in Microsoft Foundry", "url": "https://azure.microsoft.com/en-us/blog/continuous-improvement-comes-to-microsoft-foundry/" }
+        {
+          "label": "Microsoft IQ",
+          "url": "https://aka.ms/microsoftiq"
+        },
+        {
+          "label": "What's new in Work IQ",
+          "url": "https://aka.ms/WorkIQIgnite2026"
+        },
+        {
+          "label": "What's new in Fabric IQ",
+          "url": "https://aka.ms/FabricIQ-Ignite26"
+        },
+        {
+          "label": "Web IQ is broadly available",
+          "url": "https://aka.ms/webiqnews"
+        },
+        {
+          "label": "Continuous improvement in Microsoft Foundry",
+          "url": "https://azure.microsoft.com/en-us/blog/continuous-improvement-comes-to-microsoft-foundry/"
+        }
+      ]
+    },
+    {
+      "id": "foundry",
+      "name": "Microsoft Foundry",
+      "logo": "foundry",
+      "role": "Run and improve",
+      "glance": "Where agents run and keep getting better: 11,000+ models with a model router, a managed Agent Service, and a loop that turns production evidence into validated improvements.",
+      "tagline": "Models, Agent Service and continuous improvement for agents in production.",
+      "summary": "At Ignite 2026 Microsoft Foundry added Microsoft-Decision-1.1 (GA), new Microsoft AI and partner models, a managed Microsoft Copilot harness, voice agents (GA), more scalable and controlled hosted agents, and continuous improvement: Insights, annotations, Agent optimizer and Training.",
+      "why": "Models change every few weeks, so lasting advantage comes from running agents with identity and guardrails, then improving them with your own traces, expert feedback and data. Foundry brings model choice, runtime, governance and improvement into one place, with GitHub for building agents.",
+      "audience": [
+        "developer",
+        "admin",
+        "security"
+      ],
+      "docs": [
+        {
+          "label": "Foundry Agent Service documentation",
+          "url": "https://learn.microsoft.com/azure/foundry/agents/overview"
+        },
+        {
+          "label": "What’s new in Foundry Agent Service at Ignite 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-foundry-agent-service-at-ignite-2026/"
+        },
+        {
+          "label": "Continuous improvement comes to Microsoft Foundry",
+          "url": "https://azure.microsoft.com/en-us/blog/continuous-improvement-comes-to-microsoft-foundry/"
+        },
+        {
+          "label": "Foundry models catalog",
+          "url": "https://azure.microsoft.com/en-us/products/ai-foundry/models"
+        },
+        {
+          "label": "Microsoft-Decision-1.1 is generally available",
+          "url": "https://commandline.microsoft.com/microsoft-decision-model-ga/"
+        },
+        {
+          "label": "Model router in Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-router"
+        }
       ]
     },
     {
@@ -114,14 +246,36 @@
       "tagline": "Observability platform for AI: management, governance, security and business value for agents.",
       "summary": "Agent 365 launched in May 2026 and, per Microsoft, has since registered more than 50 million agents. Ignite adds multi-platform agent connections with Entra Agent ID, dynamic agent risk, local and shadow agent controls, and FinOps for AI.",
       "why": "As agents multiply across Microsoft and non-Microsoft platforms and employee devices, IT, security and business leaders need shared answers to who owns each agent, what risk it carries, and what it costs and returns.",
-      "audience": ["admin", "security", "business"],
+      "audience": [
+        "admin",
+        "security",
+        "business"
+      ],
       "docs": [
-        { "label": "Agent 365 documentation", "url": "https://learn.microsoft.com/microsoft-agent-365/" },
-        { "label": "Get started with Agent 365", "url": "https://learn.microsoft.com/microsoft-agent-365/get-started" },
-        { "label": "Training module", "url": "https://learn.microsoft.com/training/modules/agent-365-get-started/" },
-        { "label": "Connected platforms", "url": "https://learn.microsoft.com/microsoft-agent-365/admin/connected-platforms" },
-        { "label": "Service description and licensing", "url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365" },
-        { "label": "Business Analytics", "url": "https://aka.ms/A365AnalyticsLearn" }
+        {
+          "label": "Agent 365 documentation",
+          "url": "https://learn.microsoft.com/microsoft-agent-365/"
+        },
+        {
+          "label": "Get started with Agent 365",
+          "url": "https://learn.microsoft.com/microsoft-agent-365/get-started"
+        },
+        {
+          "label": "Training module",
+          "url": "https://learn.microsoft.com/training/modules/agent-365-get-started/"
+        },
+        {
+          "label": "Connected platforms",
+          "url": "https://learn.microsoft.com/microsoft-agent-365/admin/connected-platforms"
+        },
+        {
+          "label": "Service description and licensing",
+          "url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365"
+        },
+        {
+          "label": "Business Analytics",
+          "url": "https://aka.ms/A365AnalyticsLearn"
+        }
       ]
     },
     {
@@ -133,43 +287,147 @@
       "tagline": "Low-code platform for apps, workflows and data, now a foundation for agents.",
       "summary": "At Ignite 2026 Microsoft framed Power Platform around four principles: lead with the platform, deliver high-quality products, bring AI on your terms and protect existing investments. Announcements cover faster and richer apps, hybrid teams of makers and agents, Copilot inside apps, and Business Applications in Work IQ.",
       "why": "Existing apps, flows and Dataverse data become tools and context for agents without being rebuilt, and they stay inside existing permissions and governance. Microsoft says 80 million people use Power Platform every month, and that most of this year's 130+ new capabilities focused on quality and experience.",
-      "audience": ["maker", "developer", "admin", "business"],
+      "audience": [
+        "maker",
+        "developer",
+        "admin",
+        "business"
+      ],
       "docs": [
-        { "label": "Power Platform documentation", "url": "https://learn.microsoft.com/en-us/power-platform/" },
-        { "label": "Business Applications in Work IQ", "url": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/business-applications-work-iq" },
-        { "label": "Copilot in model-driven apps", "url": "https://learn.microsoft.com/en-us/power-apps/user/use-microsoft-365-copilot-model-driven-apps" },
-        { "label": "Copilot Chat in canvas apps (Learn page, marked preview)", "url": "https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/microsoft-365-copilot-canvas-app" },
-        { "label": "Flowchart mode in Power Automate for desktop (Learn page, marked preview)", "url": "https://learn.microsoft.com/en-us/power-automate/desktop-flows/flowchart-flow-designer" },
-        { "label": "Dataverse overview", "url": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-intro" }
+        {
+          "label": "Power Platform documentation",
+          "url": "https://learn.microsoft.com/en-us/power-platform/"
+        },
+        {
+          "label": "Business Applications in Work IQ",
+          "url": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/business-applications-work-iq"
+        },
+        {
+          "label": "Copilot in model-driven apps",
+          "url": "https://learn.microsoft.com/en-us/power-apps/user/use-microsoft-365-copilot-model-driven-apps"
+        },
+        {
+          "label": "Copilot Chat in canvas apps (Learn page, marked preview)",
+          "url": "https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/microsoft-365-copilot-canvas-app"
+        },
+        {
+          "label": "Flowchart mode in Power Automate for desktop (Learn page, marked preview)",
+          "url": "https://learn.microsoft.com/en-us/power-automate/desktop-flows/flowchart-flow-designer"
+        },
+        {
+          "label": "Dataverse overview",
+          "url": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-intro"
+        }
       ]
     }
   ],
   "logos": {
-    "copilot-studio": { "name": "Microsoft Copilot Studio", "file": "copilot-studio.svg", "set": "Power Platform icons" },
-    "agent-365": { "name": "Microsoft Agent 365", "file": "agent-365.svg", "set": "Power Platform icons" },
-    "power-platform": { "name": "Microsoft Power Platform", "file": "power-platform.svg", "set": "Power Platform icons" },
-    "power-apps": { "name": "Microsoft Power Apps", "file": "power-apps.svg", "set": "Power Platform icons" },
-    "power-automate": { "name": "Microsoft Power Automate", "file": "power-automate.svg", "set": "Power Platform icons" },
-    "dataverse": { "name": "Microsoft Dataverse", "file": "dataverse.svg", "set": "Power Platform icons" },
-    "foundry": { "name": "Microsoft Foundry", "file": "foundry.svg", "set": "Azure architecture icons" },
-    "microsoft": { "name": "Microsoft", "file": "microsoft.svg", "set": "Microsoft logo" },
-    "foundry-iq": { "name": "Foundry IQ", "file": "foundry-iq.svg", "set": "Azure architecture icons" }
+    "copilot-studio": {
+      "name": "Microsoft Copilot Studio",
+      "file": "copilot-studio.svg",
+      "set": "Power Platform icons"
+    },
+    "agent-365": {
+      "name": "Microsoft Agent 365",
+      "file": "agent-365.svg",
+      "set": "Power Platform icons"
+    },
+    "power-platform": {
+      "name": "Microsoft Power Platform",
+      "file": "power-platform.svg",
+      "set": "Power Platform icons"
+    },
+    "power-apps": {
+      "name": "Microsoft Power Apps",
+      "file": "power-apps.svg",
+      "set": "Power Platform icons"
+    },
+    "power-automate": {
+      "name": "Microsoft Power Automate",
+      "file": "power-automate.svg",
+      "set": "Power Platform icons"
+    },
+    "dataverse": {
+      "name": "Microsoft Dataverse",
+      "file": "dataverse.svg",
+      "set": "Power Platform icons"
+    },
+    "foundry": {
+      "name": "Microsoft Foundry",
+      "file": "foundry.svg",
+      "set": "Azure architecture icons"
+    },
+    "microsoft": {
+      "name": "Microsoft",
+      "file": "microsoft.svg",
+      "set": "Microsoft logo"
+    },
+    "foundry-iq": {
+      "name": "Foundry IQ",
+      "file": "foundry-iq.svg",
+      "set": "Azure architecture icons"
+    }
   },
   "platforms": [
-    { "logo": "copilot-studio", "label": "Build agents", "href": "#copilot-studio" },
-    { "logo": "agent-365", "label": "Govern agents", "href": "#agent-365" },
-    { "logo": "foundry-iq", "label": "Ground agents", "href": "#iq" },
-    { "logo": "power-platform", "label": "Apps and data", "href": "#power-platform" },
-    { "logo": "foundry", "label": "Agent platform" },
-    { "logo": "power-apps", "label": "Apps" },
-    { "logo": "power-automate", "label": "Workflows" },
-    { "logo": "dataverse", "label": "Data" }
+    {
+      "logo": "copilot-studio",
+      "label": "Build agents",
+      "href": "#copilot-studio"
+    },
+    {
+      "logo": "agent-365",
+      "label": "Govern agents",
+      "href": "#agent-365"
+    },
+    {
+      "logo": "foundry-iq",
+      "label": "Ground agents",
+      "href": "#iq"
+    },
+    {
+      "logo": "power-platform",
+      "label": "Apps and data",
+      "href": "#power-platform"
+    },
+    {
+      "logo": "foundry",
+      "label": "Models and agent runtime",
+      "href": "#foundry"
+    },
+    {
+      "logo": "power-apps",
+      "label": "Apps"
+    },
+    {
+      "logo": "power-automate",
+      "label": "Workflows"
+    },
+    {
+      "logo": "dataverse",
+      "label": "Data"
+    }
   ],
   "areaLogos": [
-    { "product": "iq", "area": "Foundry IQ", "logo": "foundry-iq" },
-    { "product": "copilot-studio", "area": "Apps and workflows", "logo": "power-platform" },
-    { "product": "power-platform", "area": "Power Automate", "logo": "power-automate" },
-    { "product": "power-platform", "area": "Data", "logo": "dataverse" }
+    {
+      "product": "iq",
+      "area": "Foundry IQ",
+      "logo": "foundry-iq"
+    },
+    {
+      "product": "copilot-studio",
+      "area": "Apps and workflows",
+      "logo": "power-platform"
+    },
+    {
+      "product": "power-platform",
+      "area": "Power Automate",
+      "logo": "power-automate"
+    },
+    {
+      "product": "power-platform",
+      "area": "Data",
+      "logo": "dataverse"
+    }
   ],
   "audiences": {
     "maker": "Makers",
@@ -187,7 +445,10 @@
       "name": "Customer conversation harness",
       "summary": "Purpose-built harness for customer-facing voice and chat, including hand-off to a live agent with context.",
       "status": "GA",
-      "audience": ["maker", "developer"],
+      "audience": [
+        "maker",
+        "developer"
+      ],
       "top": true,
       "source": "cs"
     },
@@ -198,7 +459,9 @@
       "name": "Apps in Copilot Studio and Copilot Cowork",
       "summary": "Makers can build apps that put the right information and actions in front of people for repeatable tasks. Rolling out in November 2026.",
       "status": "GA",
-      "audience": ["maker"],
+      "audience": [
+        "maker"
+      ],
       "top": true,
       "source": "cs"
     },
@@ -210,7 +473,10 @@
       "summary": "People closest to the work describe agents and workflows in natural language, then grow them in Copilot Studio where IT applies the same governance.",
       "status": "Preview",
       "note": "Public preview",
-      "audience": ["maker", "admin"],
+      "audience": [
+        "maker",
+        "admin"
+      ],
       "top": true,
       "source": "cs"
     },
@@ -222,7 +488,11 @@
       "summary": "Agents get managed credentials and approved access so teammates can @mention them and hand off work. Memory and signal-based triggers let them carry work forward.",
       "status": "Coming soon",
       "note": "Public preview from December 2026. The Ignite post does not state the availability of memory and triggers separately.",
-      "audience": ["maker", "admin", "security"],
+      "audience": [
+        "maker",
+        "admin",
+        "security"
+      ],
       "top": true,
       "source": "cs"
     },
@@ -233,7 +503,9 @@
       "name": "Agent sharing (co-authoring)",
       "summary": "Multiple makers work on the same agent directly in Copilot Studio.",
       "status": "GA",
-      "audience": ["maker"],
+      "audience": [
+        "maker"
+      ],
       "top": true,
       "source": "cs"
     },
@@ -245,10 +517,14 @@
       "summary": "Developers and their AI assistants can access Copilot Studio components such as the Microsoft Copilot harness, tools and models, and edit agents locally with GitHub-backed artifacts. Agents and workflows can be published to Copilot Studio from the CLI through Copilot Managed Runtime.",
       "status": "Preview",
       "note": "CLI and Copilot Studio MCP are in public preview.",
-      "audience": ["developer"],
+      "audience": [
+        "developer"
+      ],
       "top": false,
       "source": "cs",
-      "also": ["bon"]
+      "also": [
+        "bon"
+      ]
     },
     {
       "id": "cs-managed-runtime",
@@ -257,7 +533,10 @@
       "name": "Copilot Managed Runtime",
       "summary": "Microsoft-managed hosting, execution and governance for apps created in Copilot Code, Copilot Cowork, Copilot Studio and compatible third-party tools, with an optional Microsoft Fabric data backend.",
       "status": "GA",
-      "audience": ["developer", "admin"],
+      "audience": [
+        "developer",
+        "admin"
+      ],
       "top": false,
       "source": "bon"
     },
@@ -268,7 +547,9 @@
       "name": "Faster classify node and credit usage visibility in workflows",
       "summary": "The classify node uses a decision-scoring model by default for scenarios such as email triage and routing. Clearer credit usage visibility helps makers control spend.",
       "status": "Announced",
-      "audience": ["maker"],
+      "audience": [
+        "maker"
+      ],
       "top": false,
       "source": "cs"
     },
@@ -279,7 +560,10 @@
       "name": "Evaluations, monitoring and organization-level cost policies",
       "summary": "Built-in evaluations, monitoring and telemetry, plus organization-level cost policies and centralized management across the Microsoft 365 admin center and Power Platform admin center.",
       "status": "Announced",
-      "audience": ["admin", "maker"],
+      "audience": [
+        "admin",
+        "maker"
+      ],
       "top": false,
       "source": "cs"
     },
@@ -291,7 +575,10 @@
       "summary": "Agents can use governed Cloud PCs to operate legacy apps without APIs. Windows 365 for Agents is now eligible for Copilot Credits.",
       "status": "Announced",
       "note": "Described as available in the Standard harness in Copilot Studio.",
-      "audience": ["maker", "admin"],
+      "audience": [
+        "maker",
+        "admin"
+      ],
       "top": false,
       "source": "bon"
     },
@@ -303,11 +590,13 @@
       "summary": "Computer-use on governed Cloud PCs comes to the Microsoft Copilot harness.",
       "status": "Coming soon",
       "note": "Preview in December 2026.",
-      "audience": ["maker", "admin"],
+      "audience": [
+        "maker",
+        "admin"
+      ],
       "top": false,
       "source": "bon"
     },
-
     {
       "id": "iq-ga",
       "product": "iq",
@@ -315,10 +604,16 @@
       "name": "Microsoft IQ is generally available",
       "summary": "Enterprise context management plus continuous improvement in Foundry. Brings together Work IQ, Fabric IQ, Foundry IQ, Web IQ and more than 350 third-party connectors, with no new SKU or subscription.",
       "status": "GA",
-      "audience": ["developer", "maker", "admin"],
+      "audience": [
+        "developer",
+        "maker",
+        "admin"
+      ],
       "top": true,
       "source": "iq",
-      "also": ["bon"]
+      "also": [
+        "bon"
+      ]
     },
     {
       "id": "iq-business-plugins",
@@ -328,7 +623,11 @@
       "summary": "Curated, hierarchical and governed guidance that tells agents which context, tools, skills and authoritative sources to use. Sensitivity labels and change auditing support governance.",
       "status": "Preview",
       "note": "Frontier program",
-      "audience": ["maker", "developer", "admin"],
+      "audience": [
+        "maker",
+        "developer",
+        "admin"
+      ],
       "top": true,
       "source": "bon"
     },
@@ -339,7 +638,10 @@
       "name": "Reusable plugins, skills, tools and agents",
       "summary": "Discover and reuse the building blocks of enterprise AI in Microsoft Copilot and through Microsoft IQ APIs.",
       "status": "GA",
-      "audience": ["maker", "developer"],
+      "audience": [
+        "maker",
+        "developer"
+      ],
       "top": false,
       "source": "bon"
     },
@@ -350,7 +652,9 @@
       "name": "Context capabilities across Copilot, GitHub Copilot, Foundry and any harness via MCP",
       "summary": "Work IQ, Fabric IQ, Foundry IQ and Web IQ context is available across Microsoft Copilot, GitHub Copilot, Microsoft Foundry and compatible agent platforms.",
       "status": "GA",
-      "audience": ["developer"],
+      "audience": [
+        "developer"
+      ],
       "top": false,
       "source": "bon"
     },
@@ -361,7 +665,10 @@
       "name": "Work IQ: CRM and ERP grounding, Retrieve, real-time meeting context and long-running tasks",
       "summary": "Business Applications in Work IQ adds CRM and ERP records. Retrieve returns permission-trimmed Microsoft 365 and connector data in one call. Also GA: real-time meeting context, long-running tasks and agent-to-agent support, granular MCP policies, and OpenAI and Anthropic plugins.",
       "status": "GA",
-      "audience": ["developer", "admin"],
+      "audience": [
+        "developer",
+        "admin"
+      ],
       "top": true,
       "source": "iq"
     },
@@ -373,10 +680,16 @@
       "summary": "Agents can remember what matters, create and edit Word, Excel and PowerPoint content, respond to events through Listen subscriptions, and pause for human approval before consequential actions.",
       "status": "Preview",
       "note": "Public preview per the Azure blog. The Book of News words some of these as generally available, so verify before relying on them.",
-      "audience": ["developer", "admin", "security"],
+      "audience": [
+        "developer",
+        "admin",
+        "security"
+      ],
       "top": false,
       "source": "iq",
-      "also": ["bon"]
+      "also": [
+        "bon"
+      ]
     },
     {
       "id": "iq-fabric-copilot",
@@ -385,7 +698,10 @@
       "name": "Power BI semantic models in Microsoft Copilot and Fabric apps",
       "summary": "Users get answers grounded in trusted business context. With Fabric apps, developers embed conversational experiences powered by semantic models and Fabric data agents into custom apps.",
       "status": "GA",
-      "audience": ["data", "developer"],
+      "audience": [
+        "data",
+        "developer"
+      ],
       "top": false,
       "source": "iq"
     },
@@ -397,7 +713,9 @@
       "summary": "Specialized data agents that reason over enterprise data arrive in Microsoft Copilot.",
       "status": "Coming soon",
       "note": "General availability is stated as coming soon.",
-      "audience": ["data"],
+      "audience": [
+        "data"
+      ],
       "top": false,
       "source": "iq"
     },
@@ -408,7 +726,10 @@
       "name": "Fabric IQ in Excel, ChatGPT, Claude and GitHub Copilot",
       "summary": "Ask governed semantic models questions and build live Fabric-connected PivotTables in Excel. New ChatGPT and Claude connectors bring Power BI semantic model insights into those assistants, and Fabric IQ ontologies in GitHub Copilot bring business context into development.",
       "status": "Preview",
-      "audience": ["data", "developer"],
+      "audience": [
+        "data",
+        "developer"
+      ],
       "top": false,
       "source": "iq"
     },
@@ -419,7 +740,9 @@
       "name": "IQ sharing for ontologies",
       "summary": "Share business context from Fabric IQ ontologies with customers and partners.",
       "status": "Preview",
-      "audience": ["data"],
+      "audience": [
+        "data"
+      ],
       "top": false,
       "source": "iq"
     },
@@ -430,10 +753,14 @@
       "name": "Knowledge graphs and Microsoft-Retriever-1",
       "summary": "Knowledge graphs connect entities and relationships across documents and enable topic-based retrieval. Microsoft-Retriever-1 is a retrieval model that runs iterative search and query planning for agentic grounding.",
       "status": "Preview",
-      "audience": ["developer"],
+      "audience": [
+        "developer"
+      ],
       "top": true,
       "source": "bon",
-      "also": ["iq"]
+      "also": [
+        "iq"
+      ]
     },
     {
       "id": "iq-foundry-sharepoint",
@@ -442,10 +769,14 @@
       "name": "SharePoint indexed knowledge source",
       "summary": "Brings SharePoint content into Foundry IQ retrieval while respecting source permissions.",
       "status": "GA",
-      "audience": ["developer"],
+      "audience": [
+        "developer"
+      ],
       "top": false,
       "source": "bon",
-      "also": ["iq"]
+      "also": [
+        "iq"
+      ]
     },
     {
       "id": "iq-foundry-serverless",
@@ -455,10 +786,14 @@
       "summary": "Usage-based pricing with no capacity to provision and free monthly allowances. A Foundry IQ resource in every new Foundry project provides grounding from day one.",
       "status": "Coming soon",
       "note": "GA in December 2026 per the Azure blog. The Book of News describes the per-project resource as in preview.",
-      "audience": ["developer"],
+      "audience": [
+        "developer"
+      ],
       "top": false,
       "source": "iq",
-      "also": ["bon"]
+      "also": [
+        "bon"
+      ]
     },
     {
       "id": "iq-web-ga",
@@ -467,10 +802,15 @@
       "name": "Web IQ available to every Azure customer",
       "summary": "No waitlist, pricing from $1 per 1,000 calls. Auto and Auto Advanced modes unify Web, Images, Videos, News, Places and Weather. Scopes let organizations include or exclude sites and domains. Health-aware ranking surfaces credible health sources.",
       "status": "GA",
-      "audience": ["developer", "admin"],
+      "audience": [
+        "developer",
+        "admin"
+      ],
       "top": true,
       "source": "iq",
-      "also": ["bon"]
+      "also": [
+        "bon"
+      ]
     },
     {
       "id": "iq-web-commerce",
@@ -480,7 +820,9 @@
       "summary": "Structured product data across more than 40 billion listings for AI shopping agents.",
       "status": "Preview",
       "note": "Private preview",
-      "audience": ["developer"],
+      "audience": [
+        "developer"
+      ],
       "top": false,
       "source": "bon"
     },
@@ -491,7 +833,9 @@
       "name": "Bring Your Own License for publisher content",
       "summary": "Combines licensed publisher content with web results.",
       "status": "Announced",
-      "audience": ["developer"],
+      "audience": [
+        "developer"
+      ],
       "top": false,
       "source": "iq"
     },
@@ -502,10 +846,14 @@
       "name": "Agent Optimizer and Managed Training in Foundry",
       "summary": "Teams define success, then Agent Optimizer evaluates an agent, generates and ranks improved configurations, and teams approve changes before deployment. Managed Training automates model improvement for most customization needs.",
       "status": "Announced",
-      "audience": ["developer"],
+      "audience": [
+        "developer"
+      ],
       "top": false,
       "source": "iq",
-      "also": ["bon"]
+      "also": [
+        "bon"
+      ]
     },
     {
       "id": "iq-programmed-training",
@@ -515,11 +863,12 @@
       "summary": "AI engineers write custom training loops, including supervised fine-tuning and reinforcement learning, for supported open-weight models while Foundry manages compute.",
       "status": "Preview",
       "note": "Public preview",
-      "audience": ["developer"],
+      "audience": [
+        "developer"
+      ],
       "top": false,
       "source": "iq"
     },
-
     {
       "id": "a365-business-analytics",
       "product": "agent-365",
@@ -528,10 +877,16 @@
       "summary": "Shows AI spend, usage and value together across Microsoft and non-Microsoft AI, with measures such as assisted hours, success rate and satisfaction, spend forecasting and plain-language questions.",
       "status": "Preview",
       "note": "Frontier program. Insights for Microsoft services need at least one Microsoft 365 Copilot license in the tenant. Non-Microsoft insights need Agent 365 and/or ME7 licensing.",
-      "audience": ["business", "admin"],
+      "audience": [
+        "business",
+        "admin"
+      ],
       "top": true,
       "source": "a365ba",
-      "also": ["a365", "bon"]
+      "also": [
+        "a365",
+        "bon"
+      ]
     },
     {
       "id": "a365-cost-management",
@@ -541,10 +896,15 @@
       "summary": "Central place in the Microsoft 365 admin center to see and control usage-based AI services, including Copilot Studio, Copilot Cowork, Copilot Code and Copilot Managed Runtime. Set spend limits and alerts, control which models teams can use, and extend analysis through Fabric, Graph APIs and exports.",
       "status": "Preview",
       "note": "Forecasting and plain-language questions are in the Frontier program. Value insights expand in December.",
-      "audience": ["admin", "business"],
+      "audience": [
+        "admin",
+        "business"
+      ],
       "top": true,
       "source": "bon",
-      "also": ["a365"]
+      "also": [
+        "a365"
+      ]
     },
     {
       "id": "a365-connected-platforms",
@@ -554,7 +914,10 @@
       "summary": "Sync agents from Salesforce Agentforce, Amazon AgentCore, Google Vertex AI, Databricks, Snowflake, Anthropic, OpenAI and others into the registry. Each gets an Entra Agent ID. Includes a guided connection wizard and secretless authentication.",
       "status": "Preview",
       "note": "Capabilities vary by platform. Rollout completes in December.",
-      "audience": ["admin", "security"],
+      "audience": [
+        "admin",
+        "security"
+      ],
       "top": true,
       "source": "a365"
     },
@@ -565,10 +928,15 @@
       "name": "Dynamic agent risk",
       "summary": "One continuously updated risk level per agent, combining identity, access, data, endpoint, cloud and network signals with exposure and blast radius. Visible in the Microsoft 365 admin center, Defender, Entra and Purview. Check Point, Cyera, Darktrace and Zenity contribute signals through Sentinel.",
       "status": "Preview",
-      "audience": ["security", "admin"],
+      "audience": [
+        "security",
+        "admin"
+      ],
       "top": true,
       "source": "a365",
-      "also": ["bon"]
+      "also": [
+        "bon"
+      ]
     },
     {
       "id": "a365-multitenant",
@@ -578,7 +946,9 @@
       "summary": "Partners and multi-tenant enterprises view agents across tenants, compare configuration and access, and approve or block agents at scale.",
       "status": "Preview",
       "note": "Public preview",
-      "audience": ["admin"],
+      "audience": [
+        "admin"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -589,7 +959,10 @@
       "name": "Local agent discovery in Microsoft Defender",
       "summary": "Discovers more than 60 local AI agents, such as Claude Code and GitHub Copilot CLI, and their MCP servers on managed Windows and macOS devices, tied to device and user.",
       "status": "GA",
-      "audience": ["security", "admin"],
+      "audience": [
+        "security",
+        "admin"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -600,7 +973,10 @@
       "name": "Network-level and shadow AI discovery",
       "summary": "Entra Global Secure Access adds network visibility into agent destinations and MCP servers. The Agent registry brings shadow AI into the same inventory as other agents.",
       "status": "Preview",
-      "audience": ["security", "admin"],
+      "audience": [
+        "security",
+        "admin"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -611,7 +987,10 @@
       "name": "Entra Agent ID for local agents and Autopilot",
       "summary": "Supported local agents, starting with GitHub Copilot CLI and Claude Code, get their own identity separate from the user's. Entra Agent ID also extends to Microsoft Autopilot, alongside agents built with Copilot Studio and Foundry.",
       "status": "Preview",
-      "audience": ["security", "admin"],
+      "audience": [
+        "security",
+        "admin"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -622,7 +1001,10 @@
       "name": "Export Agent Activity",
       "summary": "Continuously sync agent traces from Agent 365 into Azure Monitor and Application Insights, with filters and control over which prompts and responses are included.",
       "status": "Announced",
-      "audience": ["admin", "developer"],
+      "audience": [
+        "admin",
+        "developer"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -633,7 +1015,10 @@
       "name": "Tools registry",
       "summary": "One view of the tools, resources and services agents use, including commonly used and potentially risky tools and connections.",
       "status": "GA",
-      "audience": ["admin", "security"],
+      "audience": [
+        "admin",
+        "security"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -645,7 +1030,9 @@
       "summary": "Connect catalogs such as GitHub and Unity Catalog (Databricks) and gateways so Microsoft and non-Microsoft tools appear together.",
       "status": "Coming soon",
       "note": "Private preview in December 2026.",
-      "audience": ["admin"],
+      "audience": [
+        "admin"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -656,7 +1043,10 @@
       "name": "Agent Map use cases",
       "summary": "Classifies agent sessions by type of work to reveal adoption patterns and overlapping or duplicate agents.",
       "status": "Preview",
-      "audience": ["admin", "business"],
+      "audience": [
+        "admin",
+        "business"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -667,10 +1057,14 @@
       "name": "Usage insights for Microsoft agents with qualifying Microsoft 365 subscriptions",
       "summary": "Agent overview, active users and usage metrics for Microsoft pre-built agents and agents on Microsoft platforms, without an Agent 365 license. Premium capabilities and non-Microsoft agent insights still need Agent 365 or ME7.",
       "status": "GA",
-      "audience": ["admin"],
+      "audience": [
+        "admin"
+      ],
       "top": false,
       "source": "a365",
-      "also": ["bon"]
+      "also": [
+        "bon"
+      ]
     },
     {
       "id": "a365-plugins-skills-gov",
@@ -679,10 +1073,14 @@
       "name": "Plugins and skills governance for Copilot and Cowork",
       "summary": "Manage plugin and skill availability and assign access to users and groups from the Microsoft 365 admin center.",
       "status": "GA",
-      "audience": ["admin"],
+      "audience": [
+        "admin"
+      ],
       "top": false,
       "source": "a365",
-      "also": ["bon"]
+      "also": [
+        "bon"
+      ]
     },
     {
       "id": "a365-mcp-gov",
@@ -691,10 +1089,15 @@
       "name": "MCP server governance for Azure AI Gateway and LiteLLM",
       "summary": "Bring MCP servers from Azure AI Gateway and third-party gateways into one experience, and see which agents and plugins depend on a server before blocking it.",
       "status": "Preview",
-      "audience": ["admin", "security"],
+      "audience": [
+        "admin",
+        "security"
+      ],
       "top": false,
       "source": "a365",
-      "also": ["bon"]
+      "also": [
+        "bon"
+      ]
     },
     {
       "id": "a365-local-gov",
@@ -703,7 +1106,10 @@
       "name": "Local and shadow agent governance",
       "summary": "Block unsanctioned local agents with Intune, Defender and Global Secure Access. For approved agents, Intune policies and Microsoft Execution Containers (MXC) on Windows constrain tool execution outside the agent's control.",
       "status": "Preview",
-      "audience": ["security", "admin"],
+      "audience": [
+        "security",
+        "admin"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -714,7 +1120,9 @@
       "name": "Copilot Cowork with the Agent 365 plugin",
       "summary": "Administrators inspect their AI estate and automate governance in plain language, with approval prompts before consequential actions.",
       "status": "Preview",
-      "audience": ["admin"],
+      "audience": [
+        "admin"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -726,10 +1134,14 @@
       "summary": "A focused view of governance tasks, starting with inactive and ownerless agents for review and cleanup.",
       "status": "Coming soon",
       "note": "Private preview in December 2026.",
-      "audience": ["admin"],
+      "audience": [
+        "admin"
+      ],
       "top": false,
       "source": "a365",
-      "also": ["bon"]
+      "also": [
+        "bon"
+      ]
     },
     {
       "id": "a365-adaptive-access",
@@ -738,7 +1150,9 @@
       "name": "Conditional Access dynamic controls for agents",
       "summary": "Evaluate policy at the point of action, not only at sign-in, and set access policies for agents acting on a user's behalf separate from the user's own.",
       "status": "Announced",
-      "audience": ["security"],
+      "audience": [
+        "security"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -749,7 +1163,9 @@
       "name": "Purview data loss prevention for Microsoft and local agents",
       "summary": "Detect and block sensitive information before Microsoft agents and key local agents, such as Claude Code and GitHub Copilot CLI, process or transmit it, with flexible policy scoping.",
       "status": "Preview",
-      "audience": ["security"],
+      "audience": [
+        "security"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -761,7 +1177,9 @@
       "summary": "Inspects critical points in the agent loop and can block malicious instructions before the agent acts, in Audit or Block mode.",
       "status": "GA",
       "note": "Generally available on Windows.",
-      "audience": ["security"],
+      "audience": [
+        "security"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -772,7 +1190,9 @@
       "name": "Security posture for third-party agents",
       "summary": "Defender extends posture assessment to agents built on Amazon Bedrock, Google Gemini, Google Vertex AI and Anthropic Claude, in the same inventory as Copilot Studio and Foundry agents.",
       "status": "Preview",
-      "audience": ["security"],
+      "audience": [
+        "security"
+      ],
       "top": false,
       "source": "a365"
     },
@@ -783,7 +1203,11 @@
       "name": "Business Applications in Work IQ",
       "summary": "Power Platform apps, flows and sites become tools that agents can use across Microsoft Copilot, Cowork, Copilot Studio, GitHub Copilot and custom agents, without being rebuilt. Agents work within existing permissions and governance.",
       "status": "Announced",
-      "audience": ["maker", "developer", "admin"],
+      "audience": [
+        "maker",
+        "developer",
+        "admin"
+      ],
       "top": true,
       "source": "pp"
     },
@@ -794,7 +1218,11 @@
       "name": "Work IQ setting, business skills and Dataverse semantic model",
       "summary": "The Dataverse intelligence (preview) setting in the Power Platform admin center is now the Work IQ setting. It adds business skills and a Dataverse semantic model, with data from Dynamics 365 Sales, Customer Service, ERP and Power Apps model-driven apps.",
       "status": "Announced",
-      "audience": ["admin", "developer", "data"],
+      "audience": [
+        "admin",
+        "developer",
+        "data"
+      ],
       "top": false,
       "note": "The Learn page labels ERP data as preview.",
       "source": "ppwiq"
@@ -806,7 +1234,10 @@
       "name": "Ways agents reach business data",
       "summary": "Entry points include Copilot Chat, Copilot Cowork, MCP tools (Work IQ MCP and Dataverse MCP), the Dataverse Ask API and the Dataverse plugin for coding agents. It works with Agent Builder in Copilot, Copilot Studio and Microsoft Foundry.",
       "status": "Announced",
-      "audience": ["developer", "maker"],
+      "audience": [
+        "developer",
+        "maker"
+      ],
       "top": false,
       "note": "The Learn page labels the Copilot Cowork entry point as preview.",
       "source": "ppwiq"
@@ -818,7 +1249,10 @@
       "name": "Hybrid teams of makers and agents",
       "summary": "Makers can bring agents into new and existing apps and flows only when they want them, and work continues if tokens run out. Agents build through MCP servers using Power Platform controls and components, so output stays low-code and is governed like other solutions.",
       "status": "Announced",
-      "audience": ["maker", "developer"],
+      "audience": [
+        "maker",
+        "developer"
+      ],
       "top": true,
       "source": "pp"
     },
@@ -829,7 +1263,11 @@
       "name": "Start building from the tool you prefer",
       "summary": "Pro developers can start in GitHub Copilot or other coding agents, makers use dedicated studios, and business users can build from Microsoft Copilot and Cowork.",
       "status": "Announced",
-      "audience": ["maker", "developer", "business"],
+      "audience": [
+        "maker",
+        "developer",
+        "business"
+      ],
       "top": false,
       "source": "pp"
     },
@@ -840,7 +1278,10 @@
       "name": "Copilot in model-driven apps",
       "summary": "App users get Copilot inside model-driven apps. Copilot respects the app's existing data access and permissions.",
       "status": "GA",
-      "audience": ["maker", "business"],
+      "audience": [
+        "maker",
+        "business"
+      ],
       "top": false,
       "note": "Microsoft says this became generally available in April 2026, before Ignite.",
       "source": "pp"
@@ -852,7 +1293,10 @@
       "name": "Copilot in canvas apps",
       "summary": "Makers can add suggested prompts and app-specific context and actions to Copilot in canvas apps, which respects the app's existing data access and permissions.",
       "status": "Coming soon",
-      "audience": ["maker", "business"],
+      "audience": [
+        "maker",
+        "business"
+      ],
       "top": true,
       "note": "Microsoft's post says general availability this November. The related Learn page was still marked preview.",
       "source": "pp"
@@ -864,7 +1308,10 @@
       "name": "Faster, higher-quality apps",
       "summary": "New canvas controls with better performance, model-driven apps that load faster and faster mobile app startup. Microsoft says it shipped 130+ capabilities this year, 65% focused on quality and experience, and retired 24 features.",
       "status": "Announced",
-      "audience": ["maker", "developer"],
+      "audience": [
+        "maker",
+        "developer"
+      ],
       "top": true,
       "source": "pp"
     },
@@ -875,7 +1322,10 @@
       "name": "New views and native mobile experiences",
       "summary": "Model-driven apps get calendar, cards and timeline views, and mobile apps get native experiences. Offline sync is more reliable and keeps working while the app is in the background.",
       "status": "Announced",
-      "audience": ["maker", "business"],
+      "audience": [
+        "maker",
+        "business"
+      ],
       "top": false,
       "source": "pp"
     },
@@ -886,7 +1336,10 @@
       "name": "Canvas app authoring improvements",
       "summary": "Canvas apps gain a detachable formula bar, a delegation limit extended to 10,000 items and a grid container.",
       "status": "Announced",
-      "audience": ["maker", "developer"],
+      "audience": [
+        "maker",
+        "developer"
+      ],
       "top": false,
       "source": "pp"
     },
@@ -897,7 +1350,11 @@
       "name": "New Power Automate views and on-premises connectivity",
       "summary": "Cloud flows get inline views and connect to on-premises systems in fewer steps. Power Automate for desktop adds Flowchart and Flow Map views.",
       "status": "Announced",
-      "audience": ["maker", "developer", "admin"],
+      "audience": [
+        "maker",
+        "developer",
+        "admin"
+      ],
       "top": false,
       "note": "The Learn page labels flowchart mode in Power Automate for desktop as preview.",
       "source": "pp"
@@ -909,20 +1366,402 @@
       "name": "Cross-region Link to Fabric and Update connection",
       "summary": "Any Dataverse region can now link to any Fabric region. Update connection is rolling out and Microsoft expects it to be available everywhere by the end of November 2026.",
       "status": "GA",
-      "audience": ["admin", "data"],
+      "audience": [
+        "admin",
+        "data"
+      ],
       "top": false,
       "note": "Published on Nov 24, after Ignite week. Cross-region Link to Fabric is GA, and Update connection is still rolling out.",
       "source": "ppfabric"
+    },
+    {
+      "id": "fd-decision",
+      "product": "foundry",
+      "area": "Models",
+      "name": "Microsoft-Decision-1.1",
+      "summary": "A small model for routing, classification, prioritization, verification and workflow control, with calibrated confidence scores and image input. Built on Gemma 4 26B A4B, it is more than 2x faster than Decision-1 at the same cost, and can also be used as a judge in Foundry Evaluations.",
+      "status": "GA",
+      "audience": [
+        "developer"
+      ],
+      "top": true,
+      "source": "decision",
+      "also": [
+        "fci",
+        "fmodels"
+      ]
+    },
+    {
+      "id": "fd-router",
+      "product": "foundry",
+      "area": "Models",
+      "name": "Model router",
+      "summary": "Sends simple requests to small, fast models and harder ones to larger frontier models. Microsoft testing shows savings of up to 65% compared with sending everything to the frontier. Automatic model selection is on by default in supported projects.",
+      "status": "Announced",
+      "audience": [
+        "developer",
+        "admin"
+      ],
+      "top": false,
+      "source": "fci",
+      "note": "Already available; the blog and the Book of News give different pool sizes (44 and “top 50” models)",
+      "also": [
+        "fmodels",
+        "bon"
+      ]
+    },
+    {
+      "id": "fd-managed-compute",
+      "product": "foundry",
+      "area": "Models",
+      "name": "Managed Compute",
+      "summary": "Dedicated infrastructure for models, billed at an hourly GPU rate, with Data Zone availability. Sits alongside the Batch, Standard and Provisioned deployment types.",
+      "status": "GA",
+      "audience": [
+        "developer",
+        "admin"
+      ],
+      "top": false,
+      "source": "fmodels"
+    },
+    {
+      "id": "fd-mai",
+      "product": "foundry",
+      "area": "Models",
+      "name": "New Microsoft AI models: MAI-Code-2, MAI-Image-2.7 and MAI-Cyber-2-Flash",
+      "summary": "MAI-Code-2 and MAI-Code-2-Flash are GA in GitHub, with MAI-Code-2-Flash in limited access in Foundry. MAI-Image-2.7 and MAI-Image-2.7-Flash are in public preview in Foundry. MAI-Cyber-2-Flash is available only through Codename MDASH.",
+      "status": "Preview",
+      "audience": [
+        "developer",
+        "security"
+      ],
+      "top": false,
+      "source": "fmodels",
+      "note": "Availability differs by model; see the source",
+      "also": [
+        "fci"
+      ]
+    },
+    {
+      "id": "fd-partner-models",
+      "product": "foundry",
+      "area": "Models",
+      "name": "Partner models from fal and Baseten",
+      "summary": "fal brings Kling v3 Pro, MiniMax H3 Max and H3 Max Turbo, and LTX-2.5 Pro and Fast for video. Baseten brings Kimi-K3, GLM 5.3, GLM-5.3-Flash and DeepSeek V4.1-Flash-1017, serverless pay-as-you-go, with provisioned throughput starting in December.",
+      "status": "Preview",
+      "audience": [
+        "developer"
+      ],
+      "top": false,
+      "source": "fmodels",
+      "note": "Public preview",
+      "also": [
+        "bon"
+      ]
+    },
+    {
+      "id": "fd-meta-muse",
+      "product": "foundry",
+      "area": "Models",
+      "name": "Meta Muse models",
+      "summary": "Muse Wonder, Muse Spark 1.3 and Muse Ember are announced for Foundry.",
+      "status": "Coming soon",
+      "audience": [
+        "developer"
+      ],
+      "top": false,
+      "source": "fmodels"
+    },
+    {
+      "id": "fd-harness",
+      "product": "foundry",
+      "area": "Agent Service",
+      "name": "Microsoft Copilot harness",
+      "summary": "A fully managed way to build prompt agents that reason, use tools and complete long-running tasks. Microsoft runs the agent loop and sandbox; you bring knowledge, reusable skills and tools. Author in the Foundry UI, GitHub Copilot app, Foundry CLI (azd ai) or Foundry Toolkit for VS Code.",
+      "status": "Preview",
+      "audience": [
+        "developer"
+      ],
+      "top": true,
+      "source": "fagent",
+      "note": "Public preview",
+      "also": [
+        "fci"
+      ]
+    },
+    {
+      "id": "fd-voice",
+      "product": "foundry",
+      "area": "Agent Service",
+      "name": "Voice agents",
+      "summary": "Real-time, interruptible voice conversations for agents, with native telephony and contact center connections. Add voice to existing agents without rewriting them.",
+      "status": "GA",
+      "audience": [
+        "developer",
+        "business"
+      ],
+      "top": true,
+      "source": "fagent",
+      "also": [
+        "fci"
+      ]
+    },
+    {
+      "id": "fd-tools",
+      "product": "foundry",
+      "area": "Agent Service",
+      "name": "Computer use, browser automation, A2A and Web Search",
+      "summary": "Computer use and browser automation (with Live View and Take control) are GA, as are the A2A tool and Web Search powered by Web IQ for prompt agents. Toolboxes expose reusable tools through a managed MCP endpoint, with preview tool policies.",
+      "status": "GA",
+      "audience": [
+        "developer"
+      ],
+      "top": false,
+      "source": "fagent",
+      "note": "Toolboxes updates and tool policies are in preview"
+    },
+    {
+      "id": "fd-iq-tools",
+      "product": "foundry",
+      "area": "Agent Service",
+      "name": "Work IQ and Fabric IQ integrations for agents",
+      "summary": "Bring Microsoft 365 context and Fabric data into Foundry agent workflows.",
+      "status": "Preview",
+      "audience": [
+        "developer",
+        "data"
+      ],
+      "top": false,
+      "source": "fagent"
+    },
+    {
+      "id": "fd-hosted-ga",
+      "product": "foundry",
+      "area": "Agent Service",
+      "name": "Hosted agents: scale and network controls",
+      "summary": "Shared subnet IPs, network egress controls with enforcement outside the sandbox, and long-running resiliency are GA. Default quotas are 1,000–2,000 concurrent sessions per subscription and region.",
+      "status": "GA",
+      "audience": [
+        "developer",
+        "admin"
+      ],
+      "top": false,
+      "source": "fagent",
+      "also": [
+        "fci"
+      ]
+    },
+    {
+      "id": "fd-hosted-preview",
+      "product": "foundry",
+      "area": "Agent Service",
+      "name": "Hosted agents: memory snapshots, private CA trust and Azure Policy",
+      "summary": "Memory snapshots reduce cold starts. Private certificate authority trust connects agents to internal APIs and MCP servers. Azure Policy can audit or block noncompliant egress settings.",
+      "status": "Preview",
+      "audience": [
+        "developer",
+        "admin"
+      ],
+      "top": false,
+      "source": "fagent",
+      "note": "Public preview"
+    },
+    {
+      "id": "fd-hosted-aks",
+      "product": "foundry",
+      "area": "Agent Service",
+      "name": "Deploy hosted agents to your own AKS clusters",
+      "summary": "Use the Foundry APIs and developer workflow while running agents on customer-owned AKS. Foundry manages the service integration; your team operates the cluster, networking and capacity.",
+      "status": "Coming soon",
+      "audience": [
+        "developer",
+        "admin"
+      ],
+      "top": false,
+      "source": "fagent",
+      "note": "Public preview targeted for early December"
+    },
+    {
+      "id": "fd-aks-open-weight",
+      "product": "foundry",
+      "area": "Agent Service",
+      "name": "Foundry open-weight models and agents on AKS",
+      "summary": "Run Foundry open-weight models and agents on your own AKS clusters. You choose the GPUs and regions, and Foundry handles setup.",
+      "status": "Preview",
+      "audience": [
+        "developer",
+        "admin"
+      ],
+      "top": false,
+      "source": "bon"
+    },
+    {
+      "id": "fd-m365-accounts",
+      "product": "foundry",
+      "area": "Agent Service",
+      "name": "Microsoft 365 accounts for agents",
+      "summary": "Supported hosted agents get their own Entra Agent ID, email, Teams presence, calendar and OneDrive, and appear in the org chart. Admins keep control through Microsoft Entra and Agent 365.",
+      "status": "Preview",
+      "audience": [
+        "developer",
+        "admin"
+      ],
+      "top": false,
+      "source": "fagent",
+      "also": [
+        "fci"
+      ]
+    },
+    {
+      "id": "fd-cost",
+      "product": "foundry",
+      "area": "Operate",
+      "name": "Cost in Microsoft Foundry",
+      "summary": "One view of spend across agents, models and tools, with a forecast and a month-end report on the assets driving the most cost.",
+      "status": "Preview",
+      "audience": [
+        "admin",
+        "business"
+      ],
+      "top": false,
+      "source": "fci"
+    },
+    {
+      "id": "fd-agent-controls",
+      "product": "foundry",
+      "area": "Operate",
+      "name": "Agent controls in Foundry Safety",
+      "summary": "Extends guardrail oversight to the runtime: checking an agent’s behavior against the policies you set as it runs. Covers agents built in Foundry and, in the future, outside it.",
+      "status": "Announced",
+      "audience": [
+        "security",
+        "admin"
+      ],
+      "top": false,
+      "source": "fci"
+    },
+    {
+      "id": "fd-insights",
+      "product": "foundry",
+      "area": "Continuous improvement",
+      "name": "Insights",
+      "summary": "Groups recurring problems across production traces, shows the evidence and points to a likely cause. Also covers agents built with LangGraph, LangChain and CrewAI.",
+      "status": "GA",
+      "audience": [
+        "developer"
+      ],
+      "top": true,
+      "source": "fci",
+      "also": [
+        "fagent",
+        "bon"
+      ]
+    },
+    {
+      "id": "fd-evals",
+      "product": "foundry",
+      "area": "Continuous improvement",
+      "name": "Multi-turn and rubric evaluation",
+      "summary": "Evaluate whole conversations and write rubric evaluators from your own criteria. Safety coverage for rubric evaluators is in preview.",
+      "status": "GA",
+      "audience": [
+        "developer"
+      ],
+      "top": false,
+      "source": "bon",
+      "note": "Safety rubric evaluators are in preview",
+      "also": [
+        "fci"
+      ]
+    },
+    {
+      "id": "fd-annotations",
+      "product": "foundry",
+      "area": "Continuous improvement",
+      "name": "Annotations, evaluation datasets and golden datasets",
+      "summary": "Experts mark what worked and what the agent should have done on real traces. Those reviews become evaluation datasets and a golden dataset that each new version has to beat.",
+      "status": "Preview",
+      "audience": [
+        "developer",
+        "business"
+      ],
+      "top": false,
+      "source": "fci",
+      "note": "Public preview",
+      "also": [
+        "fagent",
+        "bon"
+      ]
+    },
+    {
+      "id": "fd-optimizer",
+      "product": "foundry",
+      "area": "Continuous improvement",
+      "name": "Agent optimizer",
+      "summary": "Improves an agent’s instructions, skills and model choice and tests every candidate against your evaluations. It recommends the strongest candidate, but nothing changes in production until your team applies it.",
+      "status": "GA",
+      "audience": [
+        "developer"
+      ],
+      "top": true,
+      "source": "fci",
+      "also": [
+        "bon",
+        "iq"
+      ]
+    },
+    {
+      "id": "fd-optimizer-new",
+      "product": "foundry",
+      "area": "Continuous improvement",
+      "name": "Insights to optimizer, skill optimization and cost optimization",
+      "summary": "Send a recurring production issue to Agent optimizer, turn past work and expert feedback into versioned skills, and find cheaper model choices without losing quality.",
+      "status": "Preview",
+      "audience": [
+        "developer"
+      ],
+      "top": false,
+      "source": "fci",
+      "note": "Cost optimization is in public preview",
+      "also": [
+        "fagent"
+      ]
+    },
+    {
+      "id": "fd-training",
+      "product": "foundry",
+      "area": "Continuous improvement",
+      "name": "Managed Training and Programmed Training",
+      "summary": "Managed Training (previously managed fine-tuning) trains models on your data. Programmed Training lets engineers write Python training recipes that run on serverless GPUs. Heidi reports an estimated 87% lower cost per note; Docusign cut AI processing costs by 90%.",
+      "status": "Preview",
+      "audience": [
+        "developer",
+        "data"
+      ],
+      "top": false,
+      "source": "fci",
+      "note": "Programmed Training is in public preview",
+      "also": [
+        "bon",
+        "iq"
+      ]
     }
   ],
   "compare": {
-    "columns": ["copilot-studio", "iq", "agent-365", "power-platform"],
+    "columns": [
+      "copilot-studio",
+      "iq",
+      "foundry",
+      "agent-365",
+      "power-platform"
+    ],
     "rows": [
       {
         "label": "Role in the stack",
         "values": [
           "Build agents, workflows and apps",
           "Ground agents in organizational context",
+          "Run agents at scale and keep improving them, with 11,000+ models",
           "Govern, secure and measure agents",
           "Low-code apps, flows and data that agents build with and use as tools"
         ]
@@ -932,6 +1771,7 @@
         "values": [
           "Makers and developers",
           "Developers, data teams and makers",
+          "Developers, AI engineers and platform teams",
           "IT, security and business leaders",
           "Makers, pro developers and admins"
         ]
@@ -941,6 +1781,7 @@
         "values": [
           "Customer conversation harness, apps, agent sharing, Copilot Managed Runtime",
           "Microsoft IQ platform, Web IQ for all Azure customers, SharePoint knowledge source",
+          "Microsoft-Decision-1.1, voice agents, Insights, Agent optimizer, Managed Compute",
           "Tools registry, Defender local agent discovery, plugin and skill governance",
           "Copilot in model-driven apps (April), Cross-region Link to Fabric"
         ]
@@ -950,6 +1791,7 @@
         "values": [
           "Agent accounts (December), creation from Cowork and Code, CLI and MCP",
           "Business plugins, knowledge graphs, Programmed Training, Foundry IQ Serverless (December)",
+          "Copilot harness, MAI image and code models, Programmed Training, Foundry cost view, hosted agents on AKS (early December)",
           "Business Analytics, dynamic agent risk, connected platforms, action center (December)",
           "Copilot in canvas apps (GA this November), Update connection rollout"
         ]
@@ -959,6 +1801,7 @@
         "values": [
           "Usage-based. The harness you choose affects billing, and workflows show credit usage",
           "Built on products customers already use, with no new SKU or subscription",
+          "Usage-based: per-token model pricing and hourly GPU billing for Managed Compute",
           "Premium governance, security and non-Microsoft insights need Agent 365 or ME7",
           "Not stated in the announcements. Check Power Platform licensing for your plan"
         ]
@@ -969,40 +1812,103 @@
     {
       "title": "Copilot Studio",
       "links": [
-        { "label": "Explore Copilot Studio", "url": "https://www.microsoft.com/copilot/products/copilot-studio" },
-        { "label": "Copilot Studio documentation", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio" },
-        { "label": "Copilot Studio blog", "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/" }
+        {
+          "label": "Explore Copilot Studio",
+          "url": "https://www.microsoft.com/copilot/products/copilot-studio"
+        },
+        {
+          "label": "Copilot Studio documentation",
+          "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio"
+        },
+        {
+          "label": "Copilot Studio blog",
+          "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/"
+        }
       ]
     },
     {
       "title": "Microsoft IQ",
       "links": [
-        { "label": "Microsoft IQ overview", "url": "https://aka.ms/microsoftiq" },
-        { "label": "Introducing the new Microsoft IQ", "url": "https://azure.microsoft.com/en-us/blog/introducing-the-new-microsoft-iq-putting-your-organizations-intelligence-to-work-in-every-agent/" }
+        {
+          "label": "Microsoft IQ overview",
+          "url": "https://aka.ms/microsoftiq"
+        },
+        {
+          "label": "Introducing the new Microsoft IQ",
+          "url": "https://azure.microsoft.com/en-us/blog/introducing-the-new-microsoft-iq-putting-your-organizations-intelligence-to-work-in-every-agent/"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft Foundry",
+      "links": [
+        {
+          "label": "Foundry Agent Service documentation",
+          "url": "https://learn.microsoft.com/azure/foundry/agents/overview"
+        },
+        {
+          "label": "Foundry models catalog",
+          "url": "https://azure.microsoft.com/en-us/products/ai-foundry/models"
+        },
+        {
+          "label": "Continuous improvement in Foundry",
+          "url": "https://azure.microsoft.com/en-us/blog/continuous-improvement-comes-to-microsoft-foundry/"
+        },
+        {
+          "label": "Microsoft-Decision-1.1",
+          "url": "https://commandline.microsoft.com/microsoft-decision-model-ga/"
+        }
       ]
     },
     {
       "title": "Agent 365",
       "links": [
-        { "label": "Get started with Agent 365", "url": "https://learn.microsoft.com/microsoft-agent-365/get-started" },
-        { "label": "Training module", "url": "https://learn.microsoft.com/training/modules/agent-365-get-started/" },
-        { "label": "Microsoft 365 roadmap", "url": "https://www.microsoft.com/microsoft-365/roadmap" }
+        {
+          "label": "Get started with Agent 365",
+          "url": "https://learn.microsoft.com/microsoft-agent-365/get-started"
+        },
+        {
+          "label": "Training module",
+          "url": "https://learn.microsoft.com/training/modules/agent-365-get-started/"
+        },
+        {
+          "label": "Microsoft 365 roadmap",
+          "url": "https://www.microsoft.com/microsoft-365/roadmap"
+        }
       ]
     },
     {
       "title": "Power Platform",
       "links": [
-        { "label": "Explore Power Platform", "url": "https://www.microsoft.com/en-us/power-platform" },
-        { "label": "Power Platform documentation", "url": "https://learn.microsoft.com/en-us/power-platform/" },
-        { "label": "Power Platform learning paths", "url": "https://learn.microsoft.com/en-us/training/powerplatform/" },
-        { "label": "Ignite 2026 Power Platform blog", "url": "https://www.microsoft.com/en-us/power-platform/blog/2026/11/18/turn-ai-ambition-into-real-business-value-with-power-platform/" }
+        {
+          "label": "Explore Power Platform",
+          "url": "https://www.microsoft.com/en-us/power-platform"
+        },
+        {
+          "label": "Power Platform documentation",
+          "url": "https://learn.microsoft.com/en-us/power-platform/"
+        },
+        {
+          "label": "Power Platform learning paths",
+          "url": "https://learn.microsoft.com/en-us/training/powerplatform/"
+        },
+        {
+          "label": "Ignite 2026 Power Platform blog",
+          "url": "https://www.microsoft.com/en-us/power-platform/blog/2026/11/18/turn-ai-ambition-into-real-business-value-with-power-platform/"
+        }
       ]
     },
     {
       "title": "Ignite 2026",
       "links": [
-        { "label": "Ignite 2026 home and on-demand sessions", "url": "https://ignite.microsoft.com/en-US/home" },
-        { "label": "Ignite 2026 news hub", "url": "https://news.microsoft.com/events/ignite/2026/" }
+        {
+          "label": "Ignite 2026 home and on-demand sessions",
+          "url": "https://ignite.microsoft.com/en-US/home"
+        },
+        {
+          "label": "Ignite 2026 news hub",
+          "url": "https://news.microsoft.com/events/ignite/2026/"
+        }
       ]
     }
   ]

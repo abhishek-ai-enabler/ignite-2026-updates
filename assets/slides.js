@@ -11,7 +11,7 @@
   document.documentElement.setAttribute('data-deck-theme', theme);
   var link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = 'assets/slides-' + theme + '.css?v=20261126g';
+  link.href = 'assets/slides-' + theme + '.css?v=20261126h';
   document.head.appendChild(link);
 
   function el(tag, attrs, children) {
@@ -30,7 +30,7 @@
   }
 
   function productById(id) { return data.products.find(function (p) { return p.id === id; }); }
-  function shortName(p) { return p.id === 'iq' ? p.name : p.name.replace('Microsoft ', ''); }
+  function shortName(p) { return p.id === 'iq' || p.id === 'foundry' ? p.name : p.name.replace('Microsoft ', ''); }
   function sourceById(id) { return data.sources.find(function (s) { return s.id === id; }); }
 
   function logo(key, size) {
@@ -65,7 +65,7 @@
     var m = data.meta;
     slide('title', '', [
       el('p', { class: 'kicker', text: m.event }),
-      el('h1', { text: 'What’s new in Copilot Studio, Microsoft IQ, Agent 365 and Power Platform' }),
+      el('h1', { text: 'What’s new in Copilot Studio, Microsoft IQ, Microsoft Foundry, Agent 365 and Power Platform' }),
       el('p', { class: 'sub', text: m.dates + ' · ' + m.location }),
       el('ul', { class: 'logo-row', 'aria-label': 'Products' }, data.products.map(function (p) {
         return el('li', {}, [logo(p.logo, 64), el('span', { text: shortName(p) })]);
@@ -75,8 +75,8 @@
   }
 
   function fitSlide() {
-    var roles = { 'copilot-studio': 'Build', 'iq': 'Ground', 'power-platform': 'Connect', 'agent-365': 'Govern' };
-    var order = ['copilot-studio', 'iq', 'power-platform', 'agent-365'];
+    var roles = { 'copilot-studio': 'Build', 'iq': 'Ground', 'foundry': 'Run', 'power-platform': 'Connect', 'agent-365': 'Govern' };
+    var order = ['copilot-studio', 'iq', 'foundry', 'power-platform', 'agent-365'];
     slide('fit', '', [
       head('The big picture', 'How they fit together'),
       el('ol', { class: 'fit-row' }, order.map(function (id, i) {
@@ -204,7 +204,7 @@
   function closeSlide() {
     slide('close', '', [
       head('Sources', 'Where this comes from'),
-      el('ul', { class: 'sources' }, data.sources.slice(0, 8).map(function (s) {
+      el('ul', { class: 'sources' }, data.sources.map(function (s) {
         return el('li', {}, [el('a', { href: s.url, text: s.label, target: '_blank', rel: 'noopener noreferrer' })]);
       })),
       el('p', { class: 'small', text: 'The full page lists every source and update. Microsoft and product names and icons are trademarks of the Microsoft group of companies. Icons are the unmodified official icons.' })
@@ -271,7 +271,7 @@
     });
   }
 
-  fetch('data/updates.json?v=20261126g', { cache: 'no-cache' })
+  fetch('data/updates.json?v=20261126h', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (d) {
       data = d;
