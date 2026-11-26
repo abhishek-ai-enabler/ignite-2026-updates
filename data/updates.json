@@ -90,6 +90,7 @@
     {
       "id": "iq",
       "name": "Microsoft IQ",
+      "logo": "microsoft",
       "role": "Ground",
       "glance": "Gives every agent your organization's own context: how people work, governed data, knowledge and the web. Generally available, with no new SKU or subscription.",
       "tagline": "Enterprise context management platform: Work IQ, Fabric IQ, Foundry IQ and Web IQ.",
@@ -151,6 +152,7 @@
     "power-automate": { "name": "Microsoft Power Automate", "file": "power-automate.svg", "set": "Power Platform icons" },
     "dataverse": { "name": "Microsoft Dataverse", "file": "dataverse.svg", "set": "Power Platform icons" },
     "foundry": { "name": "Microsoft Foundry", "file": "foundry.svg", "set": "Azure architecture icons" },
+    "microsoft": { "name": "Microsoft", "file": "microsoft.svg", "set": "Microsoft logo" },
     "foundry-iq": { "name": "Foundry IQ", "file": "foundry-iq.svg", "set": "Azure architecture icons" }
   },
   "platforms": [

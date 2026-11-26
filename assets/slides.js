@@ -11,7 +11,7 @@
   document.documentElement.setAttribute('data-deck-theme', theme);
   var link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = 'assets/slides-' + theme + '.css?v=20261126e';
+  link.href = 'assets/slides-' + theme + '.css?v=20261126f';
   document.head.appendChild(link);
 
   function el(tag, attrs, children) {
@@ -270,7 +270,7 @@
     });
   }
 
-  fetch('data/updates.json?v=20261126e', { cache: 'no-cache' })
+  fetch('data/updates.json?v=20261126f', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (d) {
       data = d;
