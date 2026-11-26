@@ -1,6 +1,6 @@
 # Microsoft Ignite 2026: Copilot Studio, Microsoft IQ, Microsoft Foundry, Agent 365 and Power Platform
 
-Unofficial, static summary of Ignite 2026 (Nov 17–20, San Francisco) announcements. Plain HTML/CSS/JS, no build step, no tracking, no external dependencies.
+Unofficial, static summary of Ignite 2026 (Nov 17–20, San Francisco) announcements, referenced from documentation and content that Microsoft provided during the event. It carries a disclaimer in the page footer and the slide deck: shared for general information only, with no responsibility or liability accepted by the author, and readers should verify against the linked Microsoft sources. Plain HTML/CSS/JS, no build step, no tracking, no external dependencies.
 
 ## Theme
 

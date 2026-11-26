@@ -344,6 +344,7 @@ tbody tr:last-child > * { border-bottom: 0; }
 .pf-text span { font-size: 0.8rem; color: #4a5166; }
 .platforms-note { color: var(--hero-muted); font-size: 0.82rem; margin: 0.8rem 0 0; }
 .disclaimer.trademark { margin-top: 0.8rem; font-size: 0.85rem; }
+.disclaimer.legal { margin-top: 2rem; font-size: 0.85rem; line-height: 1.55; }
 .disclaimer.trademark a { color: inherit; text-decoration: underline; }
 
 @media print {
