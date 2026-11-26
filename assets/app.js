@@ -444,7 +444,7 @@
     main.insertBefore(el('div', { class: 'wrap section' }, [el('p', { class: 'notice', role: 'alert', text: message })]), main.firstChild);
   }
 
-  fetch('data/updates.json?v=20261126k', { cache: 'no-cache' })
+  fetch('data/updates.json?v=20261126l', { cache: 'no-cache' })
     .then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();

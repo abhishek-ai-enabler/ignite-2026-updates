@@ -48,7 +48,7 @@
       "GA": "Generally available",
       "Preview": "Public, private, Frontier or limited preview",
       "Coming soon": "Announced with a future date or availability",
-      "Announced": "Announced without an explicit availability label in the source"
+      "Announced": "No single release stage stated; see the entry for component or partner availability"
     }
   },
   "sources": [
@@ -111,6 +111,41 @@
       "id": "ppfabric",
       "label": "Now available: Cross-region Link to Fabric and Update connection (Power Platform blog, Nov 24, 2026)",
       "url": "https://www.microsoft.com/en-us/power-platform/blog/2026/11/24/now-available-cross-region-link-to-fabric-and-update-connection/"
+    },
+    {
+      "id": "spwork",
+      "label": "Introducing SharePoint tools in Work IQ (SharePoint blog)",
+      "url": "https://techcommunity.microsoft.com/blog/SPBlog/introducing-sharepoint-tools-in-work-iq/4569917"
+    },
+    {
+      "id": "workignite",
+      "label": "What’s new in Work IQ at Ignite 2026 (Microsoft 365 blog)",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft_365blog/whats-new-in-work-iq-at-ignite-2026-agents-that-get-work-done/4572219"
+    },
+    {
+      "id": "fiqignite",
+      "label": "Foundry IQ: knowledge sources, processing and permissions (Foundry blog)",
+      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/foundry-iq-introducing-knowledge-graphs-engineered-for-agents/4572683"
+    },
+    {
+      "id": "w365ignite",
+      "label": "Windows 365 at Ignite 2026: Cloud PCs for agents (Windows IT Pro blog)",
+      "url": "https://techcommunity.microsoft.com/blog/windows-itpro-blog/windows-365-at-ignite-2026-introducing-new-cloud-pc-capabilities-for-people-agen/4570006"
+    },
+    {
+      "id": "devpack",
+      "label": "The Foundry Dev Pack is here (Foundry developer blog)",
+      "url": "https://devblogs.microsoft.com/foundry/the-foundry-dev-pack-is-here-build-foundry-agents-your-way/"
+    },
+    {
+      "id": "speech",
+      "label": "Voice agents and updates to Speech in Microsoft Foundry (Foundry blog)",
+      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/voice-agents-in-microsoft-foundry-agent-service-now-generally-available/4573013"
+    },
+    {
+      "id": "toolboxes",
+      "label": "Tools and Toolboxes in Foundry (Foundry developer blog)",
+      "url": "https://devblogs.microsoft.com/foundry/build-once-reuse-across-your-agent-fleet-tools-and-toolboxes-in-foundry/"
     }
   ],
   "products": [
@@ -121,7 +156,7 @@
       "role": "Build",
       "glance": "Build agents, apps and workflows for whole business processes, shared across teams and co-built by makers and developers.",
       "tagline": "Low-code studio for building and managing agents, workflows and apps for business processes.",
-      "summary": "At Ignite 2026 Copilot Studio moved from single-task automation toward whole business processes: purpose-built harnesses, apps, shared and persistent agents with their own accounts, and team-based development with GitHub and a CLI.",
+      "summary": "Copilot Studio adds purpose-built harnesses, apps, agents with their own accounts, and team development with GitHub and a CLI. Work IQ’s SharePoint tools are rolling out to Studio, and Windows 365 extends computer use to on-premises apps.",
       "why": "Agents that carry work forward, work for a whole team and can be co-built by makers and developers turn one-off automations into shared, governed business assets. Microsoft cites Asurion raising touchless invoice processing from under 20% to over 70%, and Microsoft's own support agent resolving over 35% of cases fully autonomously (August 2026).",
       "audience": [
         "maker",
@@ -202,7 +237,7 @@
       "name": "Microsoft Foundry",
       "logo": "foundry",
       "role": "Run and improve",
-      "glance": "Where agents run and keep getting better: 11,000+ models with a model router, a managed Agent Service, and a loop that turns production evidence into validated improvements.",
+      "glance": "Build with the Dev Pack, choose from 11,000+ models including speech models, and use real runs to improve agent quality and cost.",
       "tagline": "Models, Agent Service and continuous improvement for agents in production.",
       "summary": "At Ignite 2026 Microsoft Foundry added Microsoft-Decision-1.1 (GA), new Microsoft AI and partner models, a managed Microsoft Copilot harness, voice agents (GA), more scalable and controlled hosted agents, and continuous improvement: Insights, annotations, Agent optimizer and Training.",
       "why": "Models change every few weeks, so lasting advantage comes from running agents with identity and guardrails, then improving them with your own traces, expert feedback and data. Foundry brings model choice, runtime, governance and improvement into one place, with GitHub for building agents.",
@@ -284,9 +319,9 @@
       "name": "Microsoft Power Platform",
       "logo": "power-platform",
       "role": "Apps and data",
-      "glance": "The low-code apps, flows and data that agents build with and use as tools, now with higher quality and Business Applications in Work IQ.",
+      "glance": "Use existing apps and flows as agent tools through Work IQ. With Power BI Pro, preview data apps that can write changes back to the source.",
       "tagline": "Low-code platform for apps, workflows and data, now a foundation for agents.",
-      "summary": "At Ignite 2026 Microsoft framed Power Platform around four principles: lead with the platform, deliver high-quality products, bring AI on your terms and protect existing investments. Announcements cover faster and richer apps, hybrid teams of makers and agents, Copilot inside apps, and Business Applications in Work IQ.",
+      "summary": "Makers and agents can build together, use Copilot inside apps and bring business data to Work IQ. Power BI Pro customers can preview apps that combine analytics with data entry and write-back in Power BI Desktop.",
       "why": "Existing apps, flows and Dataverse data become tools and context for agents without being rebuilt, and they stay inside existing permissions and governance. Microsoft says 80 million people use Power Platform every month, and that most of this year's 130+ new capabilities focused on quality and experience.",
       "audience": [
         "maker",
@@ -599,6 +634,38 @@
       "source": "bon"
     },
     {
+      "id": "cs-work-iq-sharepoint",
+      "product": "copilot-studio",
+      "area": "Work IQ",
+      "name": "60+ SharePoint actions through Work IQ",
+      "summary": "Agents can create lists, update libraries, handle approvals and inspect version history using native SharePoint tools. Actions run with the signed-in user’s permissions.",
+      "status": "Preview",
+      "note": "Public preview in Work IQ; rolling out to Copilot Studio.",
+      "audience": ["maker", "developer", "admin"],
+      "source": "spwork"
+    },
+    {
+      "id": "cs-w365-onprem",
+      "product": "copilot-studio",
+      "area": "Agents",
+      "name": "Agent identities for on-premises apps",
+      "summary": "An agent on a governed Windows 365 Cloud PC can use its own identity to access an on-premises application, including legacy software without an API.",
+      "status": "Preview",
+      "audience": ["maker", "admin"],
+      "source": "w365ignite"
+    },
+    {
+      "id": "cs-w365-persistent",
+      "product": "copilot-studio",
+      "area": "Agents",
+      "name": "Persistent Cloud PCs for always-on agents",
+      "summary": "Windows 365 announced persistent Cloud PCs for agents that carry a business process across sessions on the same managed computer.",
+      "status": "Coming soon",
+      "note": "Announced for Frontier private preview, not general availability.",
+      "audience": ["maker", "admin"],
+      "source": "w365ignite"
+    },
+    {
       "id": "iq-ga",
       "product": "iq",
       "area": "Platform",
@@ -663,15 +730,50 @@
       "id": "iq-work-ga",
       "product": "iq",
       "area": "Work IQ",
-      "name": "Work IQ: CRM and ERP grounding, Retrieve, real-time meeting context and long-running tasks",
-      "summary": "Business Applications in Work IQ adds CRM and ERP records. Retrieve returns permission-trimmed Microsoft 365 and connector data in one call. Also GA: real-time meeting context, long-running tasks and agent-to-agent support, granular MCP policies, and OpenAI and Anthropic plugins.",
+      "name": "Work IQ: business data, Retrieve, live meeting context and long-running tasks",
+      "summary": "Retrieve returns Microsoft 365 and connector data within the caller’s permissions. Business Applications adds CRM context; ERP data is in preview. Real-time meeting context, long-running tasks, agent-to-agent support and granular MCP policies are generally available.",
       "status": "GA",
       "audience": [
         "developer",
         "admin"
       ],
       "top": true,
-      "source": "iq"
+      "source": "iq",
+      "also": ["workignite"]
+    },
+    {
+      "id": "iq-work-engage",
+      "product": "iq",
+      "area": "Work IQ",
+      "name": "Engage: insights about people and teams",
+      "summary": "Engage uses trusted people and organizational data to help agents answer questions about teams and how work gets done.",
+      "status": "Preview",
+      "audience": ["business", "developer"],
+      "source": "workignite"
+    },
+    {
+      "id": "iq-work-partners",
+      "product": "iq",
+      "area": "Work IQ",
+      "name": "Work IQ in ChatGPT, Claude and Gemini for business",
+      "summary": "The Work IQ team lists its plugin as available for ChatGPT Business and Enterprise customers, with support for Anthropic and Gemini for business coming soon.",
+      "status": "Announced",
+      "note": "Availability varies by partner. The Microsoft IQ overview calls the Anthropic plugin generally available; the Work IQ team says it is coming soon. Confirm access in your tenant.",
+      "audience": ["business", "admin", "developer"],
+      "source": "workignite",
+      "also": ["iq"]
+    },
+    {
+      "id": "iq-work-permissions",
+      "product": "iq",
+      "area": "Work IQ",
+      "name": "Separate WorkIQ.Read and WorkIQ.Act permissions",
+      "summary": "An agent can be allowed to find and summarize SharePoint content without permission to change it. WorkIQ.Act allows changes such as creating or updating items, within the user’s access and the tenant’s policy.",
+      "status": "Preview",
+      "note": "SharePoint tools are the first Work IQ provider to use these scopes in public preview.",
+      "audience": ["admin", "security", "developer"],
+      "source": "spwork",
+      "also": ["workignite"]
     },
     {
       "id": "iq-work-preview",
@@ -780,6 +882,48 @@
       ]
     },
     {
+      "id": "iq-foundry-sources",
+      "product": "iq",
+      "area": "Foundry IQ",
+      "name": "Azure SQL, file uploads and searchable document images",
+      "summary": "Azure SQL Database and uploaded files can serve as knowledge sources. Semantic chunking splits documents by meaning, and image descriptions make their illustrations searchable.",
+      "status": "GA",
+      "audience": ["developer", "data"],
+      "source": "fiqignite"
+    },
+    {
+      "id": "iq-foundry-fabric-sources",
+      "product": "iq",
+      "area": "Foundry IQ",
+      "name": "Fabric semantic models, OneLake shortcuts and mirrored items",
+      "summary": "Agents can retrieve knowledge from Fabric IQ semantic models and from shortcuts and mirrored items in OneLake.",
+      "status": "Preview",
+      "note": "Public preview.",
+      "audience": ["developer", "data"],
+      "source": "fiqignite"
+    },
+    {
+      "id": "iq-foundry-storage-access",
+      "product": "iq",
+      "area": "Foundry IQ",
+      "name": "Data Lake and Blob Storage permissions",
+      "summary": "For configured knowledge sources, retrieval honors the caller’s Azure Data Lake Storage Gen2 access lists and role assignments, and Azure Blob container-level roles. The same checks apply over MCP.",
+      "status": "GA",
+      "audience": ["data", "security", "admin"],
+      "source": "fiqignite"
+    },
+    {
+      "id": "iq-foundry-labels",
+      "product": "iq",
+      "area": "Foundry IQ",
+      "name": "OneLake item permissions and Purview sensitivity labels",
+      "summary": "OneLake results respect each item’s permissions. Foundry IQ checks Purview label policies when an agent reads content and denies the request if it cannot verify the policy.",
+      "status": "Preview",
+      "note": "Public preview.",
+      "audience": ["data", "security", "admin"],
+      "source": "fiqignite"
+    },
+    {
       "id": "iq-foundry-serverless",
       "product": "iq",
       "area": "Foundry IQ",
@@ -875,9 +1019,9 @@
       "product": "agent-365",
       "area": "Business value",
       "name": "Agent 365 Business Analytics",
-      "summary": "Shows AI spend, usage and value together across Microsoft and non-Microsoft AI, with measures such as assisted hours, success rate and satisfaction, spend forecasting and plain-language questions.",
+      "summary": "Map AI activity to 6,000+ business use cases, compare spend with estimated assisted hours and success rates, ask questions in plain language, survey employees with Pulse, and model what-if budgets.",
       "status": "Preview",
-      "note": "Frontier program. Insights for Microsoft services need at least one Microsoft 365 Copilot license in the tenant. Non-Microsoft insights need Agent 365 and/or ME7 licensing.",
+      "note": "Frontier rollout: Microsoft’s detailed launch post specifies 50+ Microsoft 365 Copilot licenses for Microsoft-service analytics at launch, expanding to 1+ by mid-December 2026. Connected non-Microsoft services require Agent 365 or ME7.",
       "audience": [
         "business",
         "admin"
@@ -894,7 +1038,7 @@
       "product": "agent-365",
       "area": "Business value",
       "name": "Agent 365 Cost Management",
-      "summary": "Central place in the Microsoft 365 admin center to see and control usage-based AI services, including Copilot Studio, Copilot Cowork, Copilot Code and Copilot Managed Runtime. Set spend limits and alerts, control which models teams can use, and extend analysis through Fabric, Graph APIs and exports.",
+      "summary": "Track Copilot Studio, Cowork, Code and Copilot Managed Runtime spend in the Microsoft 365 admin center. Delegate budgets and policies to business owners, set spending limits and model access, and export data through Graph or Fabric.",
       "status": "Preview",
       "note": "Forecasting and plain-language questions are in the Frontier program. Value insights expand in December.",
       "audience": [
@@ -1099,6 +1243,16 @@
       "also": [
         "bon"
       ]
+    },
+    {
+      "id": "a365-mcp-firewall",
+      "product": "agent-365",
+      "area": "Governance",
+      "name": "MCP Firewall and device compliance for local agents",
+      "summary": "Entra Global Secure Access adds an MCP Firewall and network policies based on agent type and risk. Intune can flag a device with an unapproved agent as noncompliant so Conditional Access can block the device from company resources.",
+      "status": "Preview",
+      "audience": ["security", "admin"],
+      "source": "a365"
     },
     {
       "id": "a365-local-gov",
@@ -1361,6 +1515,17 @@
       "source": "pp"
     },
     {
+      "id": "pp-power-bi-data-apps",
+      "product": "power-platform",
+      "area": "Power BI",
+      "name": "Custom data apps in Power BI Desktop",
+      "summary": "Power BI Pro users can describe an app in natural language, starting from a governed semantic model. Unlike a report, the resulting app lets people enter data, update records and write changes back to the source.",
+      "status": "Preview",
+      "audience": ["maker", "data", "business"],
+      "top": true,
+      "source": "bon"
+    },
+    {
       "id": "pp-fabric-link",
       "product": "power-platform",
       "area": "Data",
@@ -1397,7 +1562,7 @@
       "product": "foundry",
       "area": "Models",
       "name": "Model router",
-      "summary": "Sends simple requests to small, fast models and harder ones to larger frontier models. Microsoft testing shows savings of up to 65% compared with sending everything to the frontier. Automatic model selection is on by default in supported projects.",
+      "summary": "Automatic model selection is on by default in supported Foundry projects and can be enabled in an existing AI Gateway. The router sends simpler requests to smaller models; Microsoft reports savings of up to 65% in its tests against using a frontier model for every request.",
       "status": "Announced",
       "audience": [
         "developer",
@@ -1508,6 +1673,81 @@
       ]
     },
     {
+      "id": "fd-dev-pack",
+      "product": "foundry",
+      "area": "Developer tools",
+      "name": "Foundry Dev Pack and Foundry Canvas",
+      "summary": "One install sets up the Foundry CLI and Foundry Skill, plus the VS Code toolkit and GitHub Copilot app plugin when those apps are present. In the plugin, Foundry Canvas turns visual choices about tools, models and guardrails into editable project files.",
+      "status": "GA",
+      "audience": ["developer"],
+      "source": "devpack"
+    },
+    {
+      "id": "fd-w365-mcp",
+      "product": "foundry",
+      "area": "Agent Service",
+      "name": "Windows 365 for Agents MCP in Foundry",
+      "summary": "Foundry builders will be able to attach Windows 365 for Agents over MCP so their agents can use applications on governed Cloud PCs.",
+      "status": "Coming soon",
+      "note": "Limited preview targeted for early 2027.",
+      "audience": ["developer", "admin"],
+      "source": "w365ignite"
+    },
+    {
+      "id": "fd-speech-conversation",
+      "product": "foundry",
+      "area": "Models",
+      "name": "GPT Live 1 and Microsoft Realtime Flash 1",
+      "summary": "GPT Live 1 supports two-way speech and can hand tasks to other agents without ending the conversation. Microsoft Realtime Flash 1 is a lower-cost option for high-volume calls.",
+      "status": "Announced",
+      "note": "Microsoft lists Realtime Flash 1 in preview at Voice Live Lite pricing; it does not specify a release stage for GPT Live 1 in this announcement.",
+      "audience": ["developer", "business"],
+      "source": "speech"
+    },
+    {
+      "id": "fd-transcription",
+      "product": "foundry",
+      "area": "Models",
+      "name": "Multilingual transcription and MAI-Transcribe-2",
+      "summary": "Real-time transcription recognizes 50+ languages without a language selection in supported regions. For recorded audio, MAI-Transcribe-2 is an additional model option.",
+      "status": "GA",
+      "note": "GA refers to the transcription service updates; the post lists MAI-Transcribe-2 as available without a separate release label.",
+      "audience": ["developer"],
+      "source": "speech"
+    },
+    {
+      "id": "fd-vasa-2",
+      "product": "foundry",
+      "area": "Models",
+      "name": "VASA-2 Photo Avatar",
+      "summary": "Create an upper-body talking avatar from a single photo, with control over facial expressions for voice agents and training content.",
+      "status": "Preview",
+      "note": "Public preview.",
+      "audience": ["developer", "business"],
+      "source": "speech"
+    },
+    {
+      "id": "fd-toolbox-copilot",
+      "product": "foundry",
+      "area": "Agent Service",
+      "name": "Toolboxes in GitHub Copilot and shared monitoring",
+      "summary": "Install a Foundry toolbox in VS Code with one click and sign in with Entra to use it from GitHub Copilot. A shared dashboard shows adoption, errors, success rates and consumption across agents using the toolbox.",
+      "status": "Announced",
+      "audience": ["developer", "admin"],
+      "source": "toolboxes"
+    },
+    {
+      "id": "fd-toolbox-shell",
+      "product": "foundry",
+      "area": "Agent Service",
+      "name": "Shell tool for skills in prompt agents",
+      "summary": "Prompt agents can load and run reusable skills in a managed shell without the developer setting up a separate execution environment.",
+      "status": "Preview",
+      "note": "Public preview.",
+      "audience": ["developer"],
+      "source": "toolboxes"
+    },
+    {
       "id": "fd-tools",
       "product": "foundry",
       "area": "Agent Service",
@@ -1519,7 +1759,7 @@
       ],
       "top": false,
       "source": "fagent",
-      "note": "Toolboxes updates and tool policies are in preview"
+      "note": "Tool policies are in preview; the GA label applies to the four tools named above."
     },
     {
       "id": "fd-iq-tools",
@@ -1794,7 +2034,7 @@
           "Business plugins, knowledge graphs, Programmed Training, Foundry IQ Serverless (December)",
           "Copilot harness, MAI image and code models, Programmed Training, Foundry cost view, hosted agents on AKS (early December)",
           "Business Analytics, dynamic agent risk, connected platforms, action center (December)",
-          "Copilot in canvas apps (GA this November), Update connection rollout"
+          "Power BI Desktop data apps (Pro preview), Copilot in canvas apps (November GA rollout)"
         ]
       },
       {
@@ -1804,7 +2044,7 @@
           "Built on products customers already use, with no new SKU or subscription",
           "Usage-based: per-token model pricing and hourly GPU billing for Managed Compute",
           "Premium governance, security and non-Microsoft insights need Agent 365 or ME7",
-          "Not stated in the announcements. Check Power Platform licensing for your plan"
+          "Power BI Desktop data apps preview requires Power BI Pro; check your plan for other capabilities"
         ]
       }
     ]

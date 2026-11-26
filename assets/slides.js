@@ -11,7 +11,7 @@
   document.documentElement.setAttribute('data-deck-theme', theme);
   var link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = 'assets/slides-' + theme + '.css?v=20261126k';
+  link.href = 'assets/slides-' + theme + '.css?v=20261126l';
   document.head.appendChild(link);
 
   function el(tag, attrs, children) {
@@ -202,14 +202,17 @@
     ]);
   }
 
-  function closeSlide() {
-    slide('close', '', [
-      head('Sources', 'Where this comes from'),
-      el('ul', { class: 'sources' }, data.sources.map(function (s) {
-        return el('li', {}, [el('a', { href: s.url, text: s.label, target: '_blank', rel: 'noopener noreferrer' })]);
-      })),
-      el('p', { class: 'small', text: 'Compiled by ' + data.meta.author.name + ', ' + data.meta.author.role + '. Disclaimer: this deck is an unofficial summary referenced from documentation and content provided by Microsoft during Microsoft Ignite 2026. It is shared for general information only, may be incomplete or change, and the author accepts no responsibility or liability for decisions based on it. Verify against the official Microsoft sources. Microsoft and product names and icons are trademarks of the Microsoft group of companies.' })
-    ]);
+  function sourceSlides() {
+    var per = 10, pages = Math.ceil(data.sources.length / per);
+    for (var i = 0; i < pages; i++) {
+      slide('close', '', [
+        head('Sources' + (pages > 1 ? ' (' + (i + 1) + ' of ' + pages + ')' : ''), 'Where this comes from'),
+        el('ul', { class: 'sources' }, data.sources.slice(i * per, (i + 1) * per).map(function (s) {
+          return el('li', {}, [el('a', { href: s.url, text: s.label, target: '_blank', rel: 'noopener noreferrer' })]);
+        })),
+        i === pages - 1 ? el('p', { class: 'small', text: 'Compiled by ' + data.meta.author.name + ', ' + data.meta.author.role + '. Disclaimer: this deck is an unofficial summary referenced from documentation and content provided by Microsoft during Microsoft Ignite 2026. It is shared for general information only, may be incomplete or change, and the author accepts no responsibility or liability for decisions based on it. Verify against the official Microsoft sources. Microsoft and product names and icons are trademarks of the Microsoft group of companies.' }) : null
+      ]);
+    }
   }
 
   function build() {
@@ -219,7 +222,7 @@
     compareSlide();
     summarySlide();
     startSlide();
-    closeSlide();
+    sourceSlides();
     var stage = document.getElementById('stage');
     slides.forEach(function (s, i) {
       s.setAttribute('aria-label', (i + 1) + ' of ' + slides.length);
@@ -272,7 +275,7 @@
     });
   }
 
-  fetch('data/updates.json?v=20261126k', { cache: 'no-cache' })
+  fetch('data/updates.json?v=20261126l', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (d) {
       data = d;

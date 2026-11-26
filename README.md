@@ -37,7 +37,7 @@ Edit `data/updates.json`. Each entry in `updates`:
 ```json
 {
   "id": "unique-kebab-id",
-  "product": "copilot-studio | iq | agent-365 | power-platform",
+  "product": "copilot-studio | iq | foundry | agent-365 | power-platform",
   "area": "Sub-area label",
   "name": "Feature name",
   "summary": "1–2 sentences.",
@@ -52,7 +52,7 @@ Edit `data/updates.json`. Each entry in `updates`:
 
 Rules:
 - Official Microsoft sources only. Never infer; if unverified, leave it out or say so in `note`.
-- `Announced` means the source gives no explicit availability label.
+- `Announced` means the source gives no single release stage; check the entry's summary and note for component-specific availability or differences between Microsoft sources.
 - Keep 3–5 items with `"top": true` per product.
 - Bump `meta.lastUpdated`.
 
