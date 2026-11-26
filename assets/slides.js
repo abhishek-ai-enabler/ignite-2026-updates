@@ -71,7 +71,7 @@
         return el('li', {}, [logo(p.logo, 64), el('span', { text: shortName(p) })]);
       })),
       el('p', { class: 'sub author', text: (m.author.name + ', ' + m.author.role) }),
-      el('p', { class: 'small', text: 'Individual analysed summary of content provided by Microsoft at Ignite 2026. Last updated ' + m.lastUpdated + '.' })
+      el('p', { class: 'small', text: 'Independent summary of Microsoft’s Ignite 2026 announcements. Updated ' + m.lastUpdated + '.' })
     ]);
   }
 
