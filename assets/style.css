@@ -78,6 +78,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .brand { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--text); text-decoration: none; font-weight: 700; font-family: var(--font-head); white-space: nowrap; }
 .logo { width: 2rem; height: 2rem; border-radius: 9px; display: grid; place-items: center; background: linear-gradient(135deg, var(--build), var(--ground) 60%, var(--govern)); color: #fff; }
 .logo svg { width: 1.15rem; height: 1.15rem; }
+.brand-logo { width: 2.2rem; height: 2.2rem; flex: none; }
 .brand-sub { display: none; font-weight: 500; font-family: var(--font); font-size: 0.85rem; color: var(--muted); }
 .site-header nav { min-width: 0; }
 .nav-list { display: flex; gap: 0.15rem; justify-content: center; overflow-x: auto; scrollbar-width: none; }

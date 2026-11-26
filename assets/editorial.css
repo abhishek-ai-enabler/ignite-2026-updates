@@ -100,6 +100,7 @@
   }
   :root[data-theme="editorial"] .brand { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); white-space: normal; }
   :root[data-theme="editorial"] .logo { width: 2.6rem; height: 2.6rem; }
+  :root[data-theme="editorial"] .brand-logo { width: 2.8rem; height: 2.8rem; }
   :root[data-theme="editorial"] .brand > span:not(.logo):not(.brand-sub) { font-size: 1.5rem; line-height: 1.2; }
   :root[data-theme="editorial"] .brand-sub { display: block; font-size: 0.82rem; font-weight: 400; color: var(--muted); }
 
