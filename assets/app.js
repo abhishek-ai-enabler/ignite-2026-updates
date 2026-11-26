@@ -36,19 +36,13 @@
     return data.products.find(function (p) { return p.id === id; });
   }
 
-  function formatDate(iso) {
-    var parts = iso.split('-').map(Number);
-    return new Date(Date.UTC(parts[0], parts[1] - 1, parts[2])).toLocaleDateString('en-US', {
-      year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
-    });
-  }
 
   function renderHeader() {
     document.getElementById('event-dates').textContent = data.meta.dates;
     document.getElementById('event-location').textContent = data.meta.location;
     var time = document.getElementById('last-updated');
     time.setAttribute('datetime', data.meta.lastUpdated);
-    time.textContent = formatDate(data.meta.lastUpdated);
+    time.textContent = data.meta.lastUpdated;
   }
 
   function statusSummary(updates) {

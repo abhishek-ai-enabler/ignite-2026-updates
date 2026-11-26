@@ -71,7 +71,7 @@
         return el('li', {}, [logo(p.logo, 64), el('span', { text: shortName(p) })]);
       })),
       el('p', { class: 'sub author', text: (m.author.name + ', ' + m.author.role) }),
-      el('p', { class: 'small', text: 'Unofficial summary of content provided by Microsoft at Ignite 2026. Last updated ' + m.lastUpdated + '.' })
+      el('p', { class: 'small', text: 'Individual analysed summary of content provided by Microsoft at Ignite 2026. Last updated ' + m.lastUpdated + '.' })
     ]);
   }
 
@@ -210,7 +210,7 @@
         el('ul', { class: 'sources' }, data.sources.slice(i * per, (i + 1) * per).map(function (s) {
           return el('li', {}, [el('a', { href: s.url, text: s.label, target: '_blank', rel: 'noopener noreferrer' })]);
         })),
-        i === pages - 1 ? el('p', { class: 'small', text: 'Compiled by ' + data.meta.author.name + ', ' + data.meta.author.role + '. Disclaimer: this deck is an unofficial summary referenced from documentation and content provided by Microsoft during Microsoft Ignite 2026. It is shared for general information only, may be incomplete or change, and the author accepts no responsibility or liability for decisions based on it. Verify against the official Microsoft sources. Microsoft and product names and icons are trademarks of the Microsoft group of companies.' }) : null
+        i === pages - 1 ? el('p', { class: 'small', text: 'Compiled by ' + data.meta.author.name + ', ' + data.meta.author.role + '. Disclaimer: this deck reflects the author’s analysis of documentation and content provided by Microsoft during Microsoft Ignite 2026. It is shared for general information only, may be incomplete or change, and the author accepts no responsibility or liability for decisions based on it. Verify against the official Microsoft sources. Microsoft and product names and icons are trademarks of the Microsoft group of companies.' }) : null
       ]);
     }
   }
