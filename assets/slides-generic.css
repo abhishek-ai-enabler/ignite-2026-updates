@@ -1,0 +1,20 @@
+/* Generic deck: dark navy with per-product colours. */
+:root {
+  --font-body: "Open Sans", system-ui, sans-serif;
+  --font-head: "Roboto Slab", Georgia, serif;
+  --bg: radial-gradient(70% 90% at 0% 0%, #1d2f73 0%, transparent 60%), radial-gradient(60% 80% at 100% 100%, #0b4f57 0%, transparent 60%), #0a1530;
+  --fg: #ffffff; --muted: #c7d0ea; --line: rgba(255, 255, 255, 0.22); --panel: rgba(255, 255, 255, 0.08);
+  --accent: #8cc2ff; --accent-text: #9ccbff; --link: #9ccbff; --focus: #ffbf47;
+  --radius: 14px;
+  --c-cs: #8cc2ff; --c-iq: #d2b6ff; --c-a365: #7ae6c0; --c-pp: #ffc46b;
+  --ga-bg: #123d26; --ga-fg: #86efac;
+  --pre-bg: #4a3608; --pre-fg: #fcd34d;
+  --soon-bg: #14305e; --soon-fg: #93c5fd;
+  --ann-bg: #2d3348; --ann-fg: #dbe1f3;
+  --chrome-bg: #05091a; --chrome-bar: #0f1630;
+}
+.slide { background: var(--bg); }
+.stage { background: #0a1530; }
+.slide-head h2::after { content: ""; display: block; width: 64px; height: 5px; border-radius: 4px; background: var(--p, var(--accent)); margin-top: 10px; }
+.slide-title h1 { background: linear-gradient(90deg, #8cc2ff, #d2b6ff 40%, #ffc46b 75%, #7ae6c0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+@media print { .slide-title h1 { color: #8cc2ff; background: none; } }

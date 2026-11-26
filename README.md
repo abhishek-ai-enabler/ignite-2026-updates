@@ -8,6 +8,15 @@ Unofficial, static summary of Ignite 2026 (Nov 17–20, San Francisco) announcem
 - The page shows everything: headline numbers, per-product sections with search, filters and every update, the comparison, next steps, and a "Summary at a glance" section at the end with one card per platform (rendered from `data/updates.json`; the one-line `glance` text is set per product).
 - Colors are CSS variables at the top of `assets/style.css` (base tokens) and `assets/editorial.css`.
 
+## Slides
+
+`slides.html` is a 16:9 deck built from the same `data/updates.json`: title, how the products fit, then per product an overview, top announcements and all updates, followed by the comparison, summary at a glance, next steps and sources.
+
+- **Keys:** arrow keys, Page Up/Down, Space, Home, End; **F** for full screen. The slide number is kept in the URL (`#5`).
+- **PDF:** print the page (Ctrl or Cmd+P); each slide is one page.
+- **Themes:** chosen by hostname. Hosts ending in `eficode.com` get the **OP format** (white and orange, `assets/slides-op.css`); everywhere else gets the **generic format** (dark navy, `assets/slides-generic.css`). Add `?theme=op` or `?theme=generic` to override.
+- The OP format approximates the public OP look only. It has no OP logo and is not an official template; replace `assets/slides-op.css` if you have one.
+
 ## Layout
 
 | Path | Purpose |
@@ -17,6 +26,7 @@ Unofficial, static summary of Ignite 2026 (Nov 17–20, San Francisco) announcem
 | `assets/app.js`, `assets/style.css` | Rendering, filter/search and base styling |
 | `assets/editorial.css`, `assets/fonts/` | Editorial (sidebar) theme and its self-hosted fonts |
 | `assets/icons/` | Official Microsoft icons, unmodified (see Credits). Mapped in the `logos`, `platforms` and `areaLogos` keys of `data/updates.json` |
+| `slides.html`, `assets/slides.js`, `assets/slides*.css` | Slide deck, shared layout and the OP and generic themes |
 | `scripts/check.mjs` | Validates the data and checks every link |
 | `.github/workflows/pages.yml` | Validates, then deploys to GitHub Pages on push to `main` |
 
