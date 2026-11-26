@@ -11,7 +11,7 @@
   document.documentElement.setAttribute('data-deck-theme', theme);
   var link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = 'assets/slides-' + theme + '.css?v=20261126j';
+  link.href = 'assets/slides-' + theme + '.css?v=20261126k';
   document.head.appendChild(link);
 
   function el(tag, attrs, children) {
@@ -70,6 +70,7 @@
       el('ul', { class: 'logo-row', 'aria-label': 'Products' }, data.products.map(function (p) {
         return el('li', {}, [logo(p.logo, 64), el('span', { text: shortName(p) })]);
       })),
+      el('p', { class: 'sub author', text: (m.author.name + ', ' + m.author.role) }),
       el('p', { class: 'small', text: 'Unofficial summary of content provided by Microsoft at Ignite 2026. Last updated ' + m.lastUpdated + '.' })
     ]);
   }
@@ -207,7 +208,7 @@
       el('ul', { class: 'sources' }, data.sources.map(function (s) {
         return el('li', {}, [el('a', { href: s.url, text: s.label, target: '_blank', rel: 'noopener noreferrer' })]);
       })),
-      el('p', { class: 'small', text: 'Disclaimer: this deck is an unofficial summary referenced from documentation and content provided by Microsoft during Microsoft Ignite 2026. It is shared for general information only, may be incomplete or change, and the author accepts no responsibility or liability for decisions based on it. Verify against the official Microsoft sources. Microsoft and product names and icons are trademarks of the Microsoft group of companies.' })
+      el('p', { class: 'small', text: 'Compiled by ' + data.meta.author.name + ', ' + data.meta.author.role + '. Disclaimer: this deck is an unofficial summary referenced from documentation and content provided by Microsoft during Microsoft Ignite 2026. It is shared for general information only, may be incomplete or change, and the author accepts no responsibility or liability for decisions based on it. Verify against the official Microsoft sources. Microsoft and product names and icons are trademarks of the Microsoft group of companies.' })
     ]);
   }
 
@@ -271,7 +272,7 @@
     });
   }
 
-  fetch('data/updates.json?v=20261126j', { cache: 'no-cache' })
+  fetch('data/updates.json?v=20261126k', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (d) {
       data = d;

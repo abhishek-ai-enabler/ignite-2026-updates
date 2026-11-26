@@ -48,6 +48,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--focus, #ffbf47)
 .slide-title { justify-content: center; gap: 26px; }
 .slide-title h1 { max-width: 1000px; }
 .slide-title .sub { font-size: 24px; color: var(--muted); }
+.slide-title .sub.author { font-size: 20px; font-weight: 600; color: var(--fg); }
 .logo-row { display: flex; gap: 32px; flex-wrap: wrap; }
 .logo-row li { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 18px; }
 .logo-row .logo { background: #fff; border-radius: 14px; padding: 7px; }
